@@ -21,12 +21,13 @@ public class NumberWizard_NickWillis : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
        for (int RoundNumber = 0; RoundNumber < 10; RoundNumber++ ) //Game Loop until round 10
         {
             Debug.Log("Welcome to Round " + RoundNumber); //Display current round number
             OpponentMove = Random.Range(1, 4); //Generate opponent move. //1-4. 1=Punch. 2=Block. 3=Dodge Left. 4=Dodge Right.
             
-            if (OpponentMove == 1 && GameMode == 1);  //When you go first (gamemode 1) and punch
+            if (OpponentMove == 1 && GameMode == 1)  //When you go first (gamemode 1) and punch
             {
                 Debug.Log("Your opponent throws a punch. What do you do?");
                 if (Input.GetKeyDown(KeyCode.UpArrow)) //This happens if you punch
@@ -55,9 +56,8 @@ public class NumberWizard_NickWillis : MonoBehaviour
                     Debug.Log("Yopu dodge right. Nobody takes Damage.");
 
                 }
-            }
-
-            else if (OpponentMove == 1 && GameMode == 2);  //When opponent goes first (gamemode 2) and punches
+            } 
+            else if (OpponentMove == 1 && GameMode == 2)  //When opponent goes first (gamemode 2) and punches
             {
                 Debug.Log("Your opponent throws a punch. What do you do?");
                 if (Input.GetKeyDown(KeyCode.UpArrow)) //This happens if you punch
@@ -86,9 +86,8 @@ public class NumberWizard_NickWillis : MonoBehaviour
                     Debug.Log("Yopu dodge right. Nobody takes Damage.");
 
                 }
-            }
-
-            else if (OpponentMove == 2 && GameMode == 1);  //When opponent goes first (gamemode 2) and blocks
+            } 
+            else if (OpponentMove == 2 && GameMode == 1)  //When opponent goes first (gamemode 2) and blocks
             {
                 Debug.Log("Your opponent throws a punch. What do you do?");
                 if (Input.GetKeyDown(KeyCode.UpArrow)) //This happens if you punch
@@ -117,9 +116,8 @@ public class NumberWizard_NickWillis : MonoBehaviour
                     Debug.Log("Undefined");
 
                 }
-            }
-
-            else if (OpponentMove == 3 && GameMode == 1);  //When opponent goes first (gamemode 2) and dodges left/right
+            } 
+            else if (OpponentMove == 3 && GameMode == 1)  //When opponent goes first (gamemode 2) and dodges left/right
             {
                 Debug.Log("Your opponent throws a punch. What do you do?");
                 if (Input.GetKeyDown(KeyCode.UpArrow)) //This happens if you punch
