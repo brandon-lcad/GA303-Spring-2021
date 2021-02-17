@@ -484,36 +484,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 893998493}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d2dc9249137192439f1d0672857452d, type: 3}
+  m_Script: {fileID: 11500000, guid: fb850d3a935e6ff41aa3711c01b8bdc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  elapsedTime: 0
-  reactionTime: 0
-  timerStarted: 0
-  timerStopped: 0
   minSeconds: 1
-  maxSeconds: 5
-  randomSeconds: 0
+  maxSeconds: 10
   background: {fileID: 692567999}
   screenText: {fileID: 1587091296}
-  audioSource: {fileID: 0}
-  startSound: {fileID: 8300000, guid: f4a69f7991c61ae468fc2409487a857b, type: 3}
-  stopSound: {fileID: 8300000, guid: 420a373db7d1f3a48aa12626c0f94431, type: 3}
-  backgroundRed:
-    r: 0.5882353
-    g: 0
-    b: 0
-    a: 1
-  backgroundBlue:
-    r: 0
-    g: 0
-    b: 0.5882353
-    a: 1
-  backgroundGreen:
-    r: 0
-    g: 0.5882353
-    b: 0
-    a: 1
+  audioSource: {fileID: 893998494}
+  startSound: {fileID: 8300000, guid: c2d18f74355a48c4fa95ef316f5c4ce1, type: 3}
+  stopSound: {fileID: 8300000, guid: b43f2236d45d7184e9971905726172f6, type: 3}
 --- !u!4 &893998496
 Transform:
   m_ObjectHideFlags: 0
@@ -569,7 +549,7 @@ MonoBehaviour:
 
     New Text'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 0}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -594,8 +574,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 48
-  m_fontSizeBase: 48
+  m_fontSize: 36
+  m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
