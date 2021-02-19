@@ -21,6 +21,10 @@ public class ReactionTimer_Heather : MonoBehaviour
     public Image background; // A reference to the background image on the Canvas
     public TextMeshProUGUI screenText; // A reference to the text on the Canvas
 
+    public Sprite defaultBackground; // Default Image to display
+    public Sprite earlyBackground; // Image to display when User clicks too soon
+    public Sprite lateBackground; // Image to display when reaction test is failed
+
     public AudioSource audioSource;
     public AudioClip startSound; // A short sound effect that plays when the timer starts
     public AudioClip stopSound; // A short sound effect that plays when the timer stops
@@ -91,12 +95,14 @@ public class ReactionTimer_Heather : MonoBehaviour
         timerStopped = false;
         randomSeconds = Random.Range(minSeconds, maxSeconds);
         SetScreen(new Color(150, 0, 0, 255), "Wait for green.");
+        background.sprite = defaultBackground;
     }
 
     void StartTimer()
     {
         timerStarted = true;
         SetScreen(new Color(0, 150, 0, 255), "Tap!");
+        background.sprite = defaultBackground;
         PlayAudioClip(startSound);
     }
 
@@ -104,7 +110,8 @@ public class ReactionTimer_Heather : MonoBehaviour
     { 
         timerStarted = true;
         timerStopped = true;
-        SetScreen(new Color(0, 0, 0, 255), "Sloooooow Doooooown.");
+        SetScreen(new Color(255, 255, 255, 255), "Patience is a virtue.");
+        background.sprite = earlyBackground;
         PlayAudioClip(earlySound);
         StartCoroutine(RestartTest(3f));
     }
@@ -112,7 +119,8 @@ public class ReactionTimer_Heather : MonoBehaviour
     void LateStop()
     {
         timerStopped = true;
-        SetScreen(new Color(0, 0, 0, 255), "That's pretty bad dude. \n Click to try again");
+        SetScreen(new Color(255, 255, 255, 255), "Wow, that's pretty bad. \n Click to restart");
+        background.sprite = lateBackground;
         PlayAudioClip(lateSound);
     }
 
@@ -120,6 +128,7 @@ public class ReactionTimer_Heather : MonoBehaviour
     {
         timerStopped = true;
         SetScreen(new Color(0, 0, 0, 255), "Reaction time: " + reactionTime + " ms. \n Click to restart");
+        background.sprite = defaultBackground;
         PlayAudioClip(stopSound);
     }
 
