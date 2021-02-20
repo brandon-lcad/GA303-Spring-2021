@@ -3,7 +3,17 @@ guid: 84ae1808041e6b84889b7da943f111f5
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - background: {instanceID: 0}
+  - startingduck: {fileID: 21300000, guid: 7e37adebd8c7de642b54d33b484c54fc, type: 3}
+  - tooearlyduck: {fileID: 21300000, guid: 10e4ab66a6cb2394da6eb0a44da76f9d, type: 3}
+  - waitingduck: {fileID: 21300000, guid: 432e431936660cc46b9b6010dd638411, type: 3}
+  - clickduck: {fileID: 21300000, guid: 9926e3f18c26aa34ea1233a27e39394d, type: 3}
+  - screenText: {instanceID: 0}
+  - audioSource: {instanceID: 0}
+  - waitingquack: {fileID: 8300000, guid: 457310545c593124a96f884084c09c03, type: 3}
+  - clickquack: {fileID: 8300000, guid: 391fa96995b637b41ae0f78e5ead8552, type: 3}
+  - tooearlyquack: {fileID: 8300000, guid: f078b20cf55119049996c173c539ec1b, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

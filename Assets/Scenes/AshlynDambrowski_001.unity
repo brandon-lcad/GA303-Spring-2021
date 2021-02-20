@@ -147,11 +147,11 @@ Light:
   m_GameObject: {fileID: 215115513}
   m_Enabled: 1
   serializedVersion: 10
-  m_Type: 1
+  m_Type: 2
   m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
-  m_Range: 10
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 16.26
+  m_Range: 2000
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -206,13 +206,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 215115513}
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalRotation: {x: 0.051936444, y: 0.059044354, z: 0.19025226, w: 0.9785809}
+  m_LocalPosition: {x: 292, y: 337, z: -316}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 4.5420003, y: 7.8020005, z: 22.314001}
 --- !u!1 &384212984
 GameObject:
   m_ObjectHideFlags: 0
@@ -320,6 +320,7 @@ GameObject:
   - component: {fileID: 466122571}
   - component: {fileID: 466122573}
   - component: {fileID: 466122572}
+  - component: {fileID: 466122574}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -336,7 +337,7 @@ RectTransform:
   m_GameObject: {fileID: 466122570}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 8.7727, y: 8.7727, z: 8.7727}
+  m_LocalScale: {x: 15.454866, y: 8.7727, z: 8.7727}
   m_Children:
   - {fileID: 800233264}
   m_Father: {fileID: 1486712458}
@@ -384,6 +385,30 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 466122570}
   m_CullTransparentMesh: 0
+--- !u!114 &466122574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 466122570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84ae1808041e6b84889b7da943f111f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minSeconds: 1
+  maxSeconds: 10
+  background: {fileID: 0}
+  startingduck: {fileID: 21300000, guid: 7e37adebd8c7de642b54d33b484c54fc, type: 3}
+  tooearlyduck: {fileID: 21300000, guid: 10e4ab66a6cb2394da6eb0a44da76f9d, type: 3}
+  waitingduck: {fileID: 21300000, guid: 432e431936660cc46b9b6010dd638411, type: 3}
+  clickduck: {fileID: 21300000, guid: 9926e3f18c26aa34ea1233a27e39394d, type: 3}
+  screenText: {fileID: 0}
+  audioSource: {fileID: 0}
+  waitingquack: {fileID: 0}
+  clickquack: {fileID: 0}
+  tooearlyquack: {fileID: 0}
 --- !u!1 &800233263
 GameObject:
   m_ObjectHideFlags: 0
@@ -395,6 +420,7 @@ GameObject:
   - component: {fileID: 800233264}
   - component: {fileID: 800233266}
   - component: {fileID: 800233265}
+  - component: {fileID: 800233267}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -411,14 +437,14 @@ RectTransform:
   m_GameObject: {fileID: 800233263}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.07844076, y: 0.13500074, z: 0.35354146}
   m_Children: []
   m_Father: {fileID: 466122571}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -14, y: -5.8}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &800233265
@@ -474,7 +500,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -503,7 +529,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -357.682, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -517,6 +543,30 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 800233263}
   m_CullTransparentMesh: 0
+--- !u!114 &800233267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 800233263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84ae1808041e6b84889b7da943f111f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minSeconds: 1
+  maxSeconds: 10
+  background: {fileID: 0}
+  startingduck: {fileID: 0}
+  tooearlyduck: {fileID: 0}
+  waitingduck: {fileID: 0}
+  clickduck: {fileID: 0}
+  screenText: {fileID: 0}
+  audioSource: {fileID: 0}
+  waitingquack: {fileID: 0}
+  clickquack: {fileID: 0}
+  tooearlyquack: {fileID: 0}
 --- !u!1 &1352325060
 GameObject:
   m_ObjectHideFlags: 0
@@ -595,6 +645,7 @@ GameObject:
   - component: {fileID: 1486712457}
   - component: {fileID: 1486712456}
   - component: {fileID: 1486712455}
+  - component: {fileID: 1486712459}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -682,3 +733,27 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1486712459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1486712454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84ae1808041e6b84889b7da943f111f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minSeconds: 1
+  maxSeconds: 10
+  background: {fileID: 466122572}
+  startingduck: {fileID: 21300000, guid: 7e37adebd8c7de642b54d33b484c54fc, type: 3}
+  tooearlyduck: {fileID: 21300000, guid: 10e4ab66a6cb2394da6eb0a44da76f9d, type: 3}
+  waitingduck: {fileID: 21300000, guid: 432e431936660cc46b9b6010dd638411, type: 3}
+  clickduck: {fileID: 21300000, guid: 9926e3f18c26aa34ea1233a27e39394d, type: 3}
+  screenText: {fileID: 800233265}
+  audioSource: {fileID: 0}
+  waitingquack: {fileID: 0}
+  clickquack: {fileID: 0}
+  tooearlyquack: {fileID: 8300000, guid: f078b20cf55119049996c173c539ec1b, type: 3}
