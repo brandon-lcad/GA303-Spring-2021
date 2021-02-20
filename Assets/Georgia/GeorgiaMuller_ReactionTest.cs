@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI; 
-using TMPro; 
+using TMPro;
 
-public class ReactionTest : MonoBehaviour {
+public class GeorgiaMuller_ReactionTest : MonoBehaviour
+{
     private float elapsedTime; // This is the total number of seconds since the timer was reset
     private float reactionTime; // This is the milliseconds between the start and stop time
 
@@ -18,76 +19,113 @@ public class ReactionTest : MonoBehaviour {
     public Image background; // A reference to the background image on the Canvas
     public TextMeshProUGUI screenText; // A reference to the text on the Canvas
 
-    public AudioSource audioSource; 
+    public AudioSource audioSource;
     public AudioClip startSound; // A short sound effect that plays when the timer starts
     public AudioClip stopSound; // A short sound effect that plays when the timer stops
 
     // Start is called before the first frame update
-    void Start() {
+    void Start()
+    {
         audioSource = GetComponent<AudioSource>();
         ResetTimer();
     }
 
     // Update is called once per frame
-    void Update() {
+    void Update()
+    {
         elapsedTime += Time.deltaTime;
 
         // The timer has not yet started 
-        if (!timerStarted) {
+        if (!timerStarted)
+        {
             Debug.Log("Wait...");
-            if (elapsedTime >= randomSeconds) {
+            if (elapsedTime >= randomSeconds)
+            {
                 StartTimer();
             }
 
-        // The timer is currently running
-        } else if (timerStarted && !timerStopped) {
+            // The timer is currently running
+        }
+        else if (timerStarted && !timerStopped)
+        {
             Debug.Log("Start...");
             reactionTime += Time.deltaTime;
 
-            if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Mouse0)) {
+            if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Mouse0))
+            {
                 Debug.Log("Stop...");
                 StopTimer();
             }
         }
 
         // The User has stopped the timer
-        else if (timerStarted && timerStopped) {
+        else if (timerStarted && timerStopped)
+        {
             Debug.Log("Reset...");
-            if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Mouse0)) {
+            if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Mouse0))
+            {
                 ResetTimer();
             }
         }
+
+        //The User has stopped the timer too early 
+        else if (!timerStarted && timerStopped)
+        {
+            StopCoroutine("Wait");
+            reactionTime = 0f;
+            timerStarted = false;
+            timerStopped = true;
+            SetScreen(new Color(75, 23, 115), "Too soon marine! Hold your fire! Click to reload!");
+
+            Debug.Log("Reset...");
+            if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                StopTimer2();
+            }
+
+        }
     }
 
-    void ResetTimer() { // Reset the timer to it's default values
-        elapsedTime = 0f; 
+    void ResetTimer()
+    { // Reset the timer to it's default values
+        elapsedTime = 0f;
         reactionTime = 0f;
         timerStarted = false;
-        timerStopped = false; 
+        timerStopped = false;
         randomSeconds = Random.Range(minSeconds, maxSeconds);
-        SetScreen(new Color(150, 0, 0, 255), "Wait for green."); 
+        SetScreen(new Color(0, 0, 150, 255), "Hold your fire soldier! Wait 'til you see martian green!");
     }
 
-    void StartTimer() {
+    void StartTimer()
+    {
         timerStarted = true;
-        SetScreen(new Color(0, 150, 0, 255), "Tap!"); 
+        SetScreen(new Color(0, 150, 0, 255), "FIRE!!!");
         PlayAudioClip(startSound);
     }
 
-    void StopTimer() {
+    void StopTimer()
+    {
         timerStopped = true;
-        SetScreen(new Color(0, 0, 0, 255), "Reaction time: " + reactionTime + " ms. \n Click to restart.");
+        SetScreen(new Color(0, 0, 150, 255), "Boy-howdy, " + reactionTime + " miliseconds! Excellent work soldier! Click to reload! There are more coming!");
         PlayAudioClip(stopSound);
     }
 
-    void SetScreen(Color color, string text) {
+    void SetScreen(Color color, string text)
+    {
         background.color = color;
-        screenText.text = text; 
+        screenText.text = text;
     }
 
-    void PlayAudioClip(AudioClip clip) {
+    void PlayAudioClip(AudioClip clip)
+    {
         audioSource.clip = clip;
         audioSource.Play();
     }
 
+    void StopTimer2()
+    {
+        timerStopped = true;
+        SetScreen(new Color(0, 0, 0, 255), "I said wait! Click to reload!");
+        PlayAudioClip(startSound);
+    }
 }
