@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI; 
 using TMPro; 
 
-public class ReactionTest : MonoBehaviour {
+public class ReactionTest: MonoBehaviour {
     private float elapsedTime; // This is the total number of seconds since the timer was reset
     private float reactionTime; // This is the milliseconds between the start and stop time
 
