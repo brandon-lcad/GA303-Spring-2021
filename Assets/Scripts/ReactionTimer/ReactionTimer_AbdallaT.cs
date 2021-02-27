@@ -54,7 +54,7 @@ public class ReactionTimer_AbdallaT : MonoBehaviour
 
             if ((elapsedTime < randomSeconds) && (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Mouse0)))       
             {
-                      SetScreen(new Color(0, 0, 0, 0), "Too Soon!");
+                      SetScreen(TooSoon, "Too Soon!");
                       //background.sprite = TooSoon;
 
                         //PlayAudioClip(...);
@@ -93,27 +93,26 @@ public class ReactionTimer_AbdallaT : MonoBehaviour
         timerStarted = false;
         timerStopped = false;
         randomSeconds = Random.Range(minSeconds, maxSeconds);
-        SetScreen(new Color(150, 0, 0, 255), "Wait for green.");
+        SetScreen(BombImage, "Wait for green.");
     }
 
     void StartTimer()
     {
         timerStarted = true;
         background.sprite = BombImage;
-        //SetScreen(new Color(0, 150, 0, 255), "Tap!");
+        SetScreen(NowDefuse, "Tap!");
         PlayAudioClip(startSound);
     }
 
-    void StopTimer()
-    {
+    void StopTimer() {
         timerStopped = true;
-        SetScreen(new Color(0, 0, 0, 255), "Reaction time: " + reactionTime + " ms. \n Click to restart.");
+        SetScreen(DefusedBomb, "Reaction time: " + reactionTime + " ms. \n Click to restart.");
         PlayAudioClip(stopSound);
     }
 
-    void SetScreen(Color color, string text)
+    void SetScreen(Sprite sprite, string text)
     {
-        background.color = color;
+        background.sprite = sprite;
         screenText.text = text;
     }
 
