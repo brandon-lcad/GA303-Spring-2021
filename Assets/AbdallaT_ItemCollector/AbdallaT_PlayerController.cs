@@ -30,8 +30,8 @@ public class AbdallaT_PlayerController : MonoBehaviour {
     void OnTriggerEnter(Collider other) {
         if (other.gameObject.CompareTag("Collectible"))
         { // Does the other object have the "Collectible" tag?
-            //GameObject effect = Instantiate(particle, other.gameObject.transform);
-            //effect.transform.parent = null; 
+            GameObject effect = Instantiate(particle, other.gameObject.transform);
+            effect.transform.parent = null; 
             other.gameObject.SetActive(false); // Deactivate the other object (uncheck the active box)
             // How many are left? "??? remain"
             // If 0, display "you win". 
