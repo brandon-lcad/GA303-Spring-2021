@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Collectible
+  - Doorway
   layers:
   - Default
   - TransparentFX
