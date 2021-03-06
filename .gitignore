@@ -62,3 +62,7 @@ Assets/Scenes/Matt_001.meta
 Assets/Scenes/Matt_001.meta
 Assets/Scenes/Matt_001.meta
 Assets/Scenes/Matt_001.meta
+
+*.ide-shm
+
+*.ide-wal
