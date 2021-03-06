@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-public class Miksch_Playercollector : MonoBehaviour {
+public class Miksch_PlayerItemcollector : MonoBehaviour {
     public float speed = 10f; // A setting that determines the movement speed
     private Rigidbody rb; // A reference to the player's RigidBody component
     public GameObject particle; // The particle effect that plays when an object is collected

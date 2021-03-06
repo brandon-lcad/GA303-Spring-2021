@@ -561,6 +561,8 @@ MonoBehaviour:
   speed: 10
   particle: {fileID: 3778865630071195066, guid: 09b1e87174779794aa69916db7635f3d,
     type: 3}
+  scoretext: {fileID: 0}
+  thescore: 0
 --- !u!54 &790700431
 Rigidbody:
   m_ObjectHideFlags: 0
