@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: Izzy
   m_EditorClassIdentifier: 
   characterName: Izzy
+  isPlayer: 0
   characterSprites:
   - {fileID: -8087604928968726919, guid: e7214ed1268adf04596c666ac3d31e43, type: 3}
   - {fileID: -2579460361316883742, guid: e7214ed1268adf04596c666ac3d31e43, type: 3}
   - {fileID: 2061762844874745769, guid: e7214ed1268adf04596c666ac3d31e43, type: 3}
+  spriteToShow: 1

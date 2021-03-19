@@ -9,6 +9,12 @@ public class Character : ScriptableObject
 {
     // The name of the character on screen
     public string characterName;
-    // The sprites available for the distortion manager to select from (TURN INTO AN ARRAY!!)
+
+    // Is this character the player?
+    public bool isPlayer;
+
+    // The sprites available for the distortion manager to select from
     public Sprite[] characterSprites;
+
+    public int spriteToShow;
 }
