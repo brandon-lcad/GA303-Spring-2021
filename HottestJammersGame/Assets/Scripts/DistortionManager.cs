@@ -2,93 +2,186 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class DistortionManager : MonoBehaviour
 {
-    public Canvas distortionUi;
 
-    public Image vignette;
-    public Image horns;
-    public Image tail;
+    private Dictionary<string,Sprite> distortionDictionary = new Dictionary<string,Sprite>();
+    private Dictionary<string,ParticleSystem> particleDictionary = new Dictionary<string,ParticleSystem>();
+    private Dictionary<string,Character> characterDictionary = new Dictionary<string,Character>();
 
-    private DialogueManager DL;
+    public Sprite outerVignette;
+    public Sprite innerVignette;
+    public Sprite boilingpot;
+    public ParticleSystem slowBubbles;
+    public ParticleSystem fastBubbles;
 
-    // Start is called before the first frame update
+    public Character alexis;
+    public Character creepyDude;
+
+    private int distortionLevel;
+
     void Start()
     {
-        GameObject.Find("Dialogue Manager").GetComponent<DialogueManager>();
-        DL = GameObject.Find("Dialogue Manager").GetComponent<DialogueManager>();
+      distortionDictionary.Add("OuterVignette", outerVignette);
+      distortionDictionary.Add("InnerVignette", innerVignette);
+      distortionDictionary.Add("BoilingPot", boilingpot);
+      particleDictionary.Add("SlowBubbles", slowBubbles);
+      particleDictionary.Add("FastBubbles", fastBubbles);
+      characterDictionary.Add("Alexis", alexis);
+      characterDictionary.Add("CreepyDude", creepyDude);
+
+      distortionLevel = 0;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void UpdateDistortionLevel(int distortionAmount)
     {
-        int distortionLevel = DL.distortionLevel;
-        // Activates a set of effects according to distortion level
-        if (distortionLevel == 0)
+      distortionLevel += distortionAmount;
+      if (distortionLevel < 0)
+      {
+        distortionLevel = 0;
+      }
+      else if (distortionLevel > 5)
+      {
+        distortionLevel = 5;
+      }
+    }
+
+    public Sprite[] GetVignetteEffects()
+    {
+      if (distortionLevel <= 1)
+      {
+        return VignetteNone();
+      }
+      else if (distortionLevel >= 4)
+      {
+        return VignetteFull();
+      }
+      else
+      {
+        return VignetteHalf();
+      }
+    }
+
+    public ParticleSystem[] GetParticle()
+    {
+      if (distortionLevel <= 1)
+      {
+        return ParticleNone();
+      }
+      else if (distortionLevel >= 4)
+      {
+        return ParticleFull();
+      }
+      else
+      {
+        return ParticleHalf();
+      }
+    }
+
+    public Sprite GetPortrait(string characterName)
+    {
+      Character activeCharacter = null;
+      if (characterDictionary.TryGetValue(characterName, out activeCharacter))
+      {
+        if (distortionLevel <= 1)
         {
-            distortion0();
+          return activeCharacter.characterSprites[0];
         }
-
-        else if (distortionLevel <= 20)
+        else if (distortionLevel >= 4)
         {
-            distortion20();
+          return activeCharacter.characterSprites[2];
         }
-
-        else if (distortionLevel <= 40)
+        else
         {
-            distortion40();
+          return activeCharacter.characterSprites[1];
         }
-
-        else if (distortionLevel <= 60)
-        {
-            distortion60();
-        }
-
-        else if (distortionLevel <= 80)
-        {
-            distortion80();
-        }
-
-        else if (distortionLevel == 100)
-        {
-            distortion100();
-        }
+      }
+      Debug.LogError("No portrait to show, character name does not exist in CharacterDictionary");
+      return null;
     }
 
-    // This function toggles effects when distortion level == 0
-    void distortion0()
+    public Sprite[] VignetteNone()
     {
-
+      Sprite[] distortionVignettes = new Sprite[0];
+      return distortionVignettes;
     }
 
-    // This function toggles effects when distortion level <= 20
-    void distortion20()
+    public Sprite[] VignetteHalf()
     {
-
+      Sprite[] distortionVignettes = new Sprite[1];
+      Sprite vignette_to_add = null;
+      if (distortionDictionary.TryGetValue("OuterVignette", out vignette_to_add))
+      {
+        distortionVignettes[0] = vignette_to_add;
+        return distortionVignettes;
+      }
+      return null;
     }
 
-    // This function toggles effects when distortion level <= 40
-    void distortion40()
+    public Sprite[] VignetteFull()
     {
-
+      Sprite[] distortionVignettes = new Sprite[3];
+      Sprite vignette_to_add = null;
+      if (distortionDictionary.TryGetValue("OuterVignette", out vignette_to_add))
+      {
+        distortionVignettes[0] = vignette_to_add;
+      }
+      if (distortionDictionary.TryGetValue("InnerVignette", out vignette_to_add))
+      {
+        distortionVignettes[1] = vignette_to_add;
+      }
+      if (distortionDictionary.TryGetValue("BoilingPot", out vignette_to_add))
+      {
+        distortionVignettes[2] = vignette_to_add;
+        return distortionVignettes;
+      }
+      return null;
     }
 
-    //This function toggles effects when distortion level <= 60
-    void distortion60()
+    public ParticleSystem[] ParticleNone()
     {
-
+      ParticleSystem[] distortionParticles = new ParticleSystem[0];
+      return distortionParticles;
     }
 
-    //This function toggles effects when distortion level <= 80
-    void distortion80()
+    public ParticleSystem[] ParticleHalf()
     {
-
+      ParticleSystem[] distortionParticles = new ParticleSystem[1];
+      ParticleSystem particles_to_add = null;
+      if (particleDictionary.TryGetValue("SlowBubbles", out particles_to_add))
+      {
+        distortionParticles[0] = particles_to_add;
+        return distortionParticles;
+      }
+      return null;
     }
 
-    //This function toggles effects when sidtortion level == 100
-    void distortion100()
+    public ParticleSystem[] ParticleFull()
     {
-
+      ParticleSystem[] distortionParticles = new ParticleSystem[2];
+      ParticleSystem particles_to_add = null;
+      if (particleDictionary.TryGetValue("SlowBubbles", out particles_to_add))
+      {
+        distortionParticles[0] = particles_to_add;
+      }
+      if (particleDictionary.TryGetValue("FastBubbles", out particles_to_add))
+      {
+        distortionParticles[1] = particles_to_add;
+        return distortionParticles;
+      }
+      return null;
     }
+
+    IEnumerator FadeTo(float aValue, float aTime)
+{
+    float alpha = transform.GetComponent<SpriteRenderer>().material.color.a;
+    for (float t = 0.0f; t < 1.0f; t += Time.deltaTime / aTime)
+    {
+        Color newColor = new Color(1, 1, 1, $$anonymous$$athf.Lerp(alpha, aValue, t));
+        transform.GetComponent<SpriteRenderer>().material.color = newColor;
+        yield return null;
+    }
+}
 }
