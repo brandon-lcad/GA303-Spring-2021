@@ -50,7 +50,7 @@ public class DistortionManager : MonoBehaviour
 
     public Sprite[] GetVignetteEffects()
     {
-      if (distortionLevel <= 1)
+      if (distortionLevel <= 2)
       {
         return VignetteNone();
       }
@@ -66,7 +66,7 @@ public class DistortionManager : MonoBehaviour
 
     public ParticleSystem[] GetParticle()
     {
-      if (distortionLevel <= 1)
+      if (distortionLevel <= 2)
       {
         return ParticleNone();
       }
@@ -85,7 +85,7 @@ public class DistortionManager : MonoBehaviour
       Character activeCharacter = null;
       if (characterDictionary.TryGetValue(characterName, out activeCharacter))
       {
-        if (distortionLevel <= 1)
+        if (distortionLevel <= 2)
         {
           return activeCharacter.characterSprites[0];
         }
