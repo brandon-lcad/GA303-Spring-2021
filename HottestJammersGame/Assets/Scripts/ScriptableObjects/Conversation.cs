@@ -23,4 +23,7 @@ public class Conversation : ScriptableObject
 
     // This is the decision the conversation will lead to
     public Decision decision;
+
+    // This is the next conversation this conversation will lead to
+    public Conversation nextConvo;
 }

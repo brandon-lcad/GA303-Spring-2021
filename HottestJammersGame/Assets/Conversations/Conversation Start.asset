@@ -18,3 +18,4 @@ MonoBehaviour:
   - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
     text: test 2
   decision: {fileID: 11400000, guid: db8cd6eddec3015459b485d70c7d8e8a, type: 2}
+  nextConvo: {fileID: 0}
