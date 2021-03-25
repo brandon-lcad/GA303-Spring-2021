@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cccf0ab1966bcbb498f7494d06242198, type: 3}
   m_Name: Test Decision
   m_EditorClassIdentifier: 
-  text: 
+  text: test
   choices:
   - text: Bad Choice
     nextConversation: {fileID: 11400000, guid: 4836c23169c2fd1419f815d740952255, type: 2}

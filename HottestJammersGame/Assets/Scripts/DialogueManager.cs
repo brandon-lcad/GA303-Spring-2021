@@ -13,12 +13,12 @@ public class DialogueManager : MonoBehaviour
     public Canvas ui;
 
     public Image portrait;
-    // public TMP_Text characterName;
+    public TMP_Text characterName;
 
-    public Image characterBubble;
+    public GameObject characterBubble;
     public TMP_Text characterDialogue;
 
-    public Image playerBubble;
+    public GameObject playerBubble;
     public TMP_Text playerDialogue;
 
     public Character chara;
@@ -30,8 +30,6 @@ public class DialogueManager : MonoBehaviour
     private int activeLineIndex = 0;
 
     private bool conversationStarted = false;
-
-    public 
 
     // Start is called before the first frame update
     void Awake()
@@ -61,7 +59,6 @@ public class DialogueManager : MonoBehaviour
 
         // If the conversation has not started, start the conversation
         if (!conversationStarted) Initialize();
-
 
         // If there are more lines to read, read next line
         if (activeLineIndex < convo.lines.Length)
@@ -106,6 +103,7 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
+    // Updates text and bubbles to correspond to current line in convo and advances activeLineIndex to next line
     void DisplayLine()
     {
         Line line = convo.lines[activeLineIndex];
@@ -113,36 +111,49 @@ public class DialogueManager : MonoBehaviour
 
         if (character.isPlayer)
         {
-            characterBubble.enabled = false;
-            characterDialogue.enabled = false;
-            playerBubble.enabled = true;
-            playerDialogue.enabled = true;
+            playerBubble.SetActive(true);
+            characterBubble.SetActive(false);
             playerDialogue.text = line.text.ToString();
         }
         else if (!character.isPlayer)
         {
-            characterBubble.enabled = true;
-            characterDialogue.enabled = true;
-            playerBubble.enabled = false;
-            playerDialogue.enabled = false;
+            playerBubble.SetActive(false);
+            characterBubble.SetActive(true);
             characterDialogue.text = line.text.ToString();
             portrait.sprite = line.character.characterSprites[distortionLevel];
+        }
+        else
+        {
+            playerBubble.SetActive(false);
+            characterBubble.SetActive(false);
         }
 
         // characterName.text = line.character.characterName;
     }
 
+    // Listens for ConversationChangeEvent and changes Conversation accordingly
     public void ChangeConversation(Conversation nextConvo)
     {
         conversationStarted = false;
         convo = nextConvo;
-        AdvanceConversation();
+        AdvanceLine();
     }
 
+    // 
     void EndConversation()
     {
         convo = null;
         conversationStarted = false;
     }
+
+    //private void SetDialogue(
+    //    SpeakerUI activeSpeakerUI,
+    //    SpeakerUI inactiveSpeakerUI,
+    //    string text)
+    //{
+    //    activeSpeakerUI.Dialogue = text;
+    //    activeSpeakerUI.Show();
+    //    inactiveSpeakerUI.Hide();
+    //}
 
 }
