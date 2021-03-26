@@ -83,6 +83,7 @@ public class DistortionManager : MonoBehaviour
       currentPortrait = GetPortrait(currentActiveCharacter.characterName);
       activeVignettes = GetVignetteEffects();
       activeParticleSystems = GetParticle();
+      Debug.Log("updateCurrents successful");
 
       // Send current actives to UIManager/Dialogue Manager
       // Portrait
@@ -125,6 +126,7 @@ public class DistortionManager : MonoBehaviour
       }
       else
       {
+        Debug.Log("return ParticleHalf successful");
         return ParticleHalf();
       }
     }
@@ -203,6 +205,7 @@ public class DistortionManager : MonoBehaviour
       if (particleDictionary.TryGetValue("SlowBubbles", out particles_to_add))
       {
         distortionParticles[0] = particles_to_add;
+        Debug.Log("ParticleHalf activated");
         return distortionParticles;
       }
       return null;
