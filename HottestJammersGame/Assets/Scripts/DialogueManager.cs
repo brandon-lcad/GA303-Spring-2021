@@ -33,8 +33,12 @@ public class DialogueManager : MonoBehaviour
     public int distortionLevel;
     private int activeLineIndex = 0;
 
+    private ParticleSystem[] activeParticles;
+    private Image[] activeVignettes;
+
     private bool conversationStarted = false;
     private bool makingDecision = false;
+    private GameObject distortionManager;
 
     // Start is called before the first frame update
     void Awake()
@@ -44,6 +48,11 @@ public class DialogueManager : MonoBehaviour
         characterBubble.SetActive(false);
         characterDialogue.text = "";
         decUI.SetActive(false);
+
+        distortionManager = GameObject.Find("DistortionManager");
+        // Initialize Active Systems to empty
+        activeParticles = new ParticleSystem[0];
+        activeVignettes = new Image[0];
 
         ui.enabled = false;
     }
@@ -121,11 +130,46 @@ public class DialogueManager : MonoBehaviour
       makingDecision = false;
     }
 
+    public void updatePortrait(Sprite nextPortrait){
+      portrait.sprite = nextPortrait;
+    }
+
+    public void updateActiveParticleSystems(ParticleSystem[] newParticleSystems){
+        // Disable all existing Particle Systems
+        for(int i = 0; i < activeParticles.Length; i++){
+          activeParticles[i].Stop();
+        }
+
+        // Set active to new active list
+        activeParticles = newParticleSystems;
+
+        // Enable all new particle systems
+        for(int x = 0; x < activeParticles.Length; x++){
+          activeParticles[x].Play();
+        }
+    }
+
+    public void updateActiveVignettes(Image[] newVignettes){
+        // Disable current Images
+        for(int j = 0; j < activeVignettes.Length; j++){
+          activeVignettes[j].enabled = false;
+        }
+
+        // Set active to new list
+        activeVignettes = newVignettes;
+
+        // Enable New vignettes
+        for(int z = 0; z < activeVignettes.Length; z++){
+          activeVignettes[z].enabled = true;
+        }
+    }
+
     // Updates text and bubbles to correspond to current line in convo and advances activeLineIndex to next line
     void DisplayLine()
     {
         Line line = convo.lines[activeLineIndex];
         Character character = line.character;
+        distortionManager.SendMessage("UpdateCurrentCharacter", character);
         portrait.enabled = true;
 
         if (character.isPlayer)
@@ -139,7 +183,7 @@ public class DialogueManager : MonoBehaviour
             playerBubble.SetActive(false);
             characterBubble.SetActive(true);
             characterDialogue.text = line.text.ToString();
-            portrait.sprite = line.character.characterSprites[distortionLevel];
+            //portrait.sprite = line.character.characterSprites[distortionLevel];
         }
         else
         {

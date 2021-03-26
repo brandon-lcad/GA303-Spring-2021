@@ -15,4 +15,5 @@ MonoBehaviour:
   characterName: Player
   isPlayer: 1
   characterSprites:
-  - {fileID: 0}
+  - {fileID: 21300000, guid: 86112d1e11212d24282d60d3e1692f54, type: 3}
+  spriteToShow: 0

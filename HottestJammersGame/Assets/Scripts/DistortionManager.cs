@@ -7,20 +7,28 @@ using TMPro;
 public class DistortionManager : MonoBehaviour
 {
 
-    private Dictionary<string,Sprite> distortionDictionary = new Dictionary<string,Sprite>();
+    private Dictionary<string,Image> distortionDictionary = new Dictionary<string,Image>();
     private Dictionary<string,ParticleSystem> particleDictionary = new Dictionary<string,ParticleSystem>();
     private Dictionary<string,Character> characterDictionary = new Dictionary<string,Character>();
 
-    public Sprite outerVignette;
-    public Sprite innerVignette;
-    public Sprite boilingpot;
+    public Image outerVignette;
+    public Image innerVignette;
+    public Image boilingpot;
     public ParticleSystem slowBubbles;
     public ParticleSystem fastBubbles;
 
     public Character alexis;
     public Character creepyDude;
+    public Character izzy;
+    public Character player;
 
-    private int distortionLevel;
+    public Character currentActiveCharacter;
+    private Sprite currentPortrait;
+    private Image[] activeVignettes;
+    private ParticleSystem[] activeParticleSystems;
+    private GameObject dialogueManager;
+
+    public int distortionLevel;
 
     void Start()
     {
@@ -31,6 +39,19 @@ public class DistortionManager : MonoBehaviour
       particleDictionary.Add("FastBubbles", fastBubbles);
       characterDictionary.Add("Alexis", alexis);
       characterDictionary.Add("CreepyDude", creepyDude);
+      characterDictionary.Add("Izzy", izzy);
+      characterDictionary.Add("Player", player);
+
+      // Turn everything off
+      // We're the only ones with references
+      // Could be turned off via Unity UI to start
+      outerVignette.enabled = false;
+      innerVignette.enabled = false;
+      boilingpot.enabled = false;
+      slowBubbles.Stop();
+      fastBubbles.Stop();
+
+      dialogueManager = GameObject.Find("Dialogue Manager");
 
       distortionLevel = 0;
     }
@@ -46,9 +67,37 @@ public class DistortionManager : MonoBehaviour
       {
         distortionLevel = 5;
       }
+      updateCurrents();
     }
 
-    public Sprite[] GetVignetteEffects()
+    public void UpdateCurrentCharacter(Character newCharacter)
+    {
+      if (newCharacter != player){
+        currentActiveCharacter = newCharacter;
+        updateCurrents();
+      }
+    }
+
+    public void updateCurrents()
+    {
+      currentPortrait = GetPortrait(currentActiveCharacter.characterName);
+      activeVignettes = GetVignetteEffects();
+      activeParticleSystems = GetParticle();
+
+      // Send current actives to UIManager/Dialogue Manager
+      // Portrait
+      dialogueManager.SendMessage("updatePortrait", currentPortrait);
+
+
+      // Vignettes
+      dialogueManager.SendMessage("updateActiveVignettes", activeVignettes);
+
+      //ParticleSystems
+      dialogueManager.SendMessage("updateActiveParticleSystems", activeParticleSystems);
+
+    }
+
+    public Image[] GetVignetteEffects()
     {
       if (distortionLevel <= 2)
       {
@@ -85,6 +134,7 @@ public class DistortionManager : MonoBehaviour
       Character activeCharacter = null;
       if (characterDictionary.TryGetValue(characterName, out activeCharacter))
       {
+        Debug.Log("ACTIVE SPRITES: " + activeCharacter.characterSprites.Length.ToString());
         if (distortionLevel <= 2)
         {
           return activeCharacter.characterSprites[0];
@@ -102,16 +152,16 @@ public class DistortionManager : MonoBehaviour
       return null;
     }
 
-    public Sprite[] VignetteNone()
+    public Image[] VignetteNone()
     {
-      Sprite[] distortionVignettes = new Sprite[0];
+      Image[] distortionVignettes = new Image[0];
       return distortionVignettes;
     }
 
-    public Sprite[] VignetteHalf()
+    public Image[] VignetteHalf()
     {
-      Sprite[] distortionVignettes = new Sprite[1];
-      Sprite vignette_to_add = null;
+      Image[] distortionVignettes = new Image[1];
+      Image vignette_to_add = null;
       if (distortionDictionary.TryGetValue("OuterVignette", out vignette_to_add))
       {
         distortionVignettes[0] = vignette_to_add;
@@ -120,10 +170,10 @@ public class DistortionManager : MonoBehaviour
       return null;
     }
 
-    public Sprite[] VignetteFull()
+    public Image[] VignetteFull()
     {
-      Sprite[] distortionVignettes = new Sprite[3];
-      Sprite vignette_to_add = null;
+      Image[] distortionVignettes = new Image[3];
+      Image vignette_to_add = null;
       if (distortionDictionary.TryGetValue("OuterVignette", out vignette_to_add))
       {
         distortionVignettes[0] = vignette_to_add;

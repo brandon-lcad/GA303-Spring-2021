@@ -33,6 +33,7 @@ public class DecisionController : MonoBehaviour
         // Get DialogueManager in order to send message asking to change the active
         decisionController.choice = choice;
         button.onClick.AddListener(() => SetChoice(choice.nextConversation));
+        button.onClick.AddListener(() => SendDistortionLevel(choice.distortionEffect));
         return decisionController;
     }
 
@@ -57,4 +58,11 @@ public class DecisionController : MonoBehaviour
     {
         conversationChangeEvent.Invoke(choice.nextConversation);
     }
+
+    private static void SendDistortionLevel(int distortionChange)
+    {
+      GameObject distortionManager = GameObject.Find("DistortionManager");
+      distortionManager.SendMessage("UpdateDistortionLevel", distortionChange);
+    }
+
 }
