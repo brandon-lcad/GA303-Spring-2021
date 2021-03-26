@@ -19,5 +19,8 @@ EditorBuildSettings:
     guid: 09be3c84cb5200c489a2cd4e2088000c
   - enabled: 1
     path: Assets/Scenes/Game Scenes/GroceryStoreScene.unity
-    guid: 28cd2541761da08408af06f15368e97f
+    guid: be4e030621ca27945aae5ff92023c273
+  - enabled: 1
+    path: Assets/Scenes/Game Scenes/BeachParty.unity
+    guid: 983a94e6f5b0aca4a86b83105ba2a6b6
   m_configObjects: {}

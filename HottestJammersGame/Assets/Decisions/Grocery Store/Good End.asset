@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cccf0ab1966bcbb498f7494d06242198, type: 3}
   m_Name: Good End
   m_EditorClassIdentifier: 
-  text: Good End
+  text: Party Time!
   choices:
-  - text: Good End
+  - text: Party Time!
     nextConversation: {fileID: 0}
     distortionEffect: 0
-    nextScene: StartMenu
+    nextScene: BeachParty

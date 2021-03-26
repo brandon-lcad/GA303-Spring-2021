@@ -21,6 +21,7 @@ public class DistortionManager : MonoBehaviour
     public Character creepyDude;
     public Character izzy;
     public Character player;
+    public Character playerThoughts;
 
     public Character currentActiveCharacter;
     private Sprite currentPortrait;
@@ -41,11 +42,12 @@ public class DistortionManager : MonoBehaviour
       characterDictionary.Add("CreepyDude", creepyDude);
       characterDictionary.Add("Izzy", izzy);
       characterDictionary.Add("Player", player);
+      characterDictionary.Add("PlayerThoughts", playerThoughts);
 
-      // Turn everything off
-      // We're the only ones with references
-      // Could be turned off via Unity UI to start
-      outerVignette.enabled = false;
+        // Turn everything off
+        // We're the only ones with references
+        // Could be turned off via Unity UI to start
+        outerVignette.enabled = false;
       innerVignette.enabled = false;
       boilingpot.enabled = false;
       slowBubbles.Stop();
