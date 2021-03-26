@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07c2599e05f034a4bb6d22538b7ff345, type: 3}
+  m_Name: Good End
+  m_EditorClassIdentifier: 
+  lines:
+  - character: {fileID: 11400000, guid: c87fd56e6eb1c6e4d8540e462bf60d69, type: 2}
+    text: Hm? Oh hey!
+  - character: {fileID: 11400000, guid: c87fd56e6eb1c6e4d8540e462bf60d69, type: 2}
+    text: What are the odds of us running into each other... again..?
+  - character: {fileID: 11400000, guid: a9a5a0ef951fe5b41b10e855cc7ea5f5, type: 2}
+    text: ...
+  - character: {fileID: 11400000, guid: c87fd56e6eb1c6e4d8540e462bf60d69, type: 2}
+    text: Uh, can we help you?
+  - character: {fileID: 11400000, guid: c87fd56e6eb1c6e4d8540e462bf60d69, type: 2}
+    text: You can help by butting out, honey. We're doing just fine.
+  - character: {fileID: 11400000, guid: c87fd56e6eb1c6e4d8540e462bf60d69, type: 2}
+    text: Oh is that right? Because from where I'm standing, it looks like you're
+      making my friend uncomfortable. Why don't you go drool over in Frozen Foods
+      and leave us alone?
+  - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
+    text: Bless you, Alexis!
+  - character: {fileID: 11400000, guid: a9a5a0ef951fe5b41b10e855cc7ea5f5, type: 2}
+    text: Psh, whatever. I'm sure I can find better tail than this.
+  - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
+    text: Thank you so much, Alexis! I was getting really nervous... I think I saw
+      butter in his cart!
+  - character: {fileID: 11400000, guid: c87fd56e6eb1c6e4d8540e462bf60d69, type: 2}
+    text: Yeah, I'm really glad that I popped in to get the stuff for s'mores! Who
+      knows what he would have done?
+  - character: {fileID: 11400000, guid: c87fd56e6eb1c6e4d8540e462bf60d69, type: 2}
+    text: Y'know, at this point we might as well just go to the party together. Did
+      you drive here?
+  - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
+    text: ... I'm a lobster.
+  - character: {fileID: 11400000, guid: c87fd56e6eb1c6e4d8540e462bf60d69, type: 2}
+    text: Oh, right, hahaha... I'll give you a ride then!
+  - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
+    text: That would be great!
+  - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
+    text: Thank you for not treating me like a piece of meat, Alexis. It's really
+      nice to not have to worry about everyone trying to take a bite out of me.
+  - character: {fileID: 11400000, guid: c87fd56e6eb1c6e4d8540e462bf60d69, type: 2}
+    text: Of course! C'mon, let's grab the stuff and get our beach party on!
+  decision: {fileID: 0}
+  nextConvo: {fileID: 0}

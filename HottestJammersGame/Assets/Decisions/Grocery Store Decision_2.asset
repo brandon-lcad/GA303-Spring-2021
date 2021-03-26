@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cccf0ab1966bcbb498f7494d06242198, type: 3}
+  m_Name: Grocery Store Decision_2
+  m_EditorClassIdentifier: 
+  text: 
+  choices:
+  - text: Going to a party
+    nextConversation: {fileID: 11400000, guid: 745b5b0535516324fa59df5bc9081134, type: 2}
+    distortionEffect: -1
+    nextScene: 
+  - text: Definitely not going to a party
+    nextConversation: {fileID: 11400000, guid: 025d491ef1c48344f8783e39dbf09a57, type: 2}
+    distortionEffect: 1
+    nextScene: 

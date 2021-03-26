@@ -16,6 +16,8 @@ public struct Choice {
 
     // The impact this choice has on the distortion level
     public int distortionEffect;
+
+    public string nextScene;
 }
 
 [CreateAssetMenu(fileName = "New Decision", menuName = "Scriptable Objects/Decision")]

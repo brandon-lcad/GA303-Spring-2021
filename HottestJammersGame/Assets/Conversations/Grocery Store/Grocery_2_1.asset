@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07c2599e05f034a4bb6d22538b7ff345, type: 3}
+  m_Name: Grocery_2_1
+  m_EditorClassIdentifier: 
+  lines:
+  - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
+    text: Uh, I'm doing nothing tonight.
+  - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
+    text: Oh~?
+  - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
+    text: I mean, I'm SUPER BUSY. Yep, got so much going on, really need to get going-
+  - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
+    text: Crud, he's blocking my way!
+  - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
+    text: Whoa whoa whoa! I can tell you've got a hard shell, but don't worry baby...
+      I can crack through that.
+  - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
+    text: Oh jeez, this guy might as well be preheating his stove as we speak!
+  - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
+    text: I'll tell you what... why don't you and I dip out of here and I can have
+      you over for dinner?
+  - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
+    text: He's not giving up... what do I do?!
+  - character: {fileID: 11400000, guid: c87fd56e6eb1c6e4d8540e462bf60d69, type: 2}
+    text: Okay... just gotta get some chocolate and marshmallows...
+  - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
+    text: It's Alexis!
+  decision: {fileID: 0}
+  nextConvo: {fileID: 0}

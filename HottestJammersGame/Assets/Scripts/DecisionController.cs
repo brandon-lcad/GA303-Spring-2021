@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 [System.Serializable]
 public class ConversationChangeEvent : UnityEvent<Conversation> {}
@@ -11,6 +12,8 @@ public class DecisionController : MonoBehaviour
 {
     public Choice choice;
     public ConversationChangeEvent conversationChangeEvent;
+
+    public SceneChange sceneChange;
 
     // Uses "Template Button" to make the choice buttons
     public static DecisionController AddChoiceButton(Button templateButton, Choice choice, int index, GameObject choicePanel)
@@ -34,6 +37,7 @@ public class DecisionController : MonoBehaviour
         decisionController.choice = choice;
         button.onClick.AddListener(() => SetChoice(choice.nextConversation));
         button.onClick.AddListener(() => SendDistortionLevel(choice.distortionEffect));
+        button.onClick.AddListener(() => LoadScene(choice.nextScene));
         return decisionController;
     }
 
@@ -63,6 +67,11 @@ public class DecisionController : MonoBehaviour
     {
       GameObject distortionManager = GameObject.Find("DistortionManager");
       distortionManager.SendMessage("UpdateDistortionLevel", distortionChange);
+    }
+
+    public static void LoadScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
     }
 
 }

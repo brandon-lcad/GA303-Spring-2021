@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07c2599e05f034a4bb6d22538b7ff345, type: 3}
+  m_Name: Start
+  m_EditorClassIdentifier: 
+  lines:
+  - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
+    text: Okay... today's the day!
+  - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
+    text: My first beach party with my new friends!
+  - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
+    text: ... My new human friends!
+  - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
+    text: ... who are a lot bigger than me and higher on the food chain...
+  - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
+    text: ... and could definitely boil me alive...
+  - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
+    text: No, no, stop! They're your friends!
+  - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
+    text: I bet they don't even like lobster! Yeah...
+  - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
+    text: But... what if they do?
+  - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
+    text: No, focus! You're going to have a good time.
+  - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
+    text: You always jump to the worst conclusion... Not everyone wants to eat you!
+  - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
+    text: And as long as you assess the situation carefully and trust your gut, you
+      won't end up in any danger.
+  - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
+    text: So! I need to get a new swimsuit at the mall and some kind of snack to
+      share.
+  - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
+    text: ... Which is definitely in no way a distraction from the fact that I am
+      incredibly edible to them.
+  - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
+    text: ... Let's get the swimsuit first.
+  decision: {fileID: 11400000, guid: 6ec419987149bde4ab1558a30bcf0d29, type: 2}
+  nextConvo: {fileID: 11400000, guid: e58408af54ee4854e991849d4b702f6f, type: 2}

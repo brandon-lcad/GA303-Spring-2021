@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07c2599e05f034a4bb6d22538b7ff345, type: 3}
+  m_Name: Mall_0
+  m_EditorClassIdentifier: 
+  lines:
+  - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
+    text: Alright, let's see-
+  - character: {fileID: 11400000, guid: c87fd56e6eb1c6e4d8540e462bf60d69, type: 2}
+    text: Hmm...
+  - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
+    text: Oh crap, it's Alexis!
+  - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
+    text: She's so smart and popular...
+  - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
+    text: I think I heard her saying she was going to be there tonight... maybe I
+      should say hi?
+  - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
+    text: I mean, isn't she like, vegan?
+  - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
+    text: Shoot, she's looking over here!
+  decision: {fileID: 11400000, guid: db8cd6eddec3015459b485d70c7d8e8a, type: 2}
+  nextConvo: {fileID: 0}

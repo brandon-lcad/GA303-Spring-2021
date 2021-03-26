@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07c2599e05f034a4bb6d22538b7ff345, type: 3}
+  m_Name: Mall_1_2
+  m_EditorClassIdentifier: 
+  lines:
+  - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
+    text: OH GOD, HIDE IN THE CLOTHES RACK, HIDE IN THE CLOTHES RACK!
+  - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
+    text: She didn't see me did she? I really don't want to get eaten today...
+  - character: {fileID: 11400000, guid: c87fd56e6eb1c6e4d8540e462bf60d69, type: 2}
+    text: Hrmmmm, pink or purple...
+  - character: {fileID: 11400000, guid: c87fd56e6eb1c6e4d8540e462bf60d69, type: 2}
+    text: I think... maybe the pink?
+  - character: {fileID: 11400000, guid: c87fd56e6eb1c6e4d8540e462bf60d69, type: 2}
+    text: Yeah, let's just do the pink, I'm sure it'll be fine.
+  - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
+    text: Phew....
+  - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
+    text: Thank god she didn't see me...
+  - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
+    text: Although... I think the purple one would have looked better.
+  - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
+    text: Alright, just grab something that's not too flashy... don't want to attract
+      too much attention after all.
+  - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
+    text: Okay, time to go get some snacks.
+  decision: {fileID: 0}
+  nextConvo: {fileID: 0}
