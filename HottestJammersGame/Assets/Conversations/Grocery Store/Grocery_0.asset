@@ -29,7 +29,7 @@ MonoBehaviour:
     text: And... uh he's kinda still scaring me.
   - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
     text: Uh, h-hello, sir...
-  - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
+  - character: {fileID: 11400000, guid: a9a5a0ef951fe5b41b10e855cc7ea5f5, type: 2}
     text: You look like you could use some assistance... need a hand?
   decision: {fileID: 11400000, guid: ac71afbd6ef70304cb19da9299071fd9, type: 2}
   nextConvo: {fileID: 0}

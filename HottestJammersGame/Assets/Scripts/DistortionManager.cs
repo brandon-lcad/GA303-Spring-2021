@@ -72,10 +72,8 @@ public class DistortionManager : MonoBehaviour
 
     public void UpdateCurrentCharacter(Character newCharacter)
     {
-      if (newCharacter != player){
-        currentActiveCharacter = newCharacter;
-        updateCurrents();
-      }
+      currentActiveCharacter = newCharacter;
+      updateCurrents();
     }
 
     public void updateCurrents()

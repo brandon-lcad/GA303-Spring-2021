@@ -172,7 +172,7 @@ public class DialogueManager : MonoBehaviour
         distortionManager.SendMessage("UpdateCurrentCharacter", character);
         portrait.enabled = true;
 
-        portrait.sprite = line.character.characterSprites[distortionLevel];
+        // portrait.sprite = line.character.characterSprites[distortionLevel];
 
         if (character.isPlayer)
         {
