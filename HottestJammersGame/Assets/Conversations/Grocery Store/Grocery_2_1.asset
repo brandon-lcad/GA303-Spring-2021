@@ -35,5 +35,5 @@ MonoBehaviour:
     text: Okay... just gotta get some chocolate and marshmallows...
   - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
     text: It's Alexis!
-  decision: {fileID: 0}
+  decision: {fileID: 11400000, guid: 04a1160eebd4bbe4ab479d739197edb1, type: 2}
   nextConvo: {fileID: 0}

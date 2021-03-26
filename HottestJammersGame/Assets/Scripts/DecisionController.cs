@@ -13,6 +13,7 @@ public class DecisionController : MonoBehaviour
     public Choice choice;
     public ConversationChangeEvent conversationChangeEvent;
 
+    // BRUTE FORCE REMOVE
     public SceneChange sceneChange;
 
     // Uses "Template Button" to make the choice buttons
@@ -20,7 +21,7 @@ public class DecisionController : MonoBehaviour
     {
         Button button = Instantiate(templateButton);
 
-    // Trying to use Layout Groups to bypass need to manually position buttons, may need these lines later
+        // Trying to use Layout Groups to bypass need to manually position buttons, may need these lines later
         // int buttonSpacing = -44;
         //button.transform.SetParent(templateButton.transform.parent);
         //button.transform.local Scale = Vector3.one;
@@ -43,8 +44,8 @@ public class DecisionController : MonoBehaviour
 
     private static void SetChoice(Conversation nextConversation)
     {
-      GameObject dm = GameObject.Find("Dialogue Manager");
-      dm.SendMessage("ChangeConversation", nextConversation);
+        GameObject dm = GameObject.Find("Dialogue Manager");
+        dm.SendMessage("ChangeConversation", nextConversation);
     }
 
     void Start()
@@ -65,13 +66,13 @@ public class DecisionController : MonoBehaviour
 
     private static void SendDistortionLevel(int distortionChange)
     {
-      GameObject distortionManager = GameObject.Find("DistortionManager");
-      distortionManager.SendMessage("UpdateDistortionLevel", distortionChange);
+        GameObject distortionManager = GameObject.Find("DistortionManager");
+        distortionManager.SendMessage("UpdateDistortionLevel", distortionChange);
     }
 
+    // BRUTE FORCE, REMOVE THESE TOO
     public static void LoadScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
     }
-
 }

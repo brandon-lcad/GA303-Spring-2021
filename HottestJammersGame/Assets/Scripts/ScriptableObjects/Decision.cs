@@ -17,6 +17,7 @@ public struct Choice {
     // The impact this choice has on the distortion level
     public int distortionEffect;
 
+    // Brute forcing to get through Hot Jam, REMOVE THESE IN ACTUAL BUILD
     public string nextScene;
 }
 

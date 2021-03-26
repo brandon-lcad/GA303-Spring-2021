@@ -34,5 +34,5 @@ MonoBehaviour:
       too much attention after all.
   - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
     text: Okay, time to go get some snacks.
-  decision: {fileID: 0}
+  decision: {fileID: 11400000, guid: fc6ace44a5a71264fac5f8725e7f14d5, type: 2}
   nextConvo: {fileID: 0}

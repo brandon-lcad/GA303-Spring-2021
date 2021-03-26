@@ -172,6 +172,8 @@ public class DialogueManager : MonoBehaviour
         distortionManager.SendMessage("UpdateCurrentCharacter", character);
         portrait.enabled = true;
 
+        portrait.sprite = line.character.characterSprites[distortionLevel];
+
         if (character.isPlayer)
         {
             playerBubble.SetActive(true);
@@ -183,7 +185,6 @@ public class DialogueManager : MonoBehaviour
             playerBubble.SetActive(false);
             characterBubble.SetActive(true);
             characterDialogue.text = line.text.ToString();
-            //portrait.sprite = line.character.characterSprites[distortionLevel];
         }
         else
         {
