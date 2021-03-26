@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Good End
   m_EditorClassIdentifier: 
   lines:
-  - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
+  - character: {fileID: 11400000, guid: e5d2758127e8bc04f9ac3f3ca9682820, type: 2}
     text: ALEXIS!
   - character: {fileID: 11400000, guid: c87fd56e6eb1c6e4d8540e462bf60d69, type: 2}
     text: Hm..? Oh hey! What are the odds of us running into each other... again..?
@@ -40,13 +40,13 @@ MonoBehaviour:
   - character: {fileID: 11400000, guid: c87fd56e6eb1c6e4d8540e462bf60d69, type: 2}
     text: Y'know, at this point we might as well just go to the party together. Did
       you drive here?
-  - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
+  - character: {fileID: 11400000, guid: e5d2758127e8bc04f9ac3f3ca9682820, type: 2}
     text: ... I'm a lobster.
   - character: {fileID: 11400000, guid: c87fd56e6eb1c6e4d8540e462bf60d69, type: 2}
     text: Oh, right, hahaha... I'll give you a ride then!
-  - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
+  - character: {fileID: 11400000, guid: e5d2758127e8bc04f9ac3f3ca9682820, type: 2}
     text: That would be great!
-  - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
+  - character: {fileID: 11400000, guid: e5d2758127e8bc04f9ac3f3ca9682820, type: 2}
     text: Thank you for not treating me like a piece of meat, Alexis. It's really
       nice to not have to worry about everyone trying to take a bite out of me.
   - character: {fileID: 11400000, guid: c87fd56e6eb1c6e4d8540e462bf60d69, type: 2}
