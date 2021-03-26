@@ -15,7 +15,7 @@ MonoBehaviour:
   characterName: Augustus
   isPlayer: 0
   characterSprites:
-  - {fileID: 21300000, guid: fa020ede7ada40249b9ed14ae016d83d, type: 3}
-  - {fileID: 21300000, guid: 3156499c275022e499cc4fd3a57620cc, type: 3}
-  - {fileID: 21300000, guid: 3f97d5bcfcfcbf54a9f179a8e8458fb0, type: 3}
+  - {fileID: 21300000, guid: 408bce446e7415e4297012583a1e1394, type: 3}
+  - {fileID: 21300000, guid: e9f4fa5565080134cbc92be40f5e3fa3, type: 3}
+  - {fileID: 21300000, guid: 9a9e2cfcc4d007d4eb3bc99dfa523857, type: 3}
   spriteToShow: 0

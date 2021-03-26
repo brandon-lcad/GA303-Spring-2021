@@ -5399,9 +5399,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 075be4309d539214ba385e6aff1806f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outerVignette: {fileID: 0}
-  innerVignette: {fileID: 0}
-  boilingpot: {fileID: 0}
+  outerVignette: {fileID: 21300000, guid: 681c698bc1efcdf4f849034214d369e7, type: 3}
+  innerVignette: {fileID: 21300000, guid: a5b8a57ee43faaa43aa6776015405009, type: 3}
+  boilingpot: {fileID: 21300000, guid: ca9b0d1165f467443956aebe2a7c29df, type: 3}
   slowBubbles: {fileID: 526728716}
   fastBubbles: {fileID: 2057011481}
   alexis: {fileID: 0}
@@ -5691,7 +5691,7 @@ SpriteRenderer:
   m_Size: {x: 10, y: 7.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1598226093

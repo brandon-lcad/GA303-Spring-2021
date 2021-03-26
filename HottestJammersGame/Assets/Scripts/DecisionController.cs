@@ -13,7 +13,7 @@ public class DecisionController : MonoBehaviour
     public ConversationChangeEvent conversationChangeEvent;
 
     // Uses "Template Button" to make the choice buttons
-    public static DecisionController AddChoiceButton(Button templateButton, Choice choice, int index)
+    public static DecisionController AddChoiceButton(Button templateButton, Choice choice, int index, GameObject choicePanel)
     {
         Button button = Instantiate(templateButton);
 
@@ -26,11 +26,20 @@ public class DecisionController : MonoBehaviour
         // Names the button and sets it to active
         button.name = "Choice " + (index + 1);
         button.gameObject.SetActive(true);
+        button.transform.SetParent(choicePanel.transform, false);
 
         // Gets the DecisionController off of the button and sets the proper data in the Choice, then returns
         DecisionController decisionController = button.GetComponent<DecisionController>();
+        // Get DialogueManager in order to send message asking to change the active
         decisionController.choice = choice;
+        button.onClick.AddListener(() => SetChoice(choice.nextConversation));
         return decisionController;
+    }
+
+    private static void SetChoice(Conversation nextConversation)
+    {
+      GameObject dm = GameObject.Find("Dialogue Manager");
+      dm.SendMessage("ChangeConversation", nextConversation);
     }
 
     void Start()

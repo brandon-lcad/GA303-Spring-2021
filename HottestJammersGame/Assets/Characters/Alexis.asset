@@ -15,7 +15,7 @@ MonoBehaviour:
   characterName: Alexis
   isPlayer: 0
   characterSprites:
-  - {fileID: 21300000, guid: 5ce84f2855630e64d9c37314c88f272c, type: 3}
-  - {fileID: 21300000, guid: 5ce84f2855630e64d9c37314c88f272c, type: 3}
-  - {fileID: 21300000, guid: 5ce84f2855630e64d9c37314c88f272c, type: 3}
+  - {fileID: 21300000, guid: 9a9bb4b0656e88842b459441e59522d6, type: 3}
+  - {fileID: 21300000, guid: 2b1bacb2de173c84d98100d5ee197133, type: 3}
+  - {fileID: 21300000, guid: f465f7968be62e74cbabeda587893a9d, type: 3}
   spriteToShow: 0
