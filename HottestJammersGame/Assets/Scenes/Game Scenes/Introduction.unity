@@ -512,21 +512,57 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 21300000, guid: 8fefc4aca757d7e409af084e9fdddbc9,
+        type: 3}
     - target: {fileID: 3213221698838364213, guid: f9b9d0231fe4e7b4ca04e4414ed22dda,
         type: 3}
       propertyPath: m_Color.r
-      value: 0.09984575
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3213221698838364213, guid: f9b9d0231fe4e7b4ca04e4414ed22dda,
         type: 3}
       propertyPath: m_Color.g
-      value: 0.07164472
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3213221698838364213, guid: f9b9d0231fe4e7b4ca04e4414ed22dda,
         type: 3}
       propertyPath: m_Color.b
-      value: 0.13207549
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3213221698838364213, guid: f9b9d0231fe4e7b4ca04e4414ed22dda,
+        type: 3}
+      propertyPath: m_PreserveAspect
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3213221698838364214, guid: f9b9d0231fe4e7b4ca04e4414ed22dda,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3213221698838364214, guid: f9b9d0231fe4e7b4ca04e4414ed22dda,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3213221698838364214, guid: f9b9d0231fe4e7b4ca04e4414ed22dda,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3213221698838364214, guid: f9b9d0231fe4e7b4ca04e4414ed22dda,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3213221698838364214, guid: f9b9d0231fe4e7b4ca04e4414ed22dda,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1020
+      objectReference: {fileID: 0}
+    - target: {fileID: 3213221698838364214, guid: f9b9d0231fe4e7b4ca04e4414ed22dda,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 616
       objectReference: {fileID: 0}
     - target: {fileID: 3213221699418501056, guid: f9b9d0231fe4e7b4ca04e4414ed22dda,
         type: 3}
@@ -641,9 +677,6 @@ MonoBehaviour:
   izzy: {fileID: 11400000, guid: 79e89e0badb87384c911cc867fdfadeb, type: 2}
   player: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
   playerThoughts: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
-  currentActiveCharacter: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8,
-    type: 2}
-  distortionLevel: 0
 --- !u!4 &1656040899
 Transform:
   m_ObjectHideFlags: 0
@@ -699,6 +732,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c2e912a6245ee94ebcddc56180c0bb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  globalDistortionLevel: 0
 --- !u!4 &1826587953
 Transform:
   m_ObjectHideFlags: 0
