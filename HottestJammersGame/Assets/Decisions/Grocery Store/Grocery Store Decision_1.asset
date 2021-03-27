@@ -16,7 +16,7 @@ MonoBehaviour:
   choices:
   - text: No, thanks...
     nextConversation: {fileID: 11400000, guid: 11550b33d177da24c8884d552232ac9d, type: 2}
-    distortionEffect: 1
+    distortionEffect: 2
     nextScene: 
   - text: Actually...
     nextConversation: {fileID: 11400000, guid: 46f3c858a71965641a10391b8f8153ed, type: 2}

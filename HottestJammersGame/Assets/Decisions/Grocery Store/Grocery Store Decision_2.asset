@@ -20,5 +20,5 @@ MonoBehaviour:
     nextScene: 
   - text: Definitely not going to a party
     nextConversation: {fileID: 11400000, guid: 025d491ef1c48344f8783e39dbf09a57, type: 2}
-    distortionEffect: 1
+    distortionEffect: 2
     nextScene: 

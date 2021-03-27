@@ -16,9 +16,9 @@ MonoBehaviour:
   choices:
   - text: Ask for help!
     nextConversation: {fileID: 11400000, guid: 786c990290e3c5e448ce7b28da7ea530, type: 2}
-    distortionEffect: -1
+    distortionEffect: -5
     nextScene: 
   - text: Just get out of there!
     nextConversation: {fileID: 11400000, guid: f44b41bbde8efcb41a28342df5c69d75, type: 2}
-    distortionEffect: 1
+    distortionEffect: 2
     nextScene: 
