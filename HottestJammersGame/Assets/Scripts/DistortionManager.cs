@@ -23,13 +23,13 @@ public class DistortionManager : MonoBehaviour
     public Character player;
     public Character playerThoughts;
 
-    public Character currentActiveCharacter;
+    private Character currentActiveCharacter;
     private Sprite currentPortrait;
     private Image[] activeVignettes;
     private ParticleSystem[] activeParticleSystems;
     private GameObject dialogueManager;
 
-    public int distortionLevel;
+    private int distortionLevel;
 
     void Start()
     {
@@ -55,7 +55,7 @@ public class DistortionManager : MonoBehaviour
 
       dialogueManager = GameObject.Find("Dialogue Manager");
 
-      distortionLevel = 0;
+      distortionLevel = GlobalChoiceRecorder.Instance.globalDistortionLevel;
     }
 
     public void UpdateDistortionLevel(int distortionAmount)
@@ -95,6 +95,9 @@ public class DistortionManager : MonoBehaviour
 
       //ParticleSystems
       dialogueManager.SendMessage("updateActiveParticleSystems", activeParticleSystems);
+
+      // Save to globalDistortionLevel
+      SaveDistortionLevel();
 
     }
 
@@ -225,5 +228,10 @@ public class DistortionManager : MonoBehaviour
         return distortionParticles;
       }
       return null;
+    }
+
+    public void SaveDistortionLevel()
+    {
+      GlobalChoiceRecorder.Instance.globalDistortionLevel = distortionLevel;
     }
 }
