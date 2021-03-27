@@ -12,7 +12,7 @@ public class DialogueManager : MonoBehaviour
 {
     public Canvas ui;
 
-    public Button nextButton;
+    // public Button nextButton;
 
     public Image portrait;
     public TMP_Text characterName;
@@ -111,7 +111,7 @@ public class DialogueManager : MonoBehaviour
               playerBubble.SetActive(false);
               characterBubble.SetActive(false);
               portrait.enabled = false;
-              disableNextInput();
+              // disableNextInput();
 
               decUI.SendMessage("Change", convo.decision);
             }
@@ -120,15 +120,15 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    void disableNextInput(){
-      nextButton.gameObject.SetActive(false);
-      makingDecision = true;
-    }
+    // void disableNextInput(){
+      // nextButton.gameObject.SetActive(false);
+      // makingDecision = true;
+    // }
 
-    void enableNextInput(){
-      nextButton.gameObject.SetActive(true);
-      makingDecision = false;
-    }
+    // void enableNextInput(){
+      // nextButton.gameObject.SetActive(true);
+      // makingDecision = false;
+    // }
 
     public void updatePortrait(Sprite nextPortrait){
       portrait.sprite = nextPortrait;
@@ -223,7 +223,7 @@ public class DialogueManager : MonoBehaviour
         convo = nextConvo;
         activeLineIndex = 0;
         decUI.SetActive(false);
-        enableNextInput();
+        // enableNextInput();
         AdvanceConversation();
     }
 
