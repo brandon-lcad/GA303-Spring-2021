@@ -13,20 +13,20 @@ MonoBehaviour:
   m_Name: Mall_1_1
   m_EditorClassIdentifier: 
   lines:
-  - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
+  - character: {fileID: 11400000, guid: e5d2758127e8bc04f9ac3f3ca9682820, type: 2}
     text: H-Hey Alexis!
   - character: {fileID: 11400000, guid: c87fd56e6eb1c6e4d8540e462bf60d69, type: 2}
     text: Hrmmm, pink or purple... Hm?
   - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
     text: Oh no... she seems confused
-  - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
+  - character: {fileID: 11400000, guid: e5d2758127e8bc04f9ac3f3ca9682820, type: 2}
     text: Uh, it's me! We, uh, met the other day...
   - character: {fileID: 11400000, guid: c87fd56e6eb1c6e4d8540e462bf60d69, type: 2}
     text: ... Oh! Yeah, I remember now! Sorry, I didn't recognize you without that
       hat you were wearing!
   - character: {fileID: 11400000, guid: c87fd56e6eb1c6e4d8540e462bf60d69, type: 2}
     text: You here for a suit too? You're going to be at the beach tonight right?
-  - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
+  - character: {fileID: 11400000, guid: e5d2758127e8bc04f9ac3f3ca9682820, type: 2}
     text: Uh, y-yeah!
   - character: {fileID: 11400000, guid: c87fd56e6eb1c6e4d8540e462bf60d69, type: 2}
     text: So what do YOU think about this party? Ready to blow off some steam?

@@ -13,23 +13,23 @@ MonoBehaviour:
   m_Name: Mall_1_1a
   m_EditorClassIdentifier: 
   lines:
-  - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
+  - character: {fileID: 11400000, guid: e5d2758127e8bc04f9ac3f3ca9682820, type: 2}
     text: Yeah! I haven't really had a chance to get to know anyone here yet, so
       I'm looking forward to it.
   - character: {fileID: 11400000, guid: c87fd56e6eb1c6e4d8540e462bf60d69, type: 2}
     text: Oh yeah, you're pretty new aren't you? I'll introduce you to some of my
       buddies!
-  - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
+  - character: {fileID: 11400000, guid: e5d2758127e8bc04f9ac3f3ca9682820, type: 2}
     text: Thanks! That sounds really nice!
   - character: {fileID: 11400000, guid: c87fd56e6eb1c6e4d8540e462bf60d69, type: 2}
     text: Alright, I think I'm just going to throw caution to the wind and geeeeeeet...
   - character: {fileID: 11400000, guid: c87fd56e6eb1c6e4d8540e462bf60d69, type: 2}
     text: The purple one! What do you think?
-  - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
+  - character: {fileID: 11400000, guid: e5d2758127e8bc04f9ac3f3ca9682820, type: 2}
     text: Yeah, that's definitely the right call, it'll look great on you!
   - character: {fileID: 11400000, guid: c87fd56e6eb1c6e4d8540e462bf60d69, type: 2}
     text: Aw, thanks hun! See you tonight!
-  - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
+  - character: {fileID: 11400000, guid: e5d2758127e8bc04f9ac3f3ca9682820, type: 2}
     text: Bye!
   - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
     text: Wow, she was like... really nice!
