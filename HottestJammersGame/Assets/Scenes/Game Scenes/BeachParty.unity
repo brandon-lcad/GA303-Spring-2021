@@ -211,7 +211,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: StartMenu
+          m_StringArgument: CreditsMenu
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &158827161
@@ -783,7 +783,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Main Menu
+  m_text: Credits
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0e0f87850b2b2a24b875ed5a55ade480, type: 2}
   m_sharedMaterial: {fileID: 7284264817657922785, guid: 0e0f87850b2b2a24b875ed5a55ade480,
