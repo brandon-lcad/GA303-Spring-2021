@@ -574,7 +574,19 @@ PlayerSettings:
   webGLLinkerTarget: 1
   webGLThreadsSupport: 0
   webGLWasmStreaming: 0
-  scriptingDefineSymbols: {}
+  scriptingDefineSymbols:
+    1: dUI_TextMeshPro
+    4: dUI_TextMeshPro
+    7: dUI_TextMeshPro
+    13: dUI_TextMeshPro
+    14: dUI_TextMeshPro
+    19: dUI_TextMeshPro
+    21: dUI_TextMeshPro
+    25: dUI_TextMeshPro
+    27: dUI_TextMeshPro
+    28: dUI_TextMeshPro
+    29: dUI_TextMeshPro
+    30: dUI_TextMeshPro
   platformArchitecture: {}
   scriptingBackend: {}
   il2cppCompilerConfiguration: {}
@@ -584,6 +596,7 @@ PlayerSettings:
   additionalIl2CppArgs: 
   scriptingRuntimeVersion: 1
   gcIncremental: 0
+  assemblyVersionValidation: 1
   gcWBarrierValidation: 0
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
@@ -633,6 +646,7 @@ PlayerSettings:
   XboxOneCapability: []
   XboxOneGameRating: {}
   XboxOneIsContentPackage: 0
+  XboxOneEnhancedXboxCompatibilityMode: 0
   XboxOneEnableGPUVariability: 1
   XboxOneSockets: {}
   XboxOneSplashScreen: {fileID: 0}
@@ -646,6 +660,7 @@ PlayerSettings:
       daydreamIconForeground: {fileID: 0}
       daydreamIconBackground: {fileID: 0}
   cloudServicesEnabled:
+    Collab: 1
     UNet: 1
   luminIcon:
     m_Name: 
@@ -659,10 +674,10 @@ PlayerSettings:
     m_VersionCode: 1
     m_VersionName: 
   apiCompatibilityLevel: 6
-  cloudProjectId: 
+  cloudProjectId: 9a1b95f4-92ad-43db-84a0-43b71d5cafc0
   framebufferDepthMemorylessMode: 0
-  projectName: 
-  organizationId: 
+  projectName: GA303-Spring-2021
+  organizationId: artstuff-e1d445cd-4c44-43a1-bb41-288d01ffd9ac
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0

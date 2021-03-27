@@ -1,0 +1,4 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+    <ui:IMGUIContainer />
+    <ui:VisualElement style="width: 728px; height: 434px;" />
+</ui:UXML>
