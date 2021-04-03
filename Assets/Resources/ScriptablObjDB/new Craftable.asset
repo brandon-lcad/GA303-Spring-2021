@@ -19,4 +19,4 @@ MonoBehaviour:
   itemDescription: +10 mana
   itemId: 1617410656
   isStackable: 1
-  stackableQty: 20
+  useText: GULP.
