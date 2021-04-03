@@ -1,12 +1,13 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Inventory : ScriptableObject, IItemContainer
 {
-    private ItemSlot[] itemSlots = new ItemSlot[15];
+    private readonly ItemSlot[] itemSlots = new ItemSlot[15];
     public Action OnItemsUpdated = delegate { };
+
+    //only passes the requested slot, not the entire array
+    public ItemSlot GetSlotByIndex(int index) => itemSlots[index];
 
     public int GetTotalQuantity(InventoryItem item)
     {
