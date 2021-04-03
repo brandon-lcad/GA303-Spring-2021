@@ -1,25 +1,5 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
-
-[CreateAssetMenu(fileName = "new Quest", menuName = "Systems/Quests")]
-public class OLD_OrderData
-{
-
-    public int questObjective; // TODO: This is supposed to be a string, right? Or maybe an item object?
-    public int invQuantity;
-
-    public bool questTimed;
-    public int questTimer;
-    public bool questActive;
-    public bool questComplete;
-
-    public int rewardAmount;
-    public Sprite rewardImage;
-}
-
 
 [CreateAssetMenu(fileName = "New Order", menuName = "Systems/Orders")]
 public abstract class OrderData : ScriptableObject
@@ -32,6 +12,14 @@ public abstract class OrderData : ScriptableObject
         Reagent
     }
 
+    public enum OrderType
+    {
+        Timed,
+        Casual,
+        Progression,
+        Bonus
+    }
+
     private bool hasUID;
 
     public string Name;
@@ -39,14 +27,24 @@ public abstract class OrderData : ScriptableObject
     public RewardType rewardType;
     [TextArea(5, 10)]
     public string itemDescription;
-    public int itemId;
+    public int orderId;
+
+    // TODO: This is supposed to be a string, right? Or maybe an item object?
+    public int questObjective;
 
 
+    public bool questTimed;
+    public bool questActive;
+    public int questTimer;
+    public bool questComplete;
+
+    public int rewardAmount;
+    public Sprite rewardImage;
 
     public void OnValidate()
     {
         //assume, because item is newly created, that the item has no ID.
-        if (!hasUID)
+        if (!hasUID && orderId == 0)
         {
             hasUID = false;
             GenerateId();

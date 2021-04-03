@@ -40,7 +40,7 @@ public abstract class GameData : ScriptableObject
 
     public void OnValidate()
     {
-        //assume, because item is newly created, that the item has no ID.
+        //assume that, because item is newly created, that the item has no ID.
         if (hasUID == false)
         {
             itemId = GenerateId();
@@ -48,7 +48,7 @@ public abstract class GameData : ScriptableObject
         hasUID = true;
     }
 
-    //figure out later how to use guid instead...
+    //figure out later how to use guid instead to understand Chris' example...
     private int GenerateId()
     {
         DateTime idRequested = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
