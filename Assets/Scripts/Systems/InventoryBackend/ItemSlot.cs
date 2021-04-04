@@ -1,23 +1,20 @@
 ﻿using UnityEngine;
+using System;
 
+[Serializable]
 public struct ItemSlot
 {
     public InventoryItem item;
-    [Min(1)] public int itemQuantity;
+    public int quantity;
 
-    //operator keyword is used to define custom action on the == operator.
-    public static bool operator == (ItemSlot a, ItemSlot b)
-    {
-        return a.Equals(b);
-    }
-    public static bool operator != (ItemSlot a, ItemSlot b)
-    {
-        return !a.Equals(b);
-    }
 
     public ItemSlot(InventoryItem item, int quantity)
     {
         this.item = item;
-        this.itemQuantity = quantity;
+        this.quantity = quantity;
     }
+
+    //operator keyword is used to define custom action on the == operator.
+    public static bool operator == (ItemSlot a, ItemSlot b) { return a.Equals(b); }
+    public static bool operator != (ItemSlot a, ItemSlot b) { return !a.Equals(b); }
 }
