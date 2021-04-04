@@ -14,7 +14,7 @@ public class InventorySlot : ItemSlotUI, IDropHandler
     }
 
     //invokng this pulls straight from inv array
-    public ItemSlot ItemSlot => inventory.GetSlotByIndex(ItemSlotIndex);
+    public ItemSlot ItemSlot => inventory.ItemContainer.GetSlotByIndex(ItemSlotIndex);
 
     public override void OnDrop(PointerEventData eventData)
     {
@@ -24,7 +24,7 @@ public class InventorySlot : ItemSlotUI, IDropHandler
 
         if ((itemDragHandler.ItemSlotUI as InventorySlot) != null)
         {
-            inventory.SwapItem(itemDragHandler.ItemSlotUI.ItemSlotIndex, ItemSlotIndex);
+            inventory.ItemContainer.SwapItem(itemDragHandler.ItemSlotUI.ItemSlotIndex, ItemSlotIndex);
         }
     }
 
@@ -35,10 +35,11 @@ public class InventorySlot : ItemSlotUI, IDropHandler
             EnableSlotUI(false);
             return;
         }
+
         EnableSlotUI(true);
 
         uiItemIcon.sprite = ItemSlot.item.ItemIcon;
-        itemQuantityText.text = ItemSlot.itemQuantity > 1 ? ItemSlot.itemQuantity.ToString() : "";
+        itemQuantityText.text = ItemSlot.quantity > 0 ? ItemSlot.quantity.ToString() : "";
     }
 
     protected override void EnableSlotUI(bool enable)

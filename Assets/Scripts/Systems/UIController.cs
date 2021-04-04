@@ -9,22 +9,16 @@ using System;
 public class UIController : MonoBehaviour
 {
     public TextMeshProUGUI clockDisplay;
-    public Image journalWindow;
-    private bool journalActive;
-    public Image ordersWindow;
-    private bool ordersActive;
-    public Image shopWindow;
-    private bool shopActive;
+    public CanvasGroup journalWindow;
+    public CanvasGroup ordersWindow;
+    public CanvasGroup shopWindow;
 
-
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        journalActive = false;
-        ordersActive = false;
-        shopActive = false;
+        journalWindow.enabled = false;
+        ordersWindow.enabled = false;
+        journalWindow.enabled = false;
     }
-
     private void FixedUpdate()
     {
         clockDisplay.text = DateTime.Now.ToString("HH:mm");
@@ -33,18 +27,15 @@ public class UIController : MonoBehaviour
 
     public void ShowHideJournalWindow()
     {
-        journalActive = !journalActive;
-        journalWindow.gameObject.SetActive(journalActive);
+        journalWindow.enabled = !journalWindow.enabled;
     }
     public void ShowHideOrdersWindow()
     {
-        ordersActive = !ordersActive;
-        ordersWindow.gameObject.SetActive(ordersActive);
+        ordersWindow.enabled = !ordersWindow.enabled;
     }
     public void ShowHideShopWindow()
     {
-        shopActive = !shopActive;
-        shopWindow.gameObject.SetActive(shopActive);
+        shopWindow.enabled = !shopWindow.enabled;
     }
 }
 
