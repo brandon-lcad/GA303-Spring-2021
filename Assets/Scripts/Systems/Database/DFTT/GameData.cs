@@ -1,8 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using System;
 
+//first script
 
 public enum Profession
 {
@@ -26,17 +25,21 @@ public abstract class GameData : ScriptableObject
 {
     [Header("Basic Info")]
     [SerializeField] private string itemName = "New Database Item";
-    [SerializeField] private Sprite itemIcon;
+    [SerializeField] private Sprite itemIcon = null;
 
+    //any class accessing this item cannot change it, only reference it
     public string ItemName => itemName;
     public abstract string NameTint { get; }
     public Sprite ItemIcon => itemIcon;
+
     public Profession profession;
     public ItemType itemType;
     [TextArea(2, 5)]
     public string itemDescription;
     private bool hasUID;
     public int itemId;
+
+    public abstract string GetInfoDisplayText();
 
     public void OnValidate()
     {
@@ -58,5 +61,5 @@ public abstract class GameData : ScriptableObject
         return itemId;
     }
 
-    public abstract string GetInfoDisplayText();
+    
 }

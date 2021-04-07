@@ -20,7 +20,7 @@ public class InventorySlot : ItemSlotUI, IDropHandler
     {
         ItemDragHandler itemDragHandler = eventData.pointerDrag.GetComponent<ItemDragHandler>();
 
-        if (itemDragHandler == null) {return;}
+        if (itemDragHandler == null) {return; }
 
         if ((itemDragHandler.ItemSlotUI as InventorySlot) != null)
         {

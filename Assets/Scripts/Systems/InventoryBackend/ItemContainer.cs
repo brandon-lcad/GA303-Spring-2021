@@ -1,11 +1,15 @@
 ﻿using System;
 
+//fifth script
+
+//Contents used to be the "Inventory" script but was 
+//later changed to accomodate a more flexible system 
 [Serializable]
 public class ItemContainer : IItemContainer
 {
-    private readonly ItemSlot[] itemSlots = new ItemSlot[0];
+    private ItemSlot[] itemSlots = new ItemSlot[0];
 
-    public Action OnInventoryItemsUpdated = delegate { };
+    public Action OnItemsUpdated = delegate { };
 
     public ItemContainer(int size) => itemSlots = new ItemSlot[size];
 
@@ -27,7 +31,8 @@ public class ItemContainer : IItemContainer
                         itemSlots[i].quantity += itemSlot.quantity;
                         itemSlot.quantity = 0;
 
-                        OnInventoryItemsUpdated.Invoke();
+                        OnItemsUpdated.Invoke();
+
                         return itemSlot;
                     }
                     else if (maxStackRemaining > 0)
@@ -51,7 +56,7 @@ public class ItemContainer : IItemContainer
                     itemSlot.quantity = 0;
 
                     //invoke event here
-                    OnInventoryItemsUpdated.Invoke();
+                    OnItemsUpdated.Invoke();
 
                     return itemSlot;
                 }
@@ -64,7 +69,7 @@ public class ItemContainer : IItemContainer
         }
 
         //invoke event here
-        OnInventoryItemsUpdated.Invoke();
+        OnItemsUpdated.Invoke();
 
         return itemSlot;
     }
@@ -86,13 +91,13 @@ public class ItemContainer : IItemContainer
                     else
                     {
                         itemSlots[i].quantity -= itemSlot.quantity;
+
                         if (itemSlots[i].quantity == 0)
                         {
                             itemSlots[i] = new ItemSlot();
 
                             //invoke event here
-                            OnInventoryItemsUpdated.Invoke();
-
+                            OnItemsUpdated.Invoke();
                             return;
                         }
                     }
@@ -104,10 +109,11 @@ public class ItemContainer : IItemContainer
     public void RemoveAt(int slotIndex)
     {
         if (slotIndex < 0 || slotIndex > itemSlots.Length - 1) { return; }
+
         itemSlots[slotIndex] = new ItemSlot();
 
         //invoke event here
-        OnInventoryItemsUpdated.Invoke();
+        OnItemsUpdated.Invoke();
     }
 
     public int GetTotalQuantity(InventoryItem item)
@@ -157,10 +163,11 @@ public class ItemContainer : IItemContainer
                 if(firstSlot.quantity <= completeMaxStack)
                 {
                     itemSlots[indexTwo].quantity += firstSlot.quantity;
+
                     itemSlots[indexOne] = new ItemSlot();
 
                     //invoke event here
-                    OnInventoryItemsUpdated.Invoke();
+                    OnItemsUpdated.Invoke();
                     return;
                 }
             }
@@ -170,6 +177,6 @@ public class ItemContainer : IItemContainer
         itemSlots[indexTwo] = firstSlot;
 
         //invoke event here
-        OnInventoryItemsUpdated.Invoke();
+        OnItemsUpdated.Invoke();
     }
 }

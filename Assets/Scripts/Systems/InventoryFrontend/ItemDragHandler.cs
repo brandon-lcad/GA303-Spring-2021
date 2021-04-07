@@ -2,22 +2,32 @@
 using UnityEngine.EventSystems;
 
 [RequireComponent(typeof(CanvasGroup))]
-public class ItemDragHandler : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDragHandler, IPointerEnterHandler, IPointerExitHandler 
+public class ItemDragHandler : MonoBehaviour, IPointerDownHandler, IDragHandler, IPointerUpHandler, IPointerEnterHandler, IPointerExitHandler 
 {
-    [SerializeField] protected ItemSlotUI itemtSlotUI = null;
+    [SerializeField] protected ItemSlotUI itemSlotUI = null;
+    //[SerializeField] protected VoidEvent onMouseEndHoverItem = null;
+    //[SerializeField] protected GameDataEvent onMouseStartHoverItem = null;
 
     private CanvasGroup canvasGroup = null;
     private Transform originalParent = null;
     private bool ishovering = false;
 
-    public ItemSlotUI ItemSlotUI => ItemSlotUI;
+    public ItemSlotUI ItemSlotUI
+    {
+        get
+        {
+            return itemSlotUI;
+        }
+    }
 
     private void Start() => canvasGroup = GetComponent<CanvasGroup>();
+
     private void OnDisable()
     {
         if (ishovering)
         {
             //invoke event
+            //onMouseEndHoverItem.Raise();
             ishovering = false;
         }
     }
@@ -28,7 +38,11 @@ public class ItemDragHandler : MonoBehaviour, IPointerDownHandler, IPointerUpHan
         if (eventData.button == PointerEventData.InputButton.Left)
         {
             //invoke event 
+            //onMouseEndHoverItem.Raise();
+
             originalParent = transform.parent;
+
+            //parents to the "SlotContainer_EGO"
             transform.SetParent(transform.parent.parent);
 
             //allows drag event to temporarily see whats below it (another slot)
@@ -63,11 +77,13 @@ public class ItemDragHandler : MonoBehaviour, IPointerDownHandler, IPointerUpHan
     {
         //tells listener that mouse is hovering
         //invoke event
+        //onMouseStartHoverItem.Raise(ItemSlotUI.SlotItem);
         ishovering = true;
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
+        //onMouseEndHoverItem.Raise();
         ishovering = false;
     }
 }

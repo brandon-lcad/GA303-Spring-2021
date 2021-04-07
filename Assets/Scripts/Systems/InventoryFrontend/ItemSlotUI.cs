@@ -2,6 +2,9 @@
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
+
+//base class for every type of slot available to a game
+//inventory, loot containers, spell bar, etc
 public abstract class ItemSlotUI : MonoBehaviour, IDropHandler
 {
     //using protected to make this accessible only through child classes
@@ -18,6 +21,7 @@ public abstract class ItemSlotUI : MonoBehaviour, IDropHandler
     //called at opening invUI
     protected virtual void Start()
     {
+        //this function is a buitin for checking where we are in a heirarchy
         ItemSlotIndex = transform.GetSiblingIndex();
         //used twice to know the index in order to set it
         UpdateSlotUI();

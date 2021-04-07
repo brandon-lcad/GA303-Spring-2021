@@ -9,17 +9,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 373d0ad4aa99baf448b98083343fde7f, type: 3}
   m_Name: Item-Lesser Health Potion
-  m_EditorClassIdentifier: Assembly-CSharp::CraftablesData
+  m_EditorClassIdentifier: 
   itemName: Lesser Health Potion
   itemIcon: {fileID: 21300000, guid: 70c07282b802b2e4d967053555733ba2, type: 3}
   profession: 0
   itemType: 1
-  itemDescription: +10 to health
-  itemId: 1617570677
-  buyPrice: 10
-  sellPrice: 3
+  itemDescription: +10 health
+  itemId: 1617751967
+  buyPrice: 14
+  sellPrice: 2
   maxStack: 20
-  isStackable: 1
   useText: GULP.
