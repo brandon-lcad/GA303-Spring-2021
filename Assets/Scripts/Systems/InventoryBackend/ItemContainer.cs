@@ -7,7 +7,7 @@
 [Serializable]
 public class ItemContainer : IItemContainer
 {
-    private ItemSlot[] itemSlots = new ItemSlot[0];
+    private readonly ItemSlot[] itemSlots = new ItemSlot[0];
 
     public Action OnItemsUpdated = delegate { };
 
@@ -153,7 +153,7 @@ public class ItemContainer : IItemContainer
         ItemSlot firstSlot = itemSlots[indexOne];
         ItemSlot secondSlot = itemSlots[indexTwo];
 
-        if (firstSlot == secondSlot) { return; }
+        if (firstSlot.Equals(secondSlot)) { return; }
 
         if(secondSlot.item != null)
         {
