@@ -11,6 +11,8 @@ public class QuestionEvent : UnityEvent<Decision> { }
 public class UIController : MonoBehaviour
 {
     public Canvas ui;
+    // Canvas for particle fx for distortion level increase or decrease
+    public Canvas fxui;
     // Background Image
     public Image bg;
     // Next Button
@@ -53,6 +55,17 @@ public class UIController : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+      // Don't Destroy this object on new scene
+      if (Instance == null)
+      {
+          DontDestroyOnLoad(gameObject);
+          Instance = this;
+      }
+      else if (Instance != this)
+      {
+          Destroy(gameObject);
+      }
+
         // Sets all speech / thought bubbles off
         characterBubble.SetActive(false);
         characterDialogue.text = "";

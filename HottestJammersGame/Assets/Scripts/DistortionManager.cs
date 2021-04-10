@@ -6,6 +6,7 @@ using TMPro;
 
 public class DistortionManager : MonoBehaviour
 {
+    public Canvas distortionUI;
 
     private Dictionary<string,Image> distortionDictionary = new Dictionary<string,Image>();
     private Dictionary<string,ParticleSystem> particleDictionary = new Dictionary<string,ParticleSystem>();

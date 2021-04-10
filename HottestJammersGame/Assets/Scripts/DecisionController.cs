@@ -38,7 +38,7 @@ public class DecisionController : MonoBehaviour
         decisionController.choice = choice;
         button.onClick.AddListener(() => SetChoice(choice.nextConversation));
         button.onClick.AddListener(() => SendDistortionLevel(choice.distortionEffect));
-        button.onClick.AddListener(() => LoadScene(choice.nextScene));
+        // button.onClick.AddListener(() => LoadScene(choice.nextScene));
         return decisionController;
     }
 

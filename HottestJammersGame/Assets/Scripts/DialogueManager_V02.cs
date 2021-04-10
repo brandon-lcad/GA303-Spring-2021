@@ -11,6 +11,18 @@ public class QuestionEvent : UnityEvent<Decision> { }
 
 public class DialogueManager_V02 : MonoBehaviour
 {
+
+    public Conversation convo;
+
+    public QuestionEvent questionEvent;
+
+    public int distortionLevel;
+    public int activeLineIndex = 0;
+
+    private bool conversationStarted = false;
+    private bool makingDecision = false;
+    private GameObject distortionManager;
+
     //public Canvas ui;
 
     // public Button nextButton;
@@ -27,30 +39,20 @@ public class DialogueManager_V02 : MonoBehaviour
     // public GameObject decUI;
 
     // public Character chara;
-    public Conversation convo;
-
-    public QuestionEvent questionEvent;
-
-    public int distortionLevel;
-    public int activeLineIndex = 0;
 
     // private ParticleSystem[] activeParticles;
     // private Image[] activeVignettes;
 
-    private bool conversationStarted = false;
-    private bool makingDecision = false;
-    private GameObject distortionManager;
-
     // Start is called before the first frame update
     void Awake()
     {
+        distortionManager = GameObject.Find("DistortionManager");
+
         // playerBubble.SetActive(false);
         // playerDialogue.text = "";
         // characterBubble.SetActive(false);
         // characterDialogue.text = "";
         // decUI.SetActive(false);
-
-        distortionManager = GameObject.Find("DistortionManager");
 
         // Initialize Active Systems to empty
         // activeParticles = new ParticleSystem[0];
@@ -73,20 +75,20 @@ public class DialogueManager_V02 : MonoBehaviour
     // This function progresses the conversation upon click or space bar; made public so a button can be implemented
     public void AdvanceConversation()
     {
-        // // If there's a question, show question
-        // if (convo.decision != null){
-        //   questionEvent.Invoke(convo.decision);
-        // }
-        //
-        // // If there's a next conversation, start next conversation
-        // else if (convo.nextConvo != null){
-        //   ChangeConversation(convo.nextConvo);
-        // }
-        //
-        // // If there's neither a question or conversation, end conversation
-        // else{
-        //   EndConversation();
-        // }
+        // If there's a question, show question
+        if (convo.decision != null){
+          questionEvent.Invoke(convo.decision);
+        }
+
+        // If there's a next conversation, start next conversation
+        else if (convo.nextConvo != null){
+          ChangeConversation(convo.nextConvo);
+        }
+
+        // If there's neither a question or conversation, end conversation
+        else{
+          EndConversation();
+        }
 
         // If there are more lines to read...
         if (activeLineIndex < convo.lines.Length)
@@ -167,35 +169,35 @@ public class DialogueManager_V02 : MonoBehaviour
     }
 
     // Updates text and bubbles to correspond to current line in convo and advances activeLineIndex to next line
-    void DisplayLine()
-    {
-        Line line = convo.lines[activeLineIndex];
-        Character character = line.character;
-        distortionManager.SendMessage("UpdateCurrentCharacter", character);
-        portrait.enabled = true;
+    // void DisplayLine()
+    // {
+        // Line line = convo.lines[activeLineIndex];
+        // Character character = line.character;
+        // distortionManager.SendMessage("UpdateCurrentCharacter", character);
+        // portrait.enabled = true;
 
         // portrait.sprite = line.character.characterSprites[distortionLevel];
 
-        if (character.isPlayer)
-        {
-            playerBubble.SetActive(true);
-            characterBubble.SetActive(false);
-            playerDialogue.text = line.text.ToString();
-        }
-        else if (!character.isPlayer)
-        {
-            playerBubble.SetActive(false);
-            characterBubble.SetActive(true);
-            characterDialogue.text = line.text.ToString();
-        }
-        else
-        {
-            playerBubble.SetActive(false);
-            characterBubble.SetActive(false);
-        }
+        // if (character.isPlayer)
+        // {
+            // playerBubble.SetActive(true);
+            // characterBubble.SetActive(false);
+            // playerDialogue.text = line.text.ToString();
+        // }
+        // else if (!character.isPlayer)
+        // {
+            // playerBubble.SetActive(false);
+            // characterBubble.SetActive(true);
+            // characterDialogue.text = line.text.ToString();
+        // }
+        // else
+        // {
+            // playerBubble.SetActive(false);
+            // characterBubble.SetActive(false);
+        // }
 
         // characterName.text = line.character.characterName;
-    }
+    // }
 
     public void AdvanceLine()
     {
@@ -206,8 +208,8 @@ public class DialogueManager_V02 : MonoBehaviour
         if (!conversationStarted) Initialize();
 
         // If there are more lines to read, read next line
-        if (activeLineIndex < convo.lines.Length)
-            DisplayLine();
+        // if (activeLineIndex < convo.lines.Length)
+            // DisplayLine();
 
         // If there aren't more lines to read, check for next conversation
         else AdvanceConversation();
@@ -224,7 +226,7 @@ public class DialogueManager_V02 : MonoBehaviour
     {
         convo = nextConvo;
         activeLineIndex = 0;
-        decUI.SetActive(false);
+        // decUI.SetActive(false);
         // enableNextInput();
         AdvanceConversation();
     }
