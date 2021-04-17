@@ -61,6 +61,15 @@ public class DecisionController : MonoBehaviour
     // Invokes the event and broadcasts what conversation to load based on choice
     public void MakeDecision()
     {
+        if(choice.distortionEffect <= 0)
+        {
+            Debug.Log("PlayPositiveeffect");
+            
+        }
+        else
+        {
+            Debug.Log("PlayNegativeEffect");
+        }
         conversationChangeEvent.Invoke(choice.nextConversation);
     }
 
