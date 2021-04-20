@@ -5,18 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class GlobalChoiceRecorder : MonoBehaviour
 {
-    public static GlobalChoiceRecorder Instance;
+    public static GlobalChoiceRecorder GCRInstance;
 
     public int globalDistortionLevel;
 
     void Awake()
     {
-        if (Instance == null)
+        if (GCRInstance == null)
         {
             DontDestroyOnLoad(gameObject);
-            Instance = this;
+            GCRInstance = this;
         }
-        else if (Instance != this)
+        else if (GCRInstance != this)
         {
             Destroy(gameObject);
         }

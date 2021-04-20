@@ -6,7 +6,7 @@ using TMPro;
 
 // This formats the lines of dialogue in the Unity Editor
 [System.Serializable]
-public struct Line
+public struct ConvoLine
 {
     // The character involved in the conversation
     public Character character;
@@ -23,11 +23,11 @@ public struct Line
 [CreateAssetMenu(fileName = "New Conversation", menuName = "Scriptable Objects/Conversation")]
 public class Conversation_V02 : ScriptableObject
 {
-    public Line[] lines;
+    public ConvoLine[] lines;
 
     // This is the decision the conversation will lead to
     public Decision decision;
 
     // This is the next conversation this conversation will lead to
-    public Conversation nextConvo;
+    public Conversation_V02 nextConvo;
 }

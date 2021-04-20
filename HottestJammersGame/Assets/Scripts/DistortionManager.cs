@@ -6,10 +6,13 @@ using TMPro;
 
 public class DistortionManager : MonoBehaviour
 {
+    public static DistortionManager DMInstance;
+
     public Canvas distortionUI;
 
     private Dictionary<string,Image> distortionDictionary = new Dictionary<string,Image>();
     private Dictionary<string,ParticleSystem> particleDictionary = new Dictionary<string,ParticleSystem>();
+    // TODO Moved to CharacterStateManager
     private Dictionary<string,Character> characterDictionary = new Dictionary<string,Character>();
 
     public Image outerVignette;
@@ -18,6 +21,7 @@ public class DistortionManager : MonoBehaviour
     public ParticleSystem slowBubbles;
     public ParticleSystem fastBubbles;
 
+    // TODO Moved to CharacterStateManager
     public Character alexis;
     public Character creepyDude;
     public Character izzy;
@@ -26,11 +30,26 @@ public class DistortionManager : MonoBehaviour
 
     private Character currentActiveCharacter;
     private Sprite currentPortrait;
+    private Sprite currentShadowPortrait;
     private Image[] activeVignettes;
     private ParticleSystem[] activeParticleSystems;
-    private GameObject dialogueManager;
+    private GameObject uiController;
+    private GameObject CharacterStateManager;
 
     private int distortionLevel;
+
+    void Awake()
+    {
+      if (DMInstance == null)
+      {
+          DontDestroyOnLoad(gameObject);
+          DMInstance = this;
+      }
+      else if (DMInstance != this)
+      {
+          Destroy(gameObject);
+      }
+    }
 
     void Start()
     {
@@ -39,6 +58,7 @@ public class DistortionManager : MonoBehaviour
       distortionDictionary.Add("BoilingPot", boilingpot);
       particleDictionary.Add("SlowBubbles", slowBubbles);
       particleDictionary.Add("FastBubbles", fastBubbles);
+      // TODO Moved to CharacterStateManager
       characterDictionary.Add("Alexis", alexis);
       characterDictionary.Add("CreepyDude", creepyDude);
       characterDictionary.Add("Izzy", izzy);
@@ -48,15 +68,15 @@ public class DistortionManager : MonoBehaviour
         // Turn everything off
         // We're the only ones with references
         // Could be turned off via Unity UI to start
-        outerVignette.enabled = false;
+      outerVignette.enabled = false;
       innerVignette.enabled = false;
       boilingpot.enabled = false;
       slowBubbles.Stop();
       fastBubbles.Stop();
 
-      dialogueManager = GameObject.Find("Dialogue Manager");
+      uiController = GameObject.Find("Dialogue Manager");
 
-      distortionLevel = GlobalChoiceRecorder.Instance.globalDistortionLevel;
+      distortionLevel = GlobalChoiceRecorder.GCRInstance.globalDistortionLevel;
     }
 
     public void UpdateDistortionLevel(int distortionAmount)
@@ -66,9 +86,9 @@ public class DistortionManager : MonoBehaviour
       {
         distortionLevel = 0;
       }
-      else if (distortionLevel > 5)
+      else if (distortionLevel > 25)
       {
-        distortionLevel = 5;
+        distortionLevel = 25;
       }
       updateCurrents();
     }
@@ -82,33 +102,48 @@ public class DistortionManager : MonoBehaviour
     public void updateCurrents()
     {
       currentPortrait = GetPortrait(currentActiveCharacter.characterName);
+      currentShadowPortrait = GetShadowPortrait(currentActiveCharacter.characterName);
       activeVignettes = GetVignetteEffects();
       activeParticleSystems = GetParticle();
+      bool isMindReading = GetMindReading();
       Debug.Log("updateCurrents successful");
 
       // Send current actives to UIManager/Dialogue Manager
       // Portrait
-      dialogueManager.SendMessage("updatePortrait", currentPortrait);
+      uiController.SendMessage("updatePortrait", currentPortrait);
 
+
+      uiController.SendMessage("updateShadowPortrait", currentShadowPortrait);
+
+      // TODO - CCheck
+      // Mind Reading t/f
+      uiController.SendMessage("updateMindReading", isMindReading);
 
       // Vignettes
-      dialogueManager.SendMessage("updateActiveVignettes", activeVignettes);
+      uiController.SendMessage("updateActiveVignettes", activeVignettes);
 
       //ParticleSystems
-      dialogueManager.SendMessage("updateActiveParticleSystems", activeParticleSystems);
+      uiController.SendMessage("updateActiveParticleSystems", activeParticleSystems);
 
       // Save to globalDistortionLevel
       SaveDistortionLevel();
 
     }
 
+    private bool GetMindReading(){
+      if (distortionLevel >= 10){
+        return true;
+      }
+      return false;
+    }
+
     public Image[] GetVignetteEffects()
     {
-      if (distortionLevel <= 2)
+      if (distortionLevel <= 5)
       {
         return VignetteNone();
       }
-      else if (distortionLevel >= 4)
+      else if (distortionLevel >= 20)
       {
         return VignetteFull();
       }
@@ -120,11 +155,11 @@ public class DistortionManager : MonoBehaviour
 
     public ParticleSystem[] GetParticle()
     {
-      if (distortionLevel <= 2)
+      if (distortionLevel <= 5)
       {
         return ParticleNone();
       }
-      else if (distortionLevel >= 4)
+      else if (distortionLevel >= 20)
       {
         return ParticleFull();
       }
@@ -141,17 +176,40 @@ public class DistortionManager : MonoBehaviour
       if (characterDictionary.TryGetValue(characterName, out activeCharacter))
       {
         Debug.Log("ACTIVE SPRITES: " + activeCharacter.characterSprites.Length.ToString());
-        if (distortionLevel <= 2)
+        if (distortionLevel <= 5)
         {
           return activeCharacter.characterSprites[0];
         }
-        else if (distortionLevel >= 4)
+        else if (distortionLevel >= 20)
         {
           return activeCharacter.characterSprites[2];
         }
         else
         {
           return activeCharacter.characterSprites[1];
+        }
+      }
+      Debug.LogError("No portrait to show, character name does not exist in CharacterDictionary");
+      return null;
+    }
+
+    public Sprite GetShadowPortrait(string characterName)
+    {
+      Character activeCharacter = null;
+      if (characterDictionary.TryGetValue(characterName, out activeCharacter))
+      {
+        Debug.Log("ACTIVE SPRITES: " + activeCharacter.shadowSprites.Length.ToString());
+        if (distortionLevel <= 5)
+        {
+          return activeCharacter.shadowSprites[0];
+        }
+        else if (distortionLevel >= 20)
+        {
+          return activeCharacter.shadowSprites[2];
+        }
+        else
+        {
+          return activeCharacter.shadowSprites[1];
         }
       }
       Debug.LogError("No portrait to show, character name does not exist in CharacterDictionary");
@@ -233,6 +291,6 @@ public class DistortionManager : MonoBehaviour
 
     public void SaveDistortionLevel()
     {
-      GlobalChoiceRecorder.Instance.globalDistortionLevel = distortionLevel;
+      GlobalChoiceRecorder.GCRInstance.globalDistortionLevel = distortionLevel;
     }
 }

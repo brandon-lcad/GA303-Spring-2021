@@ -15,6 +15,7 @@ public class Character : ScriptableObject
 
     // The sprites available for the distortion manager to select from
     public Sprite[] characterSprites;
+    public Sprite [] shadowSprites;
 
     public int spriteToShow;
 }

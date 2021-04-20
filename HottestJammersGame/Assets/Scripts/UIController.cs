@@ -5,9 +5,6 @@ using UnityEngine.Events;
 using UnityEngine.UI;
 using TMPro;
 
-[System.Serializable]
-public class QuestionEvent : UnityEvent<Decision> { }
-
 public class UIController : MonoBehaviour
 {
     public Canvas ui;
@@ -16,14 +13,14 @@ public class UIController : MonoBehaviour
     // Background Image
     public Image bg;
     // Next Button
-    public Button nextButton;
+    public GameObject nextButton;
     // Distortion Animation - type tbd
     private ParticleSystem[] activeParticles;
     // Distortion vignettes
     private Image[] activeVignettes;
     // Character Portrait and Shadow Portrait
     public Image portrait;
-    public Image shadowport;
+    public Image shadowPortrait;
     public TMP_Text characterName;
     // Character Speech Bubble
     public GameObject characterBubble;
@@ -38,7 +35,14 @@ public class UIController : MonoBehaviour
     public GameObject thoughtBubble;
     public TMP_Text thoughtDialogue;
 
+    private bool mindReading;
+
     public GameObject decUI;
+
+    public static UIController Instance;
+
+    private GameObject distortionManager;
+    private GameObject dialogueManager;
 
     // public Character chara;
     // public Conversation convo;
@@ -75,10 +79,12 @@ public class UIController : MonoBehaviour
         playerDialogue.text = "";
         thoughtBubble.SetActive(false);
         thoughtDialogue.text = "";
+        mindReading = false;
         // Sets decision UI canvas off
         decUI.SetActive(false);
 
         distortionManager = GameObject.Find("DistortionManager");
+        dialogueManager = GameObject.Find("DialogueManager");
         // Initialize Active Systems to empty
         activeParticles = new ParticleSystem[0];
         activeVignettes = new Image[0];
@@ -86,6 +92,7 @@ public class UIController : MonoBehaviour
         nextButton.SetActive(true);
 
         ui.enabled = true;
+        showPortraits();
     }
 
     // Update is called once per frame
@@ -98,6 +105,13 @@ public class UIController : MonoBehaviour
         // }
       // }
     // }
+    void Update()
+    {
+        if (Input.GetKeyDown("space"))
+        {
+          dialogueManager.SendMessage("AdvanceConversation");
+        }
+    }
 
     // This function progresses the conversation upon click or space bar; made public so a button can be implemented
     // public void AdvanceConversation()
@@ -169,8 +183,13 @@ public class UIController : MonoBehaviour
       portrait.sprite = nextPortrait;
     }
 
-    public void updateShadow(Sprite nextShadow){
-      portrait.sprite = nextShadow;
+    public void updateShadowPortrait(Sprite nextShadow){
+      shadowPortrait.sprite = nextShadow;
+    }
+
+    // TODO - CCheck
+    public void updateMindReading(bool isMindReading){
+      mindReading = isMindReading;
     }
 
     public void updateActiveParticleSystems(ParticleSystem[] newParticleSystems){
@@ -201,6 +220,85 @@ public class UIController : MonoBehaviour
         for(int z = 0; z < activeVignettes.Length; z++){
           activeVignettes[z].enabled = true;
         }
+    }
+
+    public void updateCharacterLine(string characterLine){
+        characterDialogue.text = characterLine;
+    }
+
+    public void updateShadowLine(string shadowLine){
+        distortionDialogue.text = shadowLine;
+    }
+
+    public void updatePlayerLine(string playerLine){
+        playerDialogue.text = playerLine;
+    }
+
+    public void updateThoughtLine(string thoughtLine){
+        thoughtDialogue.text = thoughtLine;
+    }
+
+    public void showCharacterBubble(){
+        characterBubble.SetActive(true);
+        distortionBubble.SetActive(false);
+        playerBubble.SetActive(false);
+        thoughtBubble.SetActive(false);
+    }
+
+    public void showPlayerBubble(){
+      characterBubble.SetActive(false);
+      distortionBubble.SetActive(false);
+      playerBubble.SetActive(true);
+      thoughtBubble.SetActive(false);
+    }
+
+    public void showPlayerThoughtBubble(){
+      characterBubble.SetActive(false);
+      distortionBubble.SetActive(false);
+      playerBubble.SetActive(false);
+      thoughtBubble.SetActive(true);
+    }
+
+    public void showShadowBubble(){
+        if (mindReading){
+          distortionBubble.SetActive(true);
+        }
+    }
+
+    public void showDecisionUI(Decision nextDecision){
+      // Turn everything off
+      characterBubble.SetActive(false);
+      characterDialogue.text = "";
+      distortionBubble.SetActive(false);
+      distortionDialogue.text = "";
+      playerBubble.SetActive(false);
+      playerDialogue.text = "";
+      thoughtBubble.SetActive(false);
+      thoughtDialogue.text = "";
+      hidePortraits();
+
+      // Turn on Decision UI
+      decUI.SetActive(true);
+
+      decUI.SendMessage("Change", nextDecision);
+    }
+
+    public void hideDecisionUI(){
+      // Turn off Decision UI
+      decUI.SetActive(false);
+      showPortraits();
+    }
+
+    private void showPortraits(){
+      // Enable Portrait
+      portrait.enabled = true;
+      shadowPortrait.enabled = true;
+    }
+
+    private void hidePortraits(){
+      // Hide Portrait
+      shadowPortrait.enabled = false;
+      portrait.enabled = false;
     }
 
     // Updates text and bubbles to correspond to current line in convo and advances activeLineIndex to next line
