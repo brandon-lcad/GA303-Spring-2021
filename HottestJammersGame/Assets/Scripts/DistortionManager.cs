@@ -20,8 +20,8 @@ public class DistortionManager : MonoBehaviour
     public Image boilingpot;
     public ParticleSystem slowBubbles;
     public ParticleSystem fastBubbles;
-
-    // TODO Moved to CharacterStateManager
+    //GEORGIA public ParticleSystem goodAnswer;
+    //GEORGIA public ParticleSystem badAnswer;
     public Character alexis;
     public Character creepyDude;
     public Character izzy;
@@ -58,7 +58,8 @@ public class DistortionManager : MonoBehaviour
       distortionDictionary.Add("BoilingPot", boilingpot);
       particleDictionary.Add("SlowBubbles", slowBubbles);
       particleDictionary.Add("FastBubbles", fastBubbles);
-      // TODO Moved to CharacterStateManager
+    //GEORGIA particleDictionary.Add("GoodAnswer", goodAnswer);
+    //GEORGIA particleDictionary.Add("BadAnswer", badAnswer);
       characterDictionary.Add("Alexis", alexis);
       characterDictionary.Add("CreepyDude", creepyDude);
       characterDictionary.Add("Izzy", izzy);
@@ -167,6 +168,13 @@ public class DistortionManager : MonoBehaviour
       {
         Debug.Log("return ParticleHalf successful");
         return ParticleHalf();
+    // GEORGIA I Think I would write something like the above mentioned particle System, but I'm unsure how to link it to the answers
+    // I can't find the answers unless I'm running the game is the first problem I face
+    //If I set it to distortion level and the player makes 2 consecutive bad choices I'm concerend if they make a good 3rd choice it
+    //will still only show the negative effect because it's working it's way back down lower than 1
+    //Like: bad choice #1 +1 to distortion distortion =1 and it shows bad particles, bad choice #2 +1 and distortion =2 it shows the bad particles, Good choice -1 but distortion = 1 so it would still show bad particles regardless 
+    //And I can't script it as a part of this for one good choice to set distortion to 0 because then it would clear the rest of the distortion in the scene away which is what we don't want
+    //I think we need to go to the descision/question manager if we want to find the choices
       }
     }
 
