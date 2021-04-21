@@ -36,15 +36,27 @@ public class DecisionController : MonoBehaviour
         DecisionController decisionController = button.GetComponent<DecisionController>();
         // Get DialogueManager in order to send message asking to change the active
         decisionController.choice = choice;
-        button.onClick.AddListener(() => SetChoice(choice.nextConversation));
+        // Add choice inspection and effect propagation
+        button.onClick.AddListener(() => SendImpactEffect(choice));
+        // Add Distortion Level propagation
         button.onClick.AddListener(() => SendDistortionLevel(choice.distortionEffect));
+        // Add conversation segue
+        button.onClick.AddListener(() => SetChoice(choice.nextConversation));
         // button.onClick.AddListener(() => LoadScene(choice.nextScene));
         return decisionController;
     }
 
+    private static void SendImpactEffect(Choice selection){
+        if (selection.hasEffect){
+          // Do stuff
+          GameObject dm = GameObject.Find("DistortionManager");
+          dm.SendMessage("ChangeCharacterState", selection.impact);
+        }
+    }
+
     private static void SetChoice(Conversation nextConversation)
     {
-        GameObject dm = GameObject.Find("Dialogue Manager");
+        GameObject dm = GameObject.Find("DialogueManager");
         dm.SendMessage("ChangeConversation", nextConversation);
     }
 
@@ -64,7 +76,7 @@ public class DecisionController : MonoBehaviour
         if(choice.distortionEffect <= 0)
         {
             Debug.Log("PlayPositiveeffect");
-            
+
         }
         else
         {

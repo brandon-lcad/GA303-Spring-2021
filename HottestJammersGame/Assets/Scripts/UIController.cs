@@ -8,10 +8,8 @@ using TMPro;
 public class UIController : MonoBehaviour
 {
     public Canvas ui;
-    // Canvas for particle fx for distortion level increase or decrease
-    public Canvas fxui;
     // Background Image
-    public Image bg;
+    // public Image bg;
     // Next Button
     public GameObject nextButton;
     // Distortion Animation - type tbd
@@ -21,7 +19,7 @@ public class UIController : MonoBehaviour
     // Character Portrait and Shadow Portrait
     public Image portrait;
     public Image shadowPortrait;
-    public TMP_Text characterName;
+    // private TMP_Text characterName;
     // Character Speech Bubble
     public GameObject characterBubble;
     public TMP_Text characterDialogue;
@@ -109,10 +107,13 @@ public class UIController : MonoBehaviour
     {
         if (Input.GetKeyDown("space"))
         {
-          dialogueManager.SendMessage("AdvanceConversation");
+          sendAdvanceConversation();
         }
     }
 
+    public void sendAdvanceConversation(){
+        dialogueManager.SendMessage("AdvanceConversation");
+    }
     // This function progresses the conversation upon click or space bar; made public so a button can be implemented
     // public void AdvanceConversation()
     // {
@@ -190,6 +191,9 @@ public class UIController : MonoBehaviour
     // TODO - CCheck
     public void updateMindReading(bool isMindReading){
       mindReading = isMindReading;
+      // if (!mindReading){
+      //   distortionBubble.SetActive(false);
+      // }
     }
 
     public void updateActiveParticleSystems(ParticleSystem[] newParticleSystems){

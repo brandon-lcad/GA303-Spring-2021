@@ -8,12 +8,21 @@ using TMPro;
 [System.Serializable]
 public struct Line
 {
-    // The character involved in the conversation (This script assumes we only have one character on the screen at a time
+    // The character involved in the conversation
     public Character character;
     // This is what the character is saying
     [TextArea(2, 5)]
     public string text;
-
+    // This flags this convo if there is dialogue attached to the shadow character
+    public bool shadowDialogue;
+    // This is what the shadow of the character is thinking
+    [TextArea(2, 5)]
+    public string shadowText;
+    // This flags convo if there is alt text for second+ meeting
+    public bool altDialogue;
+    // This is the convo if player has already met character
+    [TextArea(2, 5)]
+    public string altText;
 }
 
 [CreateAssetMenu(fileName = "New Conversation", menuName = "Scriptable Objects/Conversation")]

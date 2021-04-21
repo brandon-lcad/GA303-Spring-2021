@@ -10,7 +10,7 @@ public class QuestionsEvent : UnityEvent<Decision> { }
 public class DialogueManager_V02 : MonoBehaviour
 {
 
-    public Conversation_V02 convo;
+    public Conversation convo;
 
     public QuestionEvent questionEvent;
 
@@ -109,19 +109,16 @@ public class DialogueManager_V02 : MonoBehaviour
         // If there are more lines to read...
         if (activeLineIndex < convo.lines.Length)
         {
-            ConvoLine currentLine = convo.lines[activeLineIndex];
-            // TODO Send line to UI
-              // Send line As-Is
-            // TODO Send Character to UI
-              // Show relevant character
+            Line currentLine = convo.lines[activeLineIndex];
+            // Show relevant character
             distortionManager.SendMessage("UpdateCurrentCharacter", currentLine.character);
 
-            // TODO Active correct bubble
               // In order to pick correct, inspect line
                 // If line character is player, show player bubble
                 // if line character is playerThoughts, show player thought bubble
                 // if line character is character, show character speech bubble
                 // if line character is character && is Shadow thought is true, show shadow bubble
+                // Send line As-Is
             if(currentLine.character.characterName == "Player"){
               uiController.SendMessage("showPlayerBubble");
               uiController.SendMessage("updatePlayerLine", currentLine.text);
@@ -130,7 +127,11 @@ public class DialogueManager_V02 : MonoBehaviour
               uiController.SendMessage("updateThoughtLine", currentLine.text);
             } else {
               uiController.SendMessage("showCharacterBubble");
-              uiController.SendMessage("updateCharacterLine", currentLine.text);
+              if (currentLine.altDialogue && currentLine.character.hasMetBefore){
+                  uiController.SendMessage("updateCharacterLine", currentLine.altText);
+              } else {
+                uiController.SendMessage("updateCharacterLine", currentLine.text);
+              }
               if (currentLine.shadowDialogue){
                 uiController.SendMessage("showShadowBubble");
                 uiController.SendMessage("updateShadowLine", currentLine.shadowText);
@@ -268,7 +269,7 @@ public class DialogueManager_V02 : MonoBehaviour
     }
 
     // Listens for ConversationChangeEvent and changes Conversation accordingly
-    public void ChangeConversation(Conversation_V02 nextConvo)
+    public void ChangeConversation(Conversation nextConvo)
     {
         convo = nextConvo;
         activeLineIndex = 0;

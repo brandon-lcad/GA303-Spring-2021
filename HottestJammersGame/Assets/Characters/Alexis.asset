@@ -14,8 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: Alexis
   isPlayer: 0
+  hasMetBefore: 0
   characterSprites:
   - {fileID: -7161070266165433068, guid: 824b5309a31571648a5d345b89bcc6a3, type: 3}
   - {fileID: 2937576478030381889, guid: 824b5309a31571648a5d345b89bcc6a3, type: 3}
   - {fileID: 2937576478030381889, guid: 824b5309a31571648a5d345b89bcc6a3, type: 3}
+  shadowSprites:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   spriteToShow: 0

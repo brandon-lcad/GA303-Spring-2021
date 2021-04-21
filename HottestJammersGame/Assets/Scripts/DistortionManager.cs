@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class DistortionManager : MonoBehaviour
@@ -75,7 +76,7 @@ public class DistortionManager : MonoBehaviour
       slowBubbles.Stop();
       fastBubbles.Stop();
 
-      uiController = GameObject.Find("Dialogue Manager");
+      uiController = GameObject.Find("UIController");
 
       distortionLevel = GlobalChoiceRecorder.GCRInstance.globalDistortionLevel;
     }
@@ -116,7 +117,6 @@ public class DistortionManager : MonoBehaviour
 
       uiController.SendMessage("updateShadowPortrait", currentShadowPortrait);
 
-      // TODO - CCheck
       // Mind Reading t/f
       uiController.SendMessage("updateMindReading", isMindReading);
 
@@ -130,6 +130,26 @@ public class DistortionManager : MonoBehaviour
       SaveDistortionLevel();
 
     }
+
+    public void ChangeCharacterState(CharacterEffects effect){
+      // Affect current character in character dictionary
+      // use current active character
+      // if effect is Meet, trigger meet
+      if(effect == CharacterEffects.Meet){
+        currentActiveCharacter.hasMetBefore = true;
+      } // Add subsequent effect checks here
+    }
+
+    // TODO: Reset function to be called on game end
+    // private void ResetCharacterState(Scene scene, LoadSceneMode mode)
+    // {
+    //   if (scene.name == "Introduction")
+    //   {
+    //     foreach (GameObject Character in characterDictionary){
+    //       Character.hasMetBefore = false;
+    //     }
+    //   }
+    // }
 
     private bool GetMindReading(){
       if (distortionLevel >= 10){
@@ -172,7 +192,7 @@ public class DistortionManager : MonoBehaviour
     // I can't find the answers unless I'm running the game is the first problem I face
     //If I set it to distortion level and the player makes 2 consecutive bad choices I'm concerend if they make a good 3rd choice it
     //will still only show the negative effect because it's working it's way back down lower than 1
-    //Like: bad choice #1 +1 to distortion distortion =1 and it shows bad particles, bad choice #2 +1 and distortion =2 it shows the bad particles, Good choice -1 but distortion = 1 so it would still show bad particles regardless 
+    //Like: bad choice #1 +1 to distortion distortion =1 and it shows bad particles, bad choice #2 +1 and distortion =2 it shows the bad particles, Good choice -1 but distortion = 1 so it would still show bad particles regardless
     //And I can't script it as a part of this for one good choice to set distortion to 0 because then it would clear the rest of the distortion in the scene away which is what we don't want
     //I think we need to go to the descision/question manager if we want to find the choices
       }

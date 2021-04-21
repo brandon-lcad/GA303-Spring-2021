@@ -4,6 +4,10 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
+public enum CharacterEffects{
+  Meet
+}
+
 [System.Serializable]
 public struct Choice {
 
@@ -19,6 +23,15 @@ public struct Choice {
 
     // Brute forcing to get through Hot Jam, REMOVE THESE IN ACTUAL BUILD
     public string nextScene;
+
+    // Character effect bool
+    public bool hasEffect;
+
+    // Character impacted
+    public Character character;
+
+    // Character effect
+    public CharacterEffects impact;
 }
 
 [CreateAssetMenu(fileName = "New Decision", menuName = "Scriptable Objects/Decision")]

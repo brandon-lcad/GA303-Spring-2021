@@ -14,8 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: CreepyDude
   isPlayer: 0
+  hasMetBefore: 0
   characterSprites:
   - {fileID: -2524090046133582940, guid: 2e54089206742124a9790ff27221e54b, type: 3}
   - {fileID: -2664679666077852849, guid: 2e54089206742124a9790ff27221e54b, type: 3}
   - {fileID: -6771551968963012137, guid: 2e54089206742124a9790ff27221e54b, type: 3}
+  shadowSprites:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   spriteToShow: 0

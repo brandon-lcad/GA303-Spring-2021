@@ -12,6 +12,8 @@ public class Character : ScriptableObject
 
     // Is this character the player?
     public bool isPlayer;
+    // Has the player met this character before?
+    public bool hasMetBefore;
 
     // The sprites available for the distortion manager to select from
     public Sprite[] characterSprites;

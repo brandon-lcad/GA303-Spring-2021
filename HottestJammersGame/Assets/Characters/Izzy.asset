@@ -14,8 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: Izzy
   isPlayer: 0
+  hasMetBefore: 0
   characterSprites:
   - {fileID: -8087604928968726919, guid: e7214ed1268adf04596c666ac3d31e43, type: 3}
   - {fileID: -2579460361316883742, guid: e7214ed1268adf04596c666ac3d31e43, type: 3}
   - {fileID: 2061762844874745769, guid: e7214ed1268adf04596c666ac3d31e43, type: 3}
+  shadowSprites:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   spriteToShow: 1
