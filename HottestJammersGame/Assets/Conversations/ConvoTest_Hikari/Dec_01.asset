@@ -12,12 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cccf0ab1966bcbb498f7494d06242198, type: 3}
   m_Name: Dec_01
   m_EditorClassIdentifier: 
-  text: Text???
+  text: Decision01
   choices:
-  - text: Add 5 Distortion
+  - text: Add 5 Distortion, Talk to Alexis
     nextConversation: {fileID: 11400000, guid: 396ba6c375b99e0488dbb6546d70ac34, type: 2}
     distortionEffect: 5
     nextScene: 
     hasEffect: 1
-    character: {fileID: 0}
+    character: {fileID: 11400000, guid: c87fd56e6eb1c6e4d8540e462bf60d69, type: 2}
+    impact: 0
+  - text: Add 15 Distortion, Talk to Creep
+    nextConversation: {fileID: 11400000, guid: 396ba6c375b99e0488dbb6546d70ac34, type: 2}
+    distortionEffect: 15
+    nextScene: 
+    hasEffect: 1
+    character: {fileID: 11400000, guid: a9a5a0ef951fe5b41b10e855cc7ea5f5, type: 2}
     impact: 0

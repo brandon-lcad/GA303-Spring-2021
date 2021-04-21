@@ -38,19 +38,21 @@ public class DecisionController : MonoBehaviour
         decisionController.choice = choice;
         // Add choice inspection and effect propagation
         button.onClick.AddListener(() => SendImpactEffect(choice));
-        // Add Distortion Level propagation
+        // Add Distortion Level propagation, character attached to choice
         button.onClick.AddListener(() => SendDistortionLevel(choice.distortionEffect));
         // Add conversation segue
         button.onClick.AddListener(() => SetChoice(choice.nextConversation));
+
+        // TODO For History Tracker - add listener, send message with choice text
         // button.onClick.AddListener(() => LoadScene(choice.nextScene));
         return decisionController;
     }
 
     private static void SendImpactEffect(Choice selection){
         if (selection.hasEffect){
-          // Do stuff
-          GameObject dm = GameObject.Find("DistortionManager");
-          dm.SendMessage("ChangeCharacterState", selection.impact);
+          if (selection.impact == CharacterEffects.Meet){
+            selection.character.hasMetBefore = true;
+          }
         }
     }
 

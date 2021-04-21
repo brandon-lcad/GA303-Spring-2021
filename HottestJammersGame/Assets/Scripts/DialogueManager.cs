@@ -31,7 +31,7 @@ public class DialogueManager : MonoBehaviour
     public QuestionEvent questionEvent;
 
     public int distortionLevel;
-    private int activeLineIndex = 0;
+    public int activeLineIndex = 0;
 
     private ParticleSystem[] activeParticles;
     private Image[] activeVignettes;

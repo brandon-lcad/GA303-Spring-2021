@@ -29,7 +29,7 @@ public class DistortionManager : MonoBehaviour
     public Character player;
     public Character playerThoughts;
 
-    private Character currentActiveCharacter;
+    public Character currentActiveCharacter;
     private Sprite currentPortrait;
     private Sprite currentShadowPortrait;
     private Image[] activeVignettes;
@@ -129,15 +129,6 @@ public class DistortionManager : MonoBehaviour
       // Save to globalDistortionLevel
       SaveDistortionLevel();
 
-    }
-
-    public void ChangeCharacterState(CharacterEffects effect){
-      // Affect current character in character dictionary
-      // use current active character
-      // if effect is Meet, trigger meet
-      if(effect == CharacterEffects.Meet){
-        currentActiveCharacter.hasMetBefore = true;
-      } // Add subsequent effect checks here
     }
 
     // TODO: Reset function to be called on game end

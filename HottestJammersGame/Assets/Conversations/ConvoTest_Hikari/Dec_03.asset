@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cccf0ab1966bcbb498f7494d06242198, type: 3}
-  m_Name: New Decision
+  m_Name: Dec_03
   m_EditorClassIdentifier: 
-  text: 
+  text: Decision03
   choices:
   - text: Return Distoriton to 0
     nextConversation: {fileID: 11400000, guid: 576ab304432cb944e99ab07b73409fe6, type: 2}

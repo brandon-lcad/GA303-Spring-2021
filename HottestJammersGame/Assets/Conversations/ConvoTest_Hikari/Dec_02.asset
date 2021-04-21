@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cccf0ab1966bcbb498f7494d06242198, type: 3}
   m_Name: Dec_02
   m_EditorClassIdentifier: 
-  text: Text???
+  text: Decision02
   choices:
   - text: Add 15 Distortion
     nextConversation: {fileID: 11400000, guid: 26120c940c090ac438fea7ca8355225d, type: 2}

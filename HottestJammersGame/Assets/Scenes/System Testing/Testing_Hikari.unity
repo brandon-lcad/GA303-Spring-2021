@@ -750,7 +750,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 360558499}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1971996564}
+        m_MethodName: sendAdvanceConversation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &360558499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1214,7 +1225,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -475, y: 107}
+  m_AnchoredPosition: {x: -475, y: 131.00003}
   m_SizeDelta: {x: 850, y: 500}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &729721427
@@ -1926,6 +1937,9 @@ MonoBehaviour:
     nextConversation: {fileID: 0}
     distortionEffect: 0
     nextScene: 
+    hasEffect: 0
+    character: {fileID: 0}
+    impact: 0
   conversationChangeEvent:
     m_PersistentCalls:
       m_Calls:
@@ -2866,7 +2880,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1834629157
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3078,7 +3092,7 @@ MonoBehaviour:
   distortionDialogue: {fileID: 261909228}
   playerBubble: {fileID: 729721425}
   playerDialogue: {fileID: 1722826642}
-  thoughtBubble: {fileID: 861655384}
+  thoughtBubble: {fileID: 1015188366}
   thoughtDialogue: {fileID: 861655386}
   decUI: {fileID: 355836655}
 --- !u!4 &2066777734 stripped
