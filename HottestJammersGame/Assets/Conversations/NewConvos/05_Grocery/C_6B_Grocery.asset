@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3ef788a7ad34c74eb7e5d8c46534a4e, type: 3}
+  m_Name: C_6B_Grocery
+  m_EditorClassIdentifier: 
+  lines:
+  - character: {fileID: 11400000, guid: c87fd56e6eb1c6e4d8540e462bf60d69, type: 2}
+    text: What aisle are they in again..?
+    shadowDialogue: 0
+    shadowText: 
+    altDialogue: 0
+    altText: 
+  - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
+    text: I need help... But I don't want to trouble Alexis...
+    shadowDialogue: 0
+    shadowText: 
+    altDialogue: 0
+    altText: 
+  - character: {fileID: 11400000, guid: a9a5a0ef951fe5b41b10e855cc7ea5f5, type: 2}
+    text: Hey now, I get that she's cute, but I'm right here, dumpling~
+    shadowDialogue: 0
+    shadowText: 
+    altDialogue: 0
+    altText: 
+  - character: {fileID: 11400000, guid: a9a5a0ef951fe5b41b10e855cc7ea5f5, type: 2}
+    text: And I swear, I could eat you up right here.
+    shadowDialogue: 0
+    shadowText: 
+    altDialogue: 0
+    altText: 
+  - character: {fileID: 11400000, guid: a9a5a0ef951fe5b41b10e855cc7ea5f5, type: 2}
+    text: Now, you were giving me your number, right?
+    shadowDialogue: 1
+    shadowText: 'Heh heh heh... '
+    altDialogue: 0
+    altText: 
+  decision: {fileID: 11400000, guid: 44b14cac406c4d74fae82459a9a956a8, type: 2}
+  nextConvo: {fileID: 0}

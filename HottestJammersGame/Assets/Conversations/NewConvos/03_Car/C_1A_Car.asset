@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3ef788a7ad34c74eb7e5d8c46534a4e, type: 3}
+  m_Name: C_1A_Car
+  m_EditorClassIdentifier: 
+  lines:
+  - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
+    text: Let's figure out where I'm going first before I start driving...
+    shadowDialogue: 0
+    shadowText: 
+    altDialogue: 0
+    altText: 
+  - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
+    text: I know there are clothing stores at the Viewport Plaza Shopping Mall.
+    shadowDialogue: 0
+    shadowText: 
+    altDialogue: 0
+    altText: 
+  - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
+    text: There's also the Stellar Island Boutique. I've never been there but it
+      looks nice.
+    shadowDialogue: 0
+    shadowText: 
+    altDialogue: 0
+    altText: 
+  - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
+    text: They're about the same distance away... Where should I go?
+    shadowDialogue: 0
+    shadowText: 
+    altDialogue: 0
+    altText: 
+  decision: {fileID: 11400000, guid: aa629c6e8b8fa3c4095d0ab1d9581310, type: 2}
+  nextConvo: {fileID: 0}

@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3ef788a7ad34c74eb7e5d8c46534a4e, type: 3}
+  m_Name: C_2B_Mall
+  m_EditorClassIdentifier: 
+  lines:
+  - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
+    text: OH GOD, HIDE IN THE CLOTHES RACK, HIDE IN THE CLOTHES RACK!
+    shadowDialogue: 0
+    shadowText: 
+    altDialogue: 0
+    altText: 
+  - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
+    text: She didn't see me did she? I really hope she didn't see me dive in here
+      just now
+    shadowDialogue: 0
+    shadowText: 
+    altDialogue: 0
+    altText: 
+  - character: {fileID: 11400000, guid: c87fd56e6eb1c6e4d8540e462bf60d69, type: 2}
+    text: Hrmmmm, pink or purple...
+    shadowDialogue: 0
+    shadowText: 
+    altDialogue: 0
+    altText: 
+  - character: {fileID: 11400000, guid: c87fd56e6eb1c6e4d8540e462bf60d69, type: 2}
+    text: I think... maybe the pink?
+    shadowDialogue: 0
+    shadowText: 
+    altDialogue: 0
+    altText: 
+  - character: {fileID: 11400000, guid: c87fd56e6eb1c6e4d8540e462bf60d69, type: 2}
+    text: Yeah, let's just do the pink, I'm sure it'll be fine.
+    shadowDialogue: 0
+    shadowText: 
+    altDialogue: 0
+    altText: 
+  - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
+    text: Phew....
+    shadowDialogue: 0
+    shadowText: 
+    altDialogue: 0
+    altText: 
+  - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
+    text: Thank god she didn't see me...
+    shadowDialogue: 0
+    shadowText: 
+    altDialogue: 0
+    altText: 
+  - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
+    text: Although... I think the purple one would have looked better.
+    shadowDialogue: 0
+    shadowText: 
+    altDialogue: 0
+    altText: 
+  - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
+    text: Alright, just grab something that's not too flashy... don't want to attract
+      too much attention after all.
+    shadowDialogue: 0
+    shadowText: 
+    altDialogue: 0
+    altText: 
+  - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
+    text: Okay, time to go get some snacks.
+    shadowDialogue: 0
+    shadowText: 
+    altDialogue: 0
+    altText: 
+  decision: {fileID: 11400000, guid: a1dcb31c9015425429cc09453c1c99f3, type: 2}
+  nextConvo: {fileID: 0}

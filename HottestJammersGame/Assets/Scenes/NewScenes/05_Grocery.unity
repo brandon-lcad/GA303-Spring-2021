@@ -2158,7 +2158,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 85e697f4ef59d024d88da7fd5b53fb09, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 26d77c59b4b40444da15ede448b8a37e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3131,7 +3131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bc23048c8caff242aac38351597a254, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  convo: {fileID: 11400000, guid: 576ab304432cb944e99ab07b73409fe6, type: 2}
+  convo: {fileID: 11400000, guid: 802eca84d20f81b42b038738ae60f12e, type: 2}
   questionEvent:
     m_PersistentCalls:
       m_Calls: []

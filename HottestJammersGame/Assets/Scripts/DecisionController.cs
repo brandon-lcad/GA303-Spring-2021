@@ -44,7 +44,9 @@ public class DecisionController : MonoBehaviour
         button.onClick.AddListener(() => SetChoice(choice.nextConversation));
 
         // TODO For History Tracker - add listener, send message with choice text
-        // button.onClick.AddListener(() => LoadScene(choice.nextScene));
+
+        button.onClick.AddListener(() => LoadScene(choice.nextScene));
+
         return decisionController;
     }
 
@@ -96,6 +98,12 @@ public class DecisionController : MonoBehaviour
     // BRUTE FORCE, REMOVE THESE TOO
     public static void LoadScene(string sceneName)
     {
+      if (sceneName == ""){
+        Debug.Log("No Scene to Load");
+      }
+      else
+      {
         SceneManager.LoadScene(sceneName);
+      }
     }
 }

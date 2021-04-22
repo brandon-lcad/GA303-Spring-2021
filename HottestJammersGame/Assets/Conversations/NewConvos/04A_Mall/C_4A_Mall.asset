@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3ef788a7ad34c74eb7e5d8c46534a4e, type: 3}
+  m_Name: C_4A_Mall
+  m_EditorClassIdentifier: 
+  lines:
+  - character: {fileID: 11400000, guid: c87fd56e6eb1c6e4d8540e462bf60d69, type: 2}
+    text: Alright, I think I'm just going to throw caution to the wind and geeeeeeet...
+    shadowDialogue: 0
+    shadowText: 
+    altDialogue: 0
+    altText: 
+  - character: {fileID: 11400000, guid: c87fd56e6eb1c6e4d8540e462bf60d69, type: 2}
+    text: The purple one! What do you think?
+    shadowDialogue: 0
+    shadowText: 
+    altDialogue: 0
+    altText: 
+  - character: {fileID: 11400000, guid: e5d2758127e8bc04f9ac3f3ca9682820, type: 2}
+    text: Yeah, that's definitely the right call, it'll look great on you!
+    shadowDialogue: 0
+    shadowText: 
+    altDialogue: 0
+    altText: 
+  - character: {fileID: 11400000, guid: c87fd56e6eb1c6e4d8540e462bf60d69, type: 2}
+    text: Aw, thanks hun! See you tonight!
+    shadowDialogue: 0
+    shadowText: 
+    altDialogue: 0
+    altText: 
+  - character: {fileID: 11400000, guid: e5d2758127e8bc04f9ac3f3ca9682820, type: 2}
+    text: Bye!
+    shadowDialogue: 0
+    shadowText: 
+    altDialogue: 0
+    altText: 
+  - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
+    text: Wow, she was like... really nice!
+    shadowDialogue: 0
+    shadowText: 
+    altDialogue: 0
+    altText: 
+  - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
+    text: See, there are good people out there...
+    shadowDialogue: 0
+    shadowText: 
+    altDialogue: 0
+    altText: 
+  - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
+    text: Okay swimsuit, swimsuit... I think this one should do the trick!
+    shadowDialogue: 0
+    shadowText: 
+    altDialogue: 0
+    altText: 
+  - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
+    text: Time for some snacks.
+    shadowDialogue: 0
+    shadowText: 
+    altDialogue: 0
+    altText: 
+  decision: {fileID: 11400000, guid: a1dcb31c9015425429cc09453c1c99f3, type: 2}
+  nextConvo: {fileID: 0}

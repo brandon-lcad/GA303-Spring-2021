@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3ef788a7ad34c74eb7e5d8c46534a4e, type: 3}
+  m_Name: C_7C_Grocery
+  m_EditorClassIdentifier: 
+  lines:
+  - character: {fileID: 11400000, guid: e5d2758127e8bc04f9ac3f3ca9682820, type: 2}
+    text: I've really gotta get going and this is making me uncomfortable.
+    shadowDialogue: 0
+    shadowText: 
+    altDialogue: 0
+    altText: 
+  decision: {fileID: 0}
+  nextConvo: {fileID: 11400000, guid: e19ed32fc8e367744bbf37fde279be86, type: 2}

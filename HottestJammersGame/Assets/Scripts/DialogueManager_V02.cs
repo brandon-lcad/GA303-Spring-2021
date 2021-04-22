@@ -148,6 +148,11 @@ public class DialogueManager_V02 : MonoBehaviour
             // ui.enabled = true;
         }
 
+        // else if (activeLineIndex == convo.lines.Length)
+        // {
+        //   convo = convo.nextConvo;
+        // }
+
         else
         {
             // No more lines to read; is a question present?
@@ -164,6 +169,12 @@ public class DialogueManager_V02 : MonoBehaviour
               disableNextInput();
 
               // decUI.SendMessage("Change", convo.decision);
+            }
+
+            else
+            {
+              convo = convo.nextConvo;
+              activeLineIndex = 0;
             }
             // hide the speaker UI
             //ui.enabled = false;

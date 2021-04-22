@@ -1,0 +1,119 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3ef788a7ad34c74eb7e5d8c46534a4e, type: 3}
+  m_Name: C_6A_Grocery
+  m_EditorClassIdentifier: 
+  lines:
+  - character: {fileID: 11400000, guid: e5d2758127e8bc04f9ac3f3ca9682820, type: 2}
+    text: H-Hey Alexis!!!
+    shadowDialogue: 0
+    shadowText: 
+    altDialogue: 0
+    altText: 
+  - character: {fileID: 11400000, guid: c87fd56e6eb1c6e4d8540e462bf60d69, type: 2}
+    text: Hm...?
+    shadowDialogue: 0
+    shadowText: 
+    altDialogue: 0
+    altText: 
+  - character: {fileID: 11400000, guid: c87fd56e6eb1c6e4d8540e462bf60d69, type: 2}
+    text: Oh...! Hi there! I remember you!
+    shadowDialogue: 0
+    shadowText: 
+    altDialogue: 1
+    altText: Oh hey!
+  - character: {fileID: 11400000, guid: c87fd56e6eb1c6e4d8540e462bf60d69, type: 2}
+    text: Sorry, I didn't recognize you without that hat you were wearing!
+    shadowDialogue: 0
+    shadowText: 
+    altDialogue: 1
+    altText: What are the odds of us running into each other... again..?
+  - character: {fileID: 11400000, guid: a9a5a0ef951fe5b41b10e855cc7ea5f5, type: 2}
+    text: ...
+    shadowDialogue: 0
+    shadowText: 
+    altDialogue: 0
+    altText: 
+  - character: {fileID: 11400000, guid: c87fd56e6eb1c6e4d8540e462bf60d69, type: 2}
+    text: Uh, can we help you?
+    shadowDialogue: 0
+    shadowText: 
+    altDialogue: 0
+    altText: 
+  - character: {fileID: 11400000, guid: a9a5a0ef951fe5b41b10e855cc7ea5f5, type: 2}
+    text: You can help by butting out, honey. We're doing just fine.
+    shadowDialogue: 0
+    shadowText: 
+    altDialogue: 0
+    altText: 
+  - character: {fileID: 11400000, guid: c87fd56e6eb1c6e4d8540e462bf60d69, type: 2}
+    text: Oh is that right? Because from where I'm standing, it looks like you're
+      making my friend uncomfortable. Why don't you go drool over in Frozen Foods
+      and leave us alone?
+    shadowDialogue: 0
+    shadowText: 
+    altDialogue: 0
+    altText: 
+  - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
+    text: Bless you, Alexis!
+    shadowDialogue: 0
+    shadowText: 
+    altDialogue: 0
+    altText: 
+  - character: {fileID: 11400000, guid: a9a5a0ef951fe5b41b10e855cc7ea5f5, type: 2}
+    text: Psh, whatever. I'm sure I can find better tail than this.
+    shadowDialogue: 0
+    shadowText: 
+    altDialogue: 0
+    altText: 
+  - character: {fileID: 11400000, guid: e5d2758127e8bc04f9ac3f3ca9682820, type: 2}
+    text: Thank you so much, Alexis! I was getting really nervous... !
+    shadowDialogue: 0
+    shadowText: 
+    altDialogue: 0
+    altText: 
+  - character: {fileID: 11400000, guid: c87fd56e6eb1c6e4d8540e462bf60d69, type: 2}
+    text: Yeah, I'm really glad that I popped in to get some stuff for the party!
+      Who knows what he would have done?
+    shadowDialogue: 0
+    shadowText: 
+    altDialogue: 1
+    altText: Yeah, I'm really glad that I popped in to get the stuff for the party!
+      Who knows what he would have done? I told you I can throw down when I need
+      to!
+  - character: {fileID: 11400000, guid: c87fd56e6eb1c6e4d8540e462bf60d69, type: 2}
+    text: Y'know, at this point we might as well just go to the party together. We
+      can carpool over there if you want!
+    shadowDialogue: 0
+    shadowText: 
+    altDialogue: 0
+    altText: 
+  - character: {fileID: 11400000, guid: e5d2758127e8bc04f9ac3f3ca9682820, type: 2}
+    text: That sounds great!
+    shadowDialogue: 0
+    shadowText: 
+    altDialogue: 0
+    altText: 
+  - character: {fileID: 11400000, guid: e5d2758127e8bc04f9ac3f3ca9682820, type: 2}
+    text: Hey... Thank you for helping me out!
+    shadowDialogue: 0
+    shadowText: 
+    altDialogue: 0
+    altText: 
+  - character: {fileID: 11400000, guid: c87fd56e6eb1c6e4d8540e462bf60d69, type: 2}
+    text: Of course! C'mon, let's grab the stuff and get our beach party on!
+    shadowDialogue: 0
+    shadowText: 
+    altDialogue: 0
+    altText: 
+  decision: {fileID: 11400000, guid: f511e338507c8454d911bfed738bf3a2, type: 2}
+  nextConvo: {fileID: 0}

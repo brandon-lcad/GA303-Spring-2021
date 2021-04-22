@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cccf0ab1966bcbb498f7494d06242198, type: 3}
+  m_Name: D_1A_Home
+  m_EditorClassIdentifier: 
+  text: Decision 1A_Home
+  choices:
+  - text: I should definitely go.
+    nextConversation: {fileID: 11400000, guid: 034f5d514824f7744909e5b7df4feff7, type: 2}
+    distortionEffect: 0
+    nextScene: 
+    hasEffect: 0
+    character: {fileID: 0}
+    impact: 0
+  - text: I'm not really feeling up to it...
+    nextConversation: {fileID: 11400000, guid: 64a2aacc8a272cd419ce1dfea42f2822, type: 2}
+    distortionEffect: 10
+    nextScene: 
+    hasEffect: 0
+    character: {fileID: 0}
+    impact: 0

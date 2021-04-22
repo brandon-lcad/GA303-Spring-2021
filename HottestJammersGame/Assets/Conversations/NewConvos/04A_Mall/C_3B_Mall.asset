@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3ef788a7ad34c74eb7e5d8c46534a4e, type: 3}
+  m_Name: C_3B_Mall
+  m_EditorClassIdentifier: 
+  lines:
+  - character: {fileID: 11400000, guid: e5d2758127e8bc04f9ac3f3ca9682820, type: 2}
+    text: Well, if I'm being totally honest... I'm a little nervous.
+    shadowDialogue: 0
+    shadowText: 
+    altDialogue: 0
+    altText: 
+  - character: {fileID: 11400000, guid: c87fd56e6eb1c6e4d8540e462bf60d69, type: 2}
+    text: 'Huh? But why? You seem really nice, I''m sure you''ll have a good time. '
+    shadowDialogue: 1
+    shadowText: Yeah... "nice"... by which I mean boring...
+    altDialogue: 0
+    altText: 
+  - character: {fileID: 11400000, guid: e5d2758127e8bc04f9ac3f3ca9682820, type: 2}
+    text: I guess I'm just kind nervous, being new around here and all...
+    shadowDialogue: 0
+    shadowText: 
+    altDialogue: 0
+    altText: 
+  - character: {fileID: 11400000, guid: c87fd56e6eb1c6e4d8540e462bf60d69, type: 2}
+    text: 'Oh... Yeah, I can relate. '
+    shadowDialogue: 1
+    shadowText: ... Not really... what a strange way to think.
+    altDialogue: 0
+    altText: 
+  - character: {fileID: 11400000, guid: c87fd56e6eb1c6e4d8540e462bf60d69, type: 2}
+    text: Hey, if it makes you feel better, you can hang out with me all night! I
+      have no problem telling off anyone who looks at you funny.
+    shadowDialogue: 1
+    shadowText: Since you seem like you won't be able to do it yourself...
+    altDialogue: 0
+    altText: 
+  - character: {fileID: 11400000, guid: e5d2758127e8bc04f9ac3f3ca9682820, type: 2}
+    text: R-Really?
+    shadowDialogue: 0
+    shadowText: 
+    altDialogue: 0
+    altText: 
+  - character: {fileID: 11400000, guid: c87fd56e6eb1c6e4d8540e462bf60d69, type: 2}
+    text: 'Yeah, of course! I might not look it, but I can throw down when I need
+      to. '
+    shadowDialogue: 1
+    shadowText: What a doormat...
+    altDialogue: 0
+    altText: 
+  - character: {fileID: 11400000, guid: e5d2758127e8bc04f9ac3f3ca9682820, type: 2}
+    text: Haha, well thank you, I appreciate it.
+    shadowDialogue: 0
+    shadowText: 
+    altDialogue: 0
+    altText: 
+  decision: {fileID: 0}
+  nextConvo: {fileID: 11400000, guid: 63f2c9f24c784044cbc739cabe943614, type: 2}
