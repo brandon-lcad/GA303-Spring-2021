@@ -15,7 +15,7 @@ MonoBehaviour:
   text: Decision > Car Scene
   choices:
   - text: Get into your car
-    nextConversation: {fileID: 0}
+    nextConversation: {fileID: 11400000, guid: 1115d52b8c2d08244ab6288d271af7c7, type: 2}
     distortionEffect: 0
     nextScene: 03_Car
     hasEffect: 0

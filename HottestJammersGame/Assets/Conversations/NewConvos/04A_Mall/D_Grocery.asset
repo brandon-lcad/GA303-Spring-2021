@@ -15,7 +15,7 @@ MonoBehaviour:
   text: Decision > Grocery
   choices:
   - text: Go to the Grocery Store
-    nextConversation: {fileID: 0}
+    nextConversation: {fileID: 11400000, guid: 802eca84d20f81b42b038738ae60f12e, type: 2}
     distortionEffect: 0
     nextScene: 05_Grocery
     hasEffect: 0
