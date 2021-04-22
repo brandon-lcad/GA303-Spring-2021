@@ -228,18 +228,30 @@ public class UIController : MonoBehaviour
 
     public void updateCharacterLine(string characterLine){
         characterDialogue.text = characterLine;
+        characterDialogue.text = "";
+        StopAllCoroutines();
+        StartCoroutine(EffectTypeWriterChar(characterLine));
     }
 
     public void updateShadowLine(string shadowLine){
         distortionDialogue.text = shadowLine;
+        distortionDialogue.text = "";
+        StopAllCoroutines();
+        StartCoroutine(EffectTypeWriterShad(shadowLine));
     }
 
     public void updatePlayerLine(string playerLine){
         playerDialogue.text = playerLine;
+        playerDialogue.text = "";
+        StopAllCoroutines();
+        StartCoroutine(EffectTypeWriterPlayer(playerLine));
     }
 
     public void updateThoughtLine(string thoughtLine){
         thoughtDialogue.text = thoughtLine;
+        thoughtDialogue.text = "";
+        StopAllCoroutines();
+        StartCoroutine(EffectTypeWriterThought(thoughtLine));
     }
 
     public void showCharacterBubble(){
@@ -305,6 +317,34 @@ public class UIController : MonoBehaviour
       portrait.enabled = false;
     }
 
+    // Typewrite effects for dialogue and thought lines
+    private IEnumerator EffectTypeWriterChar(string characterLine){
+      foreach(char character in characterLine.ToCharArray()){
+        characterDialogue.text += character;
+        yield return new WaitForSeconds(0.04f);
+      }
+    }
+
+    private IEnumerator EffectTypeWriterShad(string shadowLine){
+      foreach(char character in shadowLine.ToCharArray()){
+        distortionDialogue.text += character;
+        yield return new WaitForSeconds(0.04f);
+        }
+    }
+
+    private IEnumerator EffectTypeWriterPlayer(string playerLine){
+      foreach(char character in playerLine.ToCharArray()){
+        playerDialogue.text += character;
+        yield return new WaitForSeconds(0.04f);
+        }
+    }
+
+    private IEnumerator EffectTypeWriterThought(string thoughtLine){
+      foreach(char character in thoughtLine.ToCharArray()){
+        thoughtDialogue.text += character;
+        yield return new WaitForSeconds(0.04f);
+        }
+    }
     // Updates text and bubbles to correspond to current line in convo and advances activeLineIndex to next line
     // void DisplayLine(int activeLineIndex)
     // {
