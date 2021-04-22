@@ -188,7 +188,6 @@ public class UIController : MonoBehaviour
       shadowPortrait.sprite = nextShadow;
     }
 
-    // TODO - CCheck
     public void updateMindReading(bool isMindReading){
       mindReading = isMindReading;
       // if (!mindReading){
@@ -227,31 +226,44 @@ public class UIController : MonoBehaviour
     }
 
     public void updateCharacterLine(string characterLine){
-        characterDialogue.text = characterLine;
+        // characterDialogue.text = characterLine;
         characterDialogue.text = "";
-        StopAllCoroutines();
-        StartCoroutine(EffectTypeWriterChar(characterLine));
+        StopCoroutine(EffectTypeWriter(characterLine, characterDialogue));
+        StartCoroutine(EffectTypeWriter(characterLine, characterDialogue));
+        // if (characterDialogue.text == characterLine){
+        //   StopCoroutine(EffectTypeWriter(characterLine, characterDialogue));
+        // }
     }
 
     public void updateShadowLine(string shadowLine){
-        distortionDialogue.text = shadowLine;
+        // distortionDialogue.text = shadowLine;
         distortionDialogue.text = "";
-        StopAllCoroutines();
-        StartCoroutine(EffectTypeWriterShad(shadowLine));
+        StopCoroutine(EffectTypeWriter(shadowLine, distortionDialogue));
+        StartCoroutine(EffectTypeWriter(shadowLine, distortionDialogue));
+        // if (distortionDialogue.text == shadowLine){
+        // //   StopCoroutine(EffectTypeWriter(shadowLine, distortionDialogue));
+        // }
     }
 
     public void updatePlayerLine(string playerLine){
-        playerDialogue.text = playerLine;
+        // playerDialogue.text = playerLine;
         playerDialogue.text = "";
-        StopAllCoroutines();
-        StartCoroutine(EffectTypeWriterPlayer(playerLine));
+        StopCoroutine(EffectTypeWriter(playerLine, playerDialogue));
+        StartCoroutine(EffectTypeWriter(playerLine, playerDialogue));
+        // playerDialogue.text = playerLine;
+        // if (playerDialogue.text == playerLine){
+        //   StopCoroutine(EffectTypeWriter(playerLine, playerDialogue));
+        // }
     }
 
     public void updateThoughtLine(string thoughtLine){
-        thoughtDialogue.text = thoughtLine;
+        // thoughtDialogue.text = thoughtLine;
         thoughtDialogue.text = "";
-        StopAllCoroutines();
-        StartCoroutine(EffectTypeWriterThought(thoughtLine));
+        StopCoroutine(EffectTypeWriter(thoughtLine, thoughtDialogue));
+        StartCoroutine(EffectTypeWriter(thoughtLine, thoughtDialogue));
+        // if (thoughtDialogue.text == thoughtLine){
+        // //   StopCoroutine(EffectTypeWriter(thoughtLine, thoughtDialogue));
+        // }
     }
 
     public void showCharacterBubble(){
@@ -318,33 +330,40 @@ public class UIController : MonoBehaviour
     }
 
     // Typewrite effects for dialogue and thought lines
-    private IEnumerator EffectTypeWriterChar(string characterLine){
-      foreach(char character in characterLine.ToCharArray()){
-        characterDialogue.text += character;
-        yield return new WaitForSeconds(0.04f);
+    private IEnumerator EffectTypeWriter(string whateverLine, TMP_Text lineType){
+      foreach(char character in whateverLine.ToCharArray()){
+        lineType.text += character;
+        // yield return new WaitForSeconds(0.04f);
+        yield return null;
+
       }
     }
 
-    private IEnumerator EffectTypeWriterShad(string shadowLine){
-      foreach(char character in shadowLine.ToCharArray()){
-        distortionDialogue.text += character;
-        yield return new WaitForSeconds(0.04f);
-        }
-    }
-
-    private IEnumerator EffectTypeWriterPlayer(string playerLine){
-      foreach(char character in playerLine.ToCharArray()){
-        playerDialogue.text += character;
-        yield return new WaitForSeconds(0.04f);
-        }
-    }
-
-    private IEnumerator EffectTypeWriterThought(string thoughtLine){
-      foreach(char character in thoughtLine.ToCharArray()){
-        thoughtDialogue.text += character;
-        yield return new WaitForSeconds(0.04f);
-        }
-    }
+    // private IEnumerator EffectTypeWriterShad(string shadowLine){
+    //   foreach(char character in shadowLine.ToCharArray()){
+    //     distortionDialogue.text += character;
+    //     // yield return new WaitForSeconds(0.04f);
+    //     yield return null;
+    //
+    //     }
+    // }
+    //
+    // private IEnumerator EffectTypeWriterPlayer(string playerLine){
+    //   foreach(char character in playerLine.ToCharArray()){
+    //     playerDialogue.text += character;
+    //     // yield return new WaitForSeconds(0.04f);
+    //     yield return null;
+    //
+    //     }
+    // }
+    //
+    // private IEnumerator EffectTypeWriterThought(string thoughtLine){
+    //   foreach(char character in thoughtLine.ToCharArray()){
+    //     thoughtDialogue.text += character;
+    //     // yield return new WaitForSeconds(0.04f);
+    //     yield return null;
+    //     }
+    // }
     // Updates text and bubbles to correspond to current line in convo and advances activeLineIndex to next line
     // void DisplayLine(int activeLineIndex)
     // {
