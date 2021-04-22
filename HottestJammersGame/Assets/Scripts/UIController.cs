@@ -263,8 +263,18 @@ public class UIController : MonoBehaviour
         StartCoroutine(EffectTypeWriter(thoughtLine, thoughtDialogue));
         // if (thoughtDialogue.text == thoughtLine){
         // //   StopCoroutine(EffectTypeWriter(thoughtLine, thoughtDialogue));
-        // }
-    }
+      }
+
+    // Typewrite effects for dialogue and thought lines
+    private IEnumerator EffectTypeWriter(string whateverLine, TMP_Text lineType){
+      foreach(char character in whateverLine.ToCharArray())
+          {
+            lineType.text += character;
+            // yield return new WaitForSeconds(0.04f);
+            yield return null;
+          }
+
+      }
 
     public void showCharacterBubble(){
         characterBubble.SetActive(true);
@@ -329,15 +339,7 @@ public class UIController : MonoBehaviour
       portrait.enabled = false;
     }
 
-    // Typewrite effects for dialogue and thought lines
-    private IEnumerator EffectTypeWriter(string whateverLine, TMP_Text lineType){
-      foreach(char character in whateverLine.ToCharArray()){
-        lineType.text += character;
-        // yield return new WaitForSeconds(0.04f);
-        yield return null;
-
-      }
-    }
+}
 
     // private IEnumerator EffectTypeWriterShad(string shadowLine){
     //   foreach(char character in shadowLine.ToCharArray()){
@@ -443,5 +445,3 @@ public class UIController : MonoBehaviour
     //    activeSpeakerUI.Show();
     //    inactiveSpeakerUI.Hide();
     //}
-
-}

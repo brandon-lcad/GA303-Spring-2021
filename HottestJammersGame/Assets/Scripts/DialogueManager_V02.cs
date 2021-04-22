@@ -10,6 +10,8 @@ public class QuestionsEvent : UnityEvent<Decision> { }
 public class DialogueManager_V02 : MonoBehaviour
 {
 
+    public static DialogueManager_V02 DInstance;
+
     public Conversation convo;
 
     public QuestionEvent questionEvent;
@@ -47,6 +49,16 @@ public class DialogueManager_V02 : MonoBehaviour
     {
         distortionManager = GameObject.Find("DistortionManager");
         uiController = GameObject.Find("UIController");
+
+        if (DInstance == null)
+        {
+            DontDestroyOnLoad(gameObject);
+            DInstance = this;
+        }
+        else if (DInstance != this)
+        {
+            Destroy(gameObject);
+        }
         // playerBubble.SetActive(false);
         // playerDialogue.text = "";
         // characterBubble.SetActive(false);
