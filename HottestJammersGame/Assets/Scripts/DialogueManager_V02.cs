@@ -175,6 +175,7 @@ public class DialogueManager_V02 : MonoBehaviour
             {
               convo = convo.nextConvo;
               activeLineIndex = 0;
+              AdvanceConversation();
             }
             // hide the speaker UI
             //ui.enabled = false;
