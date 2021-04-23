@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 [System.Serializable]
 public class ConversationChangeEvent : UnityEvent<Conversation> {}
@@ -43,9 +42,10 @@ public class DecisionController : MonoBehaviour
         // Add conversation segue
         button.onClick.AddListener(() => SetChoice(choice.nextConversation));
 
-        // TODO For History Tracker - add listener, send message with choice text
-
+        // TODO For History Tracker - add listener, send message with choice text? -just an idea
         button.onClick.AddListener(() => LoadScene(choice.nextScene));
+
+        // Positive or negative effect particle listener here?
 
         return decisionController;
     }
@@ -98,12 +98,7 @@ public class DecisionController : MonoBehaviour
     // BRUTE FORCE, REMOVE THESE TOO
     public static void LoadScene(string sceneName)
     {
-      if (sceneName == ""){
-        Debug.Log("No Scene to Load");
-      }
-      else
-      {
-        SceneManager.LoadScene(sceneName);
-      }
+        GameObject ui = GameObject.Find("UIController");
+        ui.SendMessage("LoadScene", sceneName);
     }
 }

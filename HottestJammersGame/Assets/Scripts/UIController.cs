@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class UIController : MonoBehaviour
@@ -42,6 +43,8 @@ public class UIController : MonoBehaviour
     private GameObject distortionManager;
     private GameObject dialogueManager;
 
+    // public Animator fadeAnimator;
+
     // public Character chara;
     // public Conversation convo;
 
@@ -78,6 +81,7 @@ public class UIController : MonoBehaviour
         thoughtBubble.SetActive(false);
         thoughtDialogue.text = "";
         mindReading = false;
+        hidePortraits();
         // Sets decision UI canvas off
         decUI.SetActive(false);
 
@@ -90,7 +94,6 @@ public class UIController : MonoBehaviour
         nextButton.SetActive(true);
 
         ui.enabled = true;
-        showPortraits();
     }
 
     // Update is called once per frame
@@ -181,10 +184,12 @@ public class UIController : MonoBehaviour
     // }
 
     public void updatePortrait(Sprite nextPortrait){
+      portrait.enabled = true;
       portrait.sprite = nextPortrait;
-    }
+      }
 
     public void updateShadowPortrait(Sprite nextShadow){
+      shadowPortrait.enabled = true;
       shadowPortrait.sprite = nextShadow;
     }
 
@@ -313,6 +318,7 @@ public class UIController : MonoBehaviour
       playerDialogue.text = "";
       thoughtBubble.SetActive(false);
       thoughtDialogue.text = "";
+      nextButton.SetActive(false);
       hidePortraits();
 
       // Turn on Decision UI
@@ -324,6 +330,7 @@ public class UIController : MonoBehaviour
     public void hideDecisionUI(){
       // Turn off Decision UI
       decUI.SetActive(false);
+      nextButton.SetActive(true);
       showPortraits();
     }
 
@@ -339,6 +346,35 @@ public class UIController : MonoBehaviour
       portrait.enabled = false;
     }
 
+    public void LoadScene(string sceneName){
+      if (sceneName == ""){
+        Debug.Log("No Scene to Load");
+      }
+      else
+      {
+        StartCoroutine(WaitTime(sceneName));
+      }
+    }
+
+    private IEnumerator WaitTime(string sceneName){
+      GameObject fadeScreen = GameObject.Find("BlackScreen");
+      Debug.Log(fadeScreen);
+      Animator animScreen = fadeScreen.GetComponent<Animator>();
+      Debug.Log(animScreen);
+      if (animScreen != null){
+        characterBubble.SetActive(false);
+        distortionBubble.SetActive(false);
+        playerBubble.SetActive(false);
+        thoughtBubble.SetActive(false);
+        hidePortraits();
+        animScreen.SetTrigger("FadeIn");
+      }
+      yield return new WaitForSeconds(1);
+      SceneManager.LoadScene(sceneName);
+      if (animScreen != null){
+        animScreen.SetTrigger("FadeIn");
+      }
+    }
 }
 
     // private IEnumerator EffectTypeWriterShad(string shadowLine){

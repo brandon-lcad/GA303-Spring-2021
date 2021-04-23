@@ -24,10 +24,12 @@ public class DistortionManager : MonoBehaviour
     //GEORGIA public ParticleSystem goodAnswer;
     //GEORGIA public ParticleSystem badAnswer;
     public Character alexis;
+    public Character gilbert;
     public Character creepyDude;
     public Character izzy;
     public Character player;
     public Character playerThoughts;
+    public Character blankCharacter;
 
     public Character currentActiveCharacter;
     private Sprite currentPortrait;
@@ -62,10 +64,12 @@ public class DistortionManager : MonoBehaviour
     //GEORGIA particleDictionary.Add("GoodAnswer", goodAnswer);
     //GEORGIA particleDictionary.Add("BadAnswer", badAnswer);
       characterDictionary.Add("Alexis", alexis);
+      characterDictionary.Add("Gilbert", gilbert);
       characterDictionary.Add("CreepyDude", creepyDude);
       characterDictionary.Add("Izzy", izzy);
       characterDictionary.Add("Player", player);
       characterDictionary.Add("PlayerThoughts", playerThoughts);
+      characterDictionary.Add("BlankCharacter", blankCharacter);
 
         // Turn everything off
         // We're the only ones with references

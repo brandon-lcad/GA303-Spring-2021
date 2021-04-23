@@ -300,7 +300,6 @@ public class DialogueManager_V02 : MonoBehaviour
         // decUI.SetActive(false);
         uiController.SendMessage("hideDecisionUI");
         enableNextInput();
-        AdvanceConversation();
     }
 
     //
