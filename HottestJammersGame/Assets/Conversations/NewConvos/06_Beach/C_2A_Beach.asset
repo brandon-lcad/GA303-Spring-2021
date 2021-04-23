@@ -10,56 +10,46 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a3ef788a7ad34c74eb7e5d8c46534a4e, type: 3}
-  m_Name: C_5A_Grocery
+  m_Name: C_2A_Beach
   m_EditorClassIdentifier: 
   lines:
-  - character: {fileID: 11400000, guid: a9a5a0ef951fe5b41b10e855cc7ea5f5, type: 2}
-    text: 'Hey, how about you give me your number? '
+  - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
+    text: He's just a dude, a BIG dude, but a dude all the same.
+    shadowDialogue: 0
+    shadowText: 
+    altDialogue: 0
+    altText: 
+  - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
+    text: Also it's not like im juggling fire, he'll get bored and find someone else
+      to predatorily stare at.
+    shadowDialogue: 0
+    shadowText: 
+    altDialogue: 0
+    altText: 
+  - character: {fileID: 11400000, guid: ddc579749e6f19f42b54334e488c1a5f, type: 2}
+    text: '*looms*'
     shadowDialogue: 1
-    shadowText: I'm being so nice... You owe me at least that...
+    shadowText: That's right... come a little bit closer.
     altDialogue: 0
     altText: 
-  - character: {fileID: 11400000, guid: e5d2758127e8bc04f9ac3f3ca9682820, type: 2}
-    text: UH....
+  - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
+    text: Or maybe he won't find somebody else to stare at.
     shadowDialogue: 0
     shadowText: 
     altDialogue: 0
     altText: 
   - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
-    text: I really don't want to... What do I do...
-    shadowDialogue: 0
-    shadowText: 
-    altDialogue: 0
-    altText: 
-  - character: {fileID: 11400000, guid: c87fd56e6eb1c6e4d8540e462bf60d69, type: 2}
-    text: What's on my list again...? Oh! Chips and salsa, right!
+    text: 'At least if I die it''ll be with a s''more in my hand and fifty witnesses... '
     shadowDialogue: 0
     shadowText: 
     altDialogue: 0
     altText: 
   - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
-    text: '!! Is that Alexis coming down the aisle??'
+    text: but it's really starting to feel like he's trying to melt me with his eyes.
+      Plus he's in the way.
     shadowDialogue: 0
     shadowText: 
     altDialogue: 0
     altText: 
-  - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
-    text: We've talked like.. only a handful of times...
-    shadowDialogue: 0
-    shadowText: 
-    altDialogue: 0
-    altText: 
-  - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
-    text: If I ask for help... would I be causing her trouble...?
-    shadowDialogue: 0
-    shadowText: 
-    altDialogue: 0
-    altText: 
-  - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
-    text: Should I try to get her attention...?
-    shadowDialogue: 0
-    shadowText: 
-    altDialogue: 0
-    altText: 
-  decision: {fileID: 11400000, guid: 3f77997c87c23c14a876720e5275c4a7, type: 2}
+  decision: {fileID: 11400000, guid: bb35ec90a19e9404da9b5c98edef219b, type: 2}
   nextConvo: {fileID: 0}

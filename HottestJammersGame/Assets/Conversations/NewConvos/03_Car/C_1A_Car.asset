@@ -26,17 +26,10 @@ MonoBehaviour:
     altDialogue: 0
     altText: 
   - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
-    text: There's also the Stellar Island Boutique. I've never been there but it
-      looks nice.
+    text: That'd be the perfect place to go!
     shadowDialogue: 0
     shadowText: 
     altDialogue: 0
     altText: 
-  - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
-    text: They're about the same distance away... Where should I go?
-    shadowDialogue: 0
-    shadowText: 
-    altDialogue: 0
-    altText: 
-  decision: {fileID: 11400000, guid: aa629c6e8b8fa3c4095d0ab1d9581310, type: 2}
+  decision: {fileID: 11400000, guid: 626ce175bdb52b940b04d139a20c5c19, type: 2}
   nextConvo: {fileID: 0}

@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cccf0ab1966bcbb498f7494d06242198, type: 3}
-  m_Name: D_Beach
+  m_Name: D_1A_Beach
   m_EditorClassIdentifier: 
-  text: Decision > Beach Scene
+  text: Decision 1A_Beach
   choices:
-  - text: Go to the party!
-    nextConversation: {fileID: 11400000, guid: d446257af722b25408276847f61f184f, type: 2}
+  - text: Oh, I see some s'mores! ... Right past him...
+    nextConversation: {fileID: 11400000, guid: cd36e172eb1bc5c44ad46552e4e1d61e, type: 2}
     distortionEffect: 0
-    nextScene: 06_Beach
+    nextScene: 
     hasEffect: 0
     character: {fileID: 0}
     impact: 0
