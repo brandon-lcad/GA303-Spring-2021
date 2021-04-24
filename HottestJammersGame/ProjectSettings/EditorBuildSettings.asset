@@ -5,25 +5,52 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Game Scenes/StartMenu.unity
     guid: cac1675a4729ffd41ad54837d766c10b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Game Scenes/Video.unity
     guid: 217561d086c197b448a49f182b076876
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Game Scenes/Introduction.unity
     guid: d5338d07ef9b033418b097be1a1af6c7
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Game Scenes/MallScene.unity
     guid: 09be3c84cb5200c489a2cd4e2088000c
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Game Scenes/GroceryStoreScene.unity
     guid: be4e030621ca27945aae5ff92023c273
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Game Scenes/BeachParty.unity
     guid: 983a94e6f5b0aca4a86b83105ba2a6b6
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Game Scenes/CreditsMenu.unity
     guid: d50acd1bf017d8341b7776d6b7c91908
+  - enabled: 1
+    path: Assets/Scenes/NewScenes/09_EndMenu.unity
+    guid: 9de2b5e383c9e0f48a12536880ace04b
+  - enabled: 1
+    path: Assets/Scenes/NewScenes/02_Home.unity
+    guid: 9be35e66c0d52ae419ca136bcfb678a0
+  - enabled: 1
+    path: Assets/Scenes/NewScenes/03_Car.unity
+    guid: cf2613d728fedd24792b1344d9b3f76d
+  - enabled: 1
+    path: Assets/Scenes/NewScenes/04A_Mall.unity
+    guid: 0211ea81ca1084d42913a84f0e473eb2
+  - enabled: 1
+    path: Assets/Scenes/NewScenes/05_Grocery.unity
+    guid: b92d544e3928e264fa6d7198929dab42
+  - enabled: 1
+    path: Assets/Scenes/NewScenes/06_Beach.unity
+    guid: 0e89495e841b48f4dbb2ccfa59d0a778
+  - enabled: 1
+    path: Assets/Scenes/NewScenes/07_AfterParty.unity
+    guid: d3c97b2270cf0024dbb5981781f3bcfc
+  - enabled: 1
+    path: Assets/Scenes/NewScenes/08_BadEnd.unity
+    guid: 378a278f9706351419e6eb7433cee09a
+  - enabled: 1
+    path: Assets/Scenes/NewScenes/01_StartMenu.unity
+    guid: 10b0929a3367483438f21cce7ba35374
   m_configObjects: {}
