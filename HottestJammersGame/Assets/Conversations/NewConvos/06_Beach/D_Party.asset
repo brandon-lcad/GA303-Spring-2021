@@ -15,7 +15,7 @@ MonoBehaviour:
   text: Decision 2B_Beach and 2C_Beach
   choices:
   - text: Party the night away!
-    nextConversation: {fileID: 11400000, guid: 73e5540ddad514c48b8aa58758a059ac, type: 2}
+    nextConversation: {fileID: 11400000, guid: 6d10d0a2fe352b544ba0c35d3cb9893c, type: 2}
     distortionEffect: 0
     nextScene: 07_AfterParty
     hasEffect: 0

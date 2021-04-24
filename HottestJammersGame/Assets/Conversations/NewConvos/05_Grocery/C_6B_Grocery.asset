@@ -25,6 +25,18 @@ MonoBehaviour:
     shadowText: 
     altDialogue: 0
     altText: 
+  - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
+    text: .....
+    shadowDialogue: 0
+    shadowText: 
+    altDialogue: 0
+    altText: 
+  - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
+    text: ... And she's gone - she seemed busy looking at her shopping list...
+    shadowDialogue: 0
+    shadowText: 
+    altDialogue: 0
+    altText: 
   - character: {fileID: 11400000, guid: a9a5a0ef951fe5b41b10e855cc7ea5f5, type: 2}
     text: Hey now, I get that she's cute, but I'm right here, dumpling~
     shadowDialogue: 0
@@ -37,10 +49,16 @@ MonoBehaviour:
     shadowText: 
     altDialogue: 0
     altText: 
-  - character: {fileID: 11400000, guid: a9a5a0ef951fe5b41b10e855cc7ea5f5, type: 2}
+  - character: {fileID: 11400000, guid: e5d2758127e8bc04f9ac3f3ca9682820, type: 2}
     text: Now, you were giving me your number, right?
     shadowDialogue: 1
     shadowText: 'Heh heh heh... '
+    altDialogue: 0
+    altText: 
+  - character: {fileID: 11400000, guid: e5d2758127e8bc04f9ac3f3ca9682820, type: 2}
+    text: Um...
+    shadowDialogue: 0
+    shadowText: 
     altDialogue: 0
     altText: 
   decision: {fileID: 11400000, guid: 44b14cac406c4d74fae82459a9a956a8, type: 2}

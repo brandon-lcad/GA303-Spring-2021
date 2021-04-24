@@ -21,7 +21,7 @@ MonoBehaviour:
     hasEffect: 0
     character: {fileID: 0}
     impact: 0
-  - text: Hide behind a display
+  - text: Pretend like everything is fine
     nextConversation: {fileID: 11400000, guid: 729995e21eb93c74c85bfea17fbaab1a, type: 2}
     distortionEffect: 5
     nextScene: 
