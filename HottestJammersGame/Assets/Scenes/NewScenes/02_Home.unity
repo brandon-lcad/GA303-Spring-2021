@@ -1895,8 +1895,8 @@ RectTransform:
   - {fileID: 2066777734}
   - {fileID: 505987982}
   - {fileID: 366676190}
-  - {fileID: 1450841781}
   - {fileID: 1834629157}
+  - {fileID: 1450841781}
   - {fileID: 321513513}
   - {fileID: 867799955}
   - {fileID: 729721426}
@@ -1955,7 +1955,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1374688955}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2688,9 +2688,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: '>>> Click or Spacebar >>>'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0e0f87850b2b2a24b875ed5a55ade480, type: 2}
-  m_sharedMaterial: {fileID: 7284264817657922785, guid: 0e0f87850b2b2a24b875ed5a55ade480,
-    type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2781,7 +2780,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1834629157
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2794,7 +2793,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1374688955}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2996,6 +2995,8 @@ MonoBehaviour:
   thoughtBubble: {fileID: 2691027145105824868}
   thoughtDialogue: {fileID: 1646776300410907388}
   decUI: {fileID: 355836655}
+  currentShadowLine: 
+  currentOtherLine: 
 --- !u!4 &2066777734 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 416250247338317362, guid: 7155628fc3381544f83b4d326ac162de,
@@ -3310,7 +3311,7 @@ GameObject:
   - component: {fileID: 6672867986780618537}
   - component: {fileID: 3457276842765824425}
   m_Layer: 5
-  m_Name: Player Thought Bubble (1)
+  m_Name: Player Thought Bubble
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

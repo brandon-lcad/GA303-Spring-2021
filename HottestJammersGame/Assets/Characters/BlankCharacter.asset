@@ -15,6 +15,12 @@ MonoBehaviour:
   characterName: BlankCharacter
   isPlayer: 0
   hasMetBefore: 0
-  characterSprites: []
-  shadowSprites: []
+  characterSprites:
+  - {fileID: 21300000, guid: 91aeb900117273445b1c9e62c031bff7, type: 3}
+  - {fileID: 21300000, guid: 91aeb900117273445b1c9e62c031bff7, type: 3}
+  - {fileID: 21300000, guid: 91aeb900117273445b1c9e62c031bff7, type: 3}
+  shadowSprites:
+  - {fileID: 21300000, guid: 91aeb900117273445b1c9e62c031bff7, type: 3}
+  - {fileID: 21300000, guid: 91aeb900117273445b1c9e62c031bff7, type: 3}
+  - {fileID: 21300000, guid: 91aeb900117273445b1c9e62c031bff7, type: 3}
   spriteToShow: 0
