@@ -3173,6 +3173,8 @@ MonoBehaviour:
   thoughtBubble: {fileID: 1015188366}
   thoughtDialogue: {fileID: 861655386}
   decUI: {fileID: 355836655}
+  currentShadowLine: 
+  currentOtherLine: 
 --- !u!4 &2066777734 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 416250247338317362, guid: 7155628fc3381544f83b4d326ac162de,
@@ -3208,7 +3210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bc23048c8caff242aac38351597a254, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  convo: {fileID: 11400000, guid: 576ab304432cb944e99ab07b73409fe6, type: 2}
+  convo: {fileID: 11400000, guid: 6d10d0a2fe352b544ba0c35d3cb9893c, type: 2}
   questionEvent:
     m_PersistentCalls:
       m_Calls: []
