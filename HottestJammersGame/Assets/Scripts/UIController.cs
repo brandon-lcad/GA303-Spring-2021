@@ -43,6 +43,10 @@ public class UIController : MonoBehaviour
     private GameObject distortionManager;
     private GameObject dialogueManager;
 
+    public string currentShadowLine;
+    public string currentOtherLine;
+
+
     // public Animator fadeAnimator;
 
     // public Character chara;
@@ -110,13 +114,65 @@ public class UIController : MonoBehaviour
     {
         if (Input.GetKeyDown("space"))
         {
+          if (characterBubble.active)
+          {
+            if (characterDialogue.text != currentOtherLine)
+              {
+                currentOtherLine = characterDialogue.text;
+              }
+            else
+              {
+                sendAdvanceConversation();
+              }
+          }
+
+          else if (playerBubble.active)
+          {
+            if (playerDialogue.text != currentOtherLine)
+              {
+                currentOtherLine = playerDialogue.text;
+              }
+            else
+              {
+                sendAdvanceConversation();
+              }
+          }
+
+          else if (thoughtBubble.active)
+          {
+            if (thoughtDialogue.text != currentOtherLine)
+              {
+                currentOtherLine = thoughtDialogue.text;
+              }
+            else
+              {
+                sendAdvanceConversation();
+              }
+          }
+
+          else if (distortionBubble.active)
+          {
+              if (distortionDialogue.text != currentShadowLine)
+              {
+                currentShadowLine = distortionDialogue.text;
+              }
+            else
+              {
+                sendAdvanceConversation();
+              }
+          }
+
+          else
+          {
           sendAdvanceConversation();
-        }
+          }
+       }
     }
 
     public void sendAdvanceConversation(){
         dialogueManager.SendMessage("AdvanceConversation");
     }
+
     // This function progresses the conversation upon click or space bar; made public so a button can be implemented
     // public void AdvanceConversation()
     // {
@@ -232,6 +288,7 @@ public class UIController : MonoBehaviour
 
     public void updateCharacterLine(string characterLine){
         // characterDialogue.text = characterLine;
+        currentOtherLine = characterLine;
         characterDialogue.text = "";
         StopCoroutine(EffectTypeWriter(characterLine, characterDialogue));
         StartCoroutine(EffectTypeWriter(characterLine, characterDialogue));
@@ -242,6 +299,7 @@ public class UIController : MonoBehaviour
 
     public void updateShadowLine(string shadowLine){
         // distortionDialogue.text = shadowLine;
+        currentShadowLine = shadowLine;
         distortionDialogue.text = "";
         StopCoroutine(EffectTypeWriter(shadowLine, distortionDialogue));
         StartCoroutine(EffectTypeWriter(shadowLine, distortionDialogue));
@@ -252,6 +310,7 @@ public class UIController : MonoBehaviour
 
     public void updatePlayerLine(string playerLine){
         // playerDialogue.text = playerLine;
+        currentOtherLine = playerLine;
         playerDialogue.text = "";
         StopCoroutine(EffectTypeWriter(playerLine, playerDialogue));
         StartCoroutine(EffectTypeWriter(playerLine, playerDialogue));
@@ -263,6 +322,7 @@ public class UIController : MonoBehaviour
 
     public void updateThoughtLine(string thoughtLine){
         // thoughtDialogue.text = thoughtLine;
+        currentOtherLine = thoughtLine;
         thoughtDialogue.text = "";
         StopCoroutine(EffectTypeWriter(thoughtLine, thoughtDialogue));
         StartCoroutine(EffectTypeWriter(thoughtLine, thoughtDialogue));
@@ -376,32 +436,6 @@ public class UIController : MonoBehaviour
       }
     }
 }
-
-    // private IEnumerator EffectTypeWriterShad(string shadowLine){
-    //   foreach(char character in shadowLine.ToCharArray()){
-    //     distortionDialogue.text += character;
-    //     // yield return new WaitForSeconds(0.04f);
-    //     yield return null;
-    //
-    //     }
-    // }
-    //
-    // private IEnumerator EffectTypeWriterPlayer(string playerLine){
-    //   foreach(char character in playerLine.ToCharArray()){
-    //     playerDialogue.text += character;
-    //     // yield return new WaitForSeconds(0.04f);
-    //     yield return null;
-    //
-    //     }
-    // }
-    //
-    // private IEnumerator EffectTypeWriterThought(string thoughtLine){
-    //   foreach(char character in thoughtLine.ToCharArray()){
-    //     thoughtDialogue.text += character;
-    //     // yield return new WaitForSeconds(0.04f);
-    //     yield return null;
-    //     }
-    // }
     // Updates text and bubbles to correspond to current line in convo and advances activeLineIndex to next line
     // void DisplayLine(int activeLineIndex)
     // {
