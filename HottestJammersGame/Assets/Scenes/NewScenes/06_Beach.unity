@@ -2233,7 +2233,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 26d77c59b4b40444da15ede448b8a37e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f7759b1b6905f274d8dafc0a5b4babb4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2494,7 +2494,7 @@ MonoBehaviour:
   slowBubbles: {fileID: 10400279}
   fastBubbles: {fileID: 1804932367}
   alexis: {fileID: 11400000, guid: c87fd56e6eb1c6e4d8540e462bf60d69, type: 2}
-  gilbert: {fileID: 0}
+  gilbert: {fileID: 11400000, guid: ddc579749e6f19f42b54334e488c1a5f, type: 2}
   creepyDude: {fileID: 11400000, guid: a9a5a0ef951fe5b41b10e855cc7ea5f5, type: 2}
   izzy: {fileID: 11400000, guid: 79e89e0badb87384c911cc867fdfadeb, type: 2}
   player: {fileID: 11400000, guid: e5d2758127e8bc04f9ac3f3ca9682820, type: 2}
@@ -3173,6 +3173,8 @@ MonoBehaviour:
   thoughtBubble: {fileID: 1015188366}
   thoughtDialogue: {fileID: 861655386}
   decUI: {fileID: 355836655}
+  currentShadowLine: 
+  currentOtherLine: 
 --- !u!4 &2066777734 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 416250247338317362, guid: 7155628fc3381544f83b4d326ac162de,
@@ -3208,7 +3210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bc23048c8caff242aac38351597a254, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  convo: {fileID: 11400000, guid: 576ab304432cb944e99ab07b73409fe6, type: 2}
+  convo: {fileID: 11400000, guid: d446257af722b25408276847f61f184f, type: 2}
   questionEvent:
     m_PersistentCalls:
       m_Calls: []
