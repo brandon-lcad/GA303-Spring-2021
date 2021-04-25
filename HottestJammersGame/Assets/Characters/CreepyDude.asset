@@ -16,11 +16,11 @@ MonoBehaviour:
   isPlayer: 0
   hasMetBefore: 1
   characterSprites:
-  - {fileID: -2524090046133582940, guid: 2e54089206742124a9790ff27221e54b, type: 3}
-  - {fileID: -2664679666077852849, guid: 2e54089206742124a9790ff27221e54b, type: 3}
-  - {fileID: -6771551968963012137, guid: 2e54089206742124a9790ff27221e54b, type: 3}
+  - {fileID: 21300000, guid: a39bf30ef6651b645bb4f2b4a71a0576, type: 3}
+  - {fileID: 21300000, guid: 969d5b0366b6bb043ae9e7321cb1dce6, type: 3}
+  - {fileID: 21300000, guid: ecc3ed097759ccd4c9179aa9d0e23577, type: 3}
   shadowSprites:
   - {fileID: 21300000, guid: 91aeb900117273445b1c9e62c031bff7, type: 3}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 21300000, guid: f603621114d8b6e40b2b5c3828c7927d, type: 3}
+  - {fileID: 21300000, guid: 302ab407e1fca374882deeee78e7bc9e, type: 3}
   spriteToShow: 0
