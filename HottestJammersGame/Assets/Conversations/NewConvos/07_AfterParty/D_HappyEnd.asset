@@ -15,7 +15,7 @@ MonoBehaviour:
   text: Decision > HappyEnd
   choices:
   - text: The End!
-    nextConversation: {fileID: 0}
+    nextConversation: {fileID: 11400000, guid: 4ec6eb71af853b549828b9459c62e906, type: 2}
     distortionEffect: 0
     nextScene: 09_EndMenu
     hasEffect: 0
