@@ -40,6 +40,8 @@ public class DialogueManager : MonoBehaviour
     private bool makingDecision = false;
     private GameObject distortionManager;
 
+    private GameObject uiController;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -97,6 +99,8 @@ public class DialogueManager : MonoBehaviour
 
             // show the speaker UI
             ui.enabled = true;
+
+            HistoryWriter();
         }
 
         else
@@ -120,14 +124,21 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
+    public void HistoryWriter()
+    {
+        Line line = convo.lines[activeLineIndex];
+
+        uiController.SendMessage("updateHistoryText", line.character.characterName.ToString() + ": " + line.text.ToString());
+    }
+
     // void disableNextInput(){
-      // nextButton.gameObject.SetActive(false);
-      // makingDecision = true;
+    // nextButton.gameObject.SetActive(false);
+    // makingDecision = true;
     // }
 
     // void enableNextInput(){
-      // nextButton.gameObject.SetActive(true);
-      // makingDecision = false;
+    // nextButton.gameObject.SetActive(true);
+    // makingDecision = false;
     // }
 
     public void updatePortrait(Sprite nextPortrait){

@@ -34,7 +34,7 @@ public class CharacterStateManager : MonoBehaviour
         characterDictionary.Add("CreepyDude", creepyDude);
         characterDictionary.Add("Izzy", izzy);
         characterDictionary.Add("Player", player);
-        characterDictionary.Add("PlayerThoughts", playerThoughts);
+        characterDictionary.Add("Player Thoughts", playerThoughts);
     }
 
     // Update is called once per frame

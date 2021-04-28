@@ -125,6 +125,8 @@ public class DialogueManager_V02 : MonoBehaviour
             // Show relevant character
             distortionManager.SendMessage("UpdateCurrentCharacter", currentLine.character);
 
+                HistoryWriter();
+
               // In order to pick correct, inspect line
                 // If line character is player, show player bubble
                 // if line character is playerThoughts, show player thought bubble
@@ -134,7 +136,7 @@ public class DialogueManager_V02 : MonoBehaviour
             if(currentLine.character.characterName == "Player"){
               uiController.SendMessage("showPlayerBubble");
               uiController.SendMessage("updatePlayerLine", currentLine.text);
-            } else if (currentLine.character.characterName == "PlayerThoughts") {
+            } else if (currentLine.character.characterName == "Player Thoughts") {
               uiController.SendMessage("showPlayerThoughtBubble");
               uiController.SendMessage("updateThoughtLine", currentLine.text);
             } else {
@@ -193,6 +195,13 @@ public class DialogueManager_V02 : MonoBehaviour
             //ui.enabled = false;
         }
       }
+    }
+
+    public void HistoryWriter()
+    {
+        Line line = convo.lines[activeLineIndex];
+
+        uiController.SendMessage("updateHistoryText", line.character.characterName.ToString() + ": " + line.text.ToString());
     }
 
     void disableNextInput(){
