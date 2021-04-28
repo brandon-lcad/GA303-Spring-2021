@@ -65,7 +65,7 @@ public class DistortionManager : MonoBehaviour
     //GEORGIA particleDictionary.Add("BadAnswer", badAnswer);
       characterDictionary.Add("Alexis", alexis);
       characterDictionary.Add("Gilbert", gilbert);
-      characterDictionary.Add("CreepyDude", creepyDude);
+      characterDictionary.Add("Creepy Dude", creepyDude);
       characterDictionary.Add("Izzy", izzy);
       characterDictionary.Add("Player", player);
       characterDictionary.Add("Player Thoughts", playerThoughts);

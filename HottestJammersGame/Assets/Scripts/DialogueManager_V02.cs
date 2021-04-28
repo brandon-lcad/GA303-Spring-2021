@@ -5,7 +5,7 @@ using UnityEngine.Events;
 using UnityEngine.UI;
 using TMPro;
 
-public class QuestionsEvent : UnityEvent<Decision> { }
+public class QuestionEvent : UnityEvent<Decision> { }
 
 public class DialogueManager_V02 : MonoBehaviour
 {
@@ -202,6 +202,10 @@ public class DialogueManager_V02 : MonoBehaviour
         Line line = convo.lines[activeLineIndex];
 
         uiController.SendMessage("updateHistoryText", line.character.characterName.ToString() + ": " + line.text.ToString());
+        if (line.shadowDialogue)
+        {
+            uiController.SendMessage("updateHistoryText", line.character.characterName.ToString() + "'s Shadow: " + line.shadowText.ToString());
+        }
     }
 
     void disableNextInput(){

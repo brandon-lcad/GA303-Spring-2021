@@ -31,7 +31,7 @@ public class CharacterStateManager : MonoBehaviour
     void Start()
     {
         characterDictionary.Add("Alexis", alexis);
-        characterDictionary.Add("CreepyDude", creepyDude);
+        characterDictionary.Add("Creepy Dude", creepyDude);
         characterDictionary.Add("Izzy", izzy);
         characterDictionary.Add("Player", player);
         characterDictionary.Add("Player Thoughts", playerThoughts);
