@@ -28,8 +28,7 @@ MonoBehaviour:
     hasEffect: 0
     character: {fileID: 0}
     impact: 0
-  - text: I'd rather skip whatever's going on here right now because I've got stuff
-      to do and places to be.
+  - text: Yeah, we are NOT doing this right now.
     nextConversation: {fileID: 11400000, guid: e19ed32fc8e367744bbf37fde279be86, type: 2}
     distortionEffect: 0
     nextScene: 

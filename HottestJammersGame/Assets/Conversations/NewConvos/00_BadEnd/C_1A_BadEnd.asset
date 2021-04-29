@@ -32,13 +32,13 @@ MonoBehaviour:
     altDialogue: 0
     altText: 
   - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
-    text: I'm so worried if I'll ever manage to make friends here...
+    text: I'm don't think I'll ever manage to make friends here...
     shadowDialogue: 0
     shadowText: 
     altDialogue: 0
     altText: 
   - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
-    text: But noone can hurt me if I don't ever put myself out there...
+    text: But no one can hurt me if I don't ever put myself out there...
     shadowDialogue: 0
     shadowText: 
     altDialogue: 0

@@ -13,6 +13,13 @@ MonoBehaviour:
   m_Name: C_4C_Grocery
   m_EditorClassIdentifier: 
   lines:
+  - character: {fileID: 11400000, guid: e5d2758127e8bc04f9ac3f3ca9682820, type: 2}
+    text: I'd rather skip whatever's going on here right now because I've got stuff
+      to do and places to be.
+    shadowDialogue: 0
+    shadowText: 
+    altDialogue: 0
+    altText: 
   - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
     text: It might come across rude, but my gut is telling me that this guy isn't
       here just to be nice to me.

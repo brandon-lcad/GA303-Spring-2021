@@ -56,7 +56,7 @@ MonoBehaviour:
     altDialogue: 0
     altText: 
   - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
-    text: Noone will think you're weird...
+    text: No one will think you're weird...
     shadowDialogue: 0
     shadowText: 
     altDialogue: 0

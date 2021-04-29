@@ -45,8 +45,8 @@ MonoBehaviour:
     altDialogue: 0
     altText: 
   - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
-    text: but it's really starting to feel like he's trying to melt me with his eyes.
-      Plus he's in the way.
+    text: ... but it's really starting to feel like he's trying to melt me with his
+      eyes. Plus he's in the way.
     shadowDialogue: 0
     shadowText: 
     altDialogue: 0

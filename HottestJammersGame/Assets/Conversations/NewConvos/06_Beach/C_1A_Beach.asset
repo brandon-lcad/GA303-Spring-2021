@@ -35,7 +35,7 @@ MonoBehaviour:
     altDialogue: 0
     altText: 
   - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
-    text: ' *music note* Gonna-get-me-a-smore, gonnagetmeas''more *music note*'
+    text: "\u2669 Gonna-get-me-a-smore, gonnagetmeas'more \u266B"
     shadowDialogue: 0
     shadowText: 
     altDialogue: 0
@@ -53,7 +53,7 @@ MonoBehaviour:
     altDialogue: 0
     altText: 
   - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
-    text: and seeeeems to have a thing for staring...
+    text: ... and seeeeems to have a thing for staring...
     shadowDialogue: 0
     shadowText: 
     altDialogue: 0
