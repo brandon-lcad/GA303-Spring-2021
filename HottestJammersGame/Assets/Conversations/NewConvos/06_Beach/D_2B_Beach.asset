@@ -14,14 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: Decision 2B_Beach and 2C_Beach
   choices:
-  - text: CONFRONT HIM
+  - text: Confront him!
     nextConversation: {fileID: 11400000, guid: 73e5540ddad514c48b8aa58758a059ac, type: 2}
     distortionEffect: 0
     nextScene: 
     hasEffect: 1
     character: {fileID: 11400000, guid: ddc579749e6f19f42b54334e488c1a5f, type: 2}
     impact: 0
-  - text: RUN!
+  - text: ABORT!
     nextConversation: {fileID: 11400000, guid: 17bc778ca9f08ce43affd77df45a793f, type: 2}
     distortionEffect: 0
     nextScene: 

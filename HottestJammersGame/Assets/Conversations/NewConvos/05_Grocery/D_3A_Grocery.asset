@@ -14,21 +14,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: Decision 2A_Grocery
   choices:
-  - text: Oh... uh.... I'm going to a party tonight...
+  - text: Be honest
     nextConversation: {fileID: 11400000, guid: e0e374af042bd7747b22bdfb9b1394d9, type: 2}
     distortionEffect: 10
     nextScene: 
     hasEffect: 0
     character: {fileID: 0}
     impact: 0
-  - text: Sorry, I really have to get going...
+  - text: Try to leave
     nextConversation: {fileID: 11400000, guid: f3c6374ca7068d34f8e6f673f17f1c38, type: 2}
     distortionEffect: 5
     nextScene: 
     hasEffect: 0
     character: {fileID: 0}
     impact: 0
-  - text: Yeah, we are NOT doing this right now.
+  - text: Tell him off
     nextConversation: {fileID: 11400000, guid: e19ed32fc8e367744bbf37fde279be86, type: 2}
     distortionEffect: 0
     nextScene: 

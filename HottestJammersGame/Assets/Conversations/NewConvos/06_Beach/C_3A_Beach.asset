@@ -45,7 +45,7 @@ MonoBehaviour:
     altDialogue: 0
     altText: 
   - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
-    text: Almost forgot I was wearing this old thing
+    text: Almost forgot I was wearing this old thing!
     shadowDialogue: 0
     shadowText: 
     altDialogue: 0
@@ -63,32 +63,32 @@ MonoBehaviour:
     altDialogue: 0
     altText: 
   - character: {fileID: 11400000, guid: ddc579749e6f19f42b54334e488c1a5f, type: 2}
-    text: I was trying to remember the english word,
+    text: I was trying to remember the english word...
     shadowDialogue: 0
     shadowText: 
     altDialogue: 0
     altText: 
   - character: {fileID: 11400000, guid: ddc579749e6f19f42b54334e488c1a5f, type: 2}
-    text: ' I didn''t want to just point at your breats and you thinking I''m geiler
-      bock'
+    text: ' I didn''t want to just point at your chest, and you thinking I''m geiler
+      bock...'
     shadowDialogue: 0
     shadowText: 
     altDialogue: 0
     altText: 
   - character: {fileID: 11400000, guid: e5d2758127e8bc04f9ac3f3ca9682820, type: 2}
-    text: 'Yeah, no I totally understand,  '
+    text: Yeah, no I totally understand!
     shadowDialogue: 0
     shadowText: 
     altDialogue: 0
     altText: 
   - character: {fileID: 11400000, guid: e5d2758127e8bc04f9ac3f3ca9682820, type: 2}
-    text: honestly you've got the most intense thinking face I've ever seen,
+    text: Honestly though, you've got the most intense thinking face I've ever seen!
     shadowDialogue: 0
     shadowText: 
     altDialogue: 0
     altText: 
   - character: {fileID: 11400000, guid: e5d2758127e8bc04f9ac3f3ca9682820, type: 2}
-    text: I thought I'd done something to upset you
+    text: I thought I'd done something to upset you.
     shadowDialogue: 0
     shadowText: 
     altDialogue: 0
@@ -100,19 +100,19 @@ MonoBehaviour:
     altDialogue: 0
     altText: 
   - character: {fileID: 11400000, guid: ddc579749e6f19f42b54334e488c1a5f, type: 2}
-    text: I look angry even when I want to talk about the shrek
+    text: I look angry even when I want to talk about the Shrek.
     shadowDialogue: 0
     shadowText: 
     altDialogue: 0
     altText: 
   - character: {fileID: 11400000, guid: c87fd56e6eb1c6e4d8540e462bf60d69, type: 2}
-    text: Hi guys! Having fun? How's your first all-american-beach bash Gilbert?
+    text: Hi guys! Having fun? How's your first all-American-beach-bash, Gilbert?
     shadowDialogue: 0
     shadowText: 
     altDialogue: 0
     altText: 
   - character: {fileID: 11400000, guid: ddc579749e6f19f42b54334e488c1a5f, type: 2}
-    text: Very good, it is much warmer here than in Germany
+    text: Very good, it is much warmer here than in Germany.
     shadowDialogue: 0
     shadowText: 
     altDialogue: 0

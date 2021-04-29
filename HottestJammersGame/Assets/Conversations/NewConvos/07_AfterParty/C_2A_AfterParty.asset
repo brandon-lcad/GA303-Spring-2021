@@ -14,50 +14,51 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lines:
   - character: {fileID: 11400000, guid: c87fd56e6eb1c6e4d8540e462bf60d69, type: 2}
-    text: 'Now sit on him til the cops get here Gilbert! '
+    text: 'Now sit on him ''til the cops get here, Gilbert! '
     shadowDialogue: 0
     shadowText: 
     altDialogue: 0
     altText: 
   - character: {fileID: 11400000, guid: c87fd56e6eb1c6e4d8540e462bf60d69, type: 2}
-    text: His days of hunting down women and grabbing them in parkinglots are over!
+    text: His days of hunting down women and grabbing them in parking lots are over!
     shadowDialogue: 0
     shadowText: 
     altDialogue: 0
     altText: 
   - character: {fileID: 11400000, guid: e5d2758127e8bc04f9ac3f3ca9682820, type: 2}
-    text: Thank you! Thank you so much- he followed me and I- I don't even know what
-      would have ha-
+    text: Thank you! Thank you so much- he followed me, a-and I-I don't even know
+      what would have ha-
     shadowDialogue: 0
     shadowText: 
     altDialogue: 0
     altText: 
   - character: {fileID: 11400000, guid: c87fd56e6eb1c6e4d8540e462bf60d69, type: 2}
-    text: I'm gonna stop you right there before you give yourself nightmares
+    text: I'm gonna stop you right there before you give yourself nightmares.
     shadowDialogue: 0
     shadowText: 
     altDialogue: 0
     altText: 
   - character: {fileID: 11400000, guid: c87fd56e6eb1c6e4d8540e462bf60d69, type: 2}
-    text: All you need to think about is that we beat this creep
-    shadowDialogue: 0
-    shadowText: 
-    altDialogue: 0
-    altText: 
-  - character: {fileID: 11400000, guid: c87fd56e6eb1c6e4d8540e462bf60d69, type: 2}
-    text: And I'd beat him a hundred times again if it means keeping you safe
+    text: All you need to know is that we beat this creep, and we'd beat him a hundred
+      times again if it means keeping you safe.
     shadowDialogue: 0
     shadowText: 
     altDialogue: 0
     altText: 
   - character: {fileID: 11400000, guid: ddc579749e6f19f42b54334e488c1a5f, type: 2}
-    text: Ya!
+    text: Isn't that right, Gilbert?
+    shadowDialogue: 0
+    shadowText: 
+    altDialogue: 0
+    altText: 
+  - character: {fileID: 11400000, guid: ddc579749e6f19f42b54334e488c1a5f, type: 2}
+    text: Ja!
     shadowDialogue: 0
     shadowText: 
     altDialogue: 0
     altText: 
   - character: {fileID: 11400000, guid: e5d2758127e8bc04f9ac3f3ca9682820, type: 2}
-    text: Thanks you guys, for everything!
+    text: Thank you guys so much... for everything!
     shadowDialogue: 0
     shadowText: 
     altDialogue: 0

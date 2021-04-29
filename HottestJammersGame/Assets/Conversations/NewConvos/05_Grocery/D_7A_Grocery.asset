@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: Decision 3B_Grocery
   choices:
-  - text: Cave and give him your number.
+  - text: Cave and give him your number
     nextConversation: {fileID: 11400000, guid: ea7b7439e926f194f98422f1bbf9594a, type: 2}
     distortionEffect: 20
     nextScene: 

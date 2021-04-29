@@ -28,13 +28,13 @@ MonoBehaviour:
     altDialogue: 0
     altText: 
   - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
-    text: definetly not a large, muscular, staring reason.
+    text: ... definitely not a large... muscular... staring reason.
     shadowDialogue: 0
     shadowText: 
     altDialogue: 0
     altText: 
   - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
-    text: Ah, there we go, good to be away.
+    text: Ah, there we go... Good to be away.
     shadowDialogue: 0
     shadowText: 
     altDialogue: 0
@@ -46,8 +46,8 @@ MonoBehaviour:
     altDialogue: 0
     altText: 
   - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
-    text: Just gonna get a quick 20 on the incredible hulk- aaand he's coming this
-      way, crapcrapcrap
+    text: Just gonna' get a quick 20 on the incredible hulk- aaand he's coming this
+      way, crapcrapcrap-
     shadowDialogue: 0
     shadowText: 
     altDialogue: 0

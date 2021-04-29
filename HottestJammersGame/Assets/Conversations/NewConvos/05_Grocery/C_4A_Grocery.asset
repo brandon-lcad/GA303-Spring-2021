@@ -13,6 +13,12 @@ MonoBehaviour:
   m_Name: C_4A_Grocery
   m_EditorClassIdentifier: 
   lines:
+  - character: {fileID: 11400000, guid: e5d2758127e8bc04f9ac3f3ca9682820, type: 2}
+    text: Oh... uh.... I'm going to a party tonight...
+    shadowDialogue: 0
+    shadowText: 
+    altDialogue: 0
+    altText: 
   - character: {fileID: 11400000, guid: a9a5a0ef951fe5b41b10e855cc7ea5f5, type: 2}
     text: Oh! And I happen to be free tonight. Sounds like you could use a plus one~
       I'm happy to be your arm candy, sugar.
@@ -33,7 +39,7 @@ MonoBehaviour:
     altDialogue: 0
     altText: 
   - character: {fileID: 11400000, guid: a9a5a0ef951fe5b41b10e855cc7ea5f5, type: 2}
-    text: C'mon, don't you make me... butter you up.
+    text: C'mon, don't you make me butter you up...
     shadowDialogue: 1
     shadowText: What? I'm just telling you how attractive you are...
     altDialogue: 0
