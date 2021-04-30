@@ -11,6 +11,8 @@ public class DecisionController : MonoBehaviour
 {
     public Choice choice;
     public ConversationChangeEvent conversationChangeEvent;
+    public GameObject PositiveEffect;
+    public GameObject NegativeEffect;
 
     // BRUTE FORCE REMOVE
     public SceneChange sceneChange;
@@ -88,8 +90,21 @@ public class DecisionController : MonoBehaviour
         }
         conversationChangeEvent.Invoke(choice.nextConversation);
     }
+    
+    //public static void PlayEffect(GameObject particle, Button BTN)
+    //{
+       //Move to UI Manager
+        //GameObject effect = Instantiate(particle, BTN.gameObject.transform);
+        //effect.transform.parent = null;
+        //delete after 2-3 seconds
 
-    private static void SendDistortionLevel(int distortionChange)
+
+
+
+
+    //}
+
+private static void SendDistortionLevel(int distortionChange)
     {
         GameObject distortionManager = GameObject.Find("DistortionManager");
         distortionManager.SendMessage("UpdateDistortionLevel", distortionChange);
