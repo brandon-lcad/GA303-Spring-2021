@@ -12,7 +12,8 @@ public class UIController : MonoBehaviour
     // Background Image
     // public Image bg;
     // Next Button
-    public GameObject nextButton;
+    //public GameObject nextButton;
+    public TMP_Text nextButton;
     // Distortion Animation - type tbd
     private ParticleSystem[] activeParticles;
     // Distortion vignettes
@@ -102,7 +103,7 @@ public class UIController : MonoBehaviour
         activeParticles = new ParticleSystem[0];
         activeVignettes = new Image[0];
         // Shows next button on screen
-        nextButton.SetActive(true);
+        nextButton.enabled = true;
 
         ui.enabled = true;
     }
@@ -403,7 +404,7 @@ public class UIController : MonoBehaviour
             playerDialogue.text = "";
             thoughtBubble.SetActive(false);
             thoughtDialogue.text = "";
-            nextButton.SetActive(false);
+            nextButton.enabled = false;
             hidePortraits();
 
             // Turn on Decision UI
@@ -415,7 +416,7 @@ public class UIController : MonoBehaviour
         public void hideDecisionUI() {
             // Turn off Decision UI
             decUI.SetActive(false);
-            nextButton.SetActive(true);
+            nextButton.enabled = true;
             showPortraits();
         }
 
