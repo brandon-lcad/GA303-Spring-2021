@@ -11,6 +11,8 @@ public class DecisionController : MonoBehaviour
 {
     public Choice choice;
     public ConversationChangeEvent conversationChangeEvent;
+    public GameObject PositiveEffect;
+    public GameObject NegativeEffect;
 
     // BRUTE FORCE REMOVE
     public SceneChange sceneChange;
@@ -46,15 +48,16 @@ public class DecisionController : MonoBehaviour
         button.onClick.AddListener(() => LoadScene(choice.nextScene));
 
         // Positive or negative effect particle listener here?
+        button.onClick.AddListener(() => SendPositiveOrNegative(choice.distortionEffect));
 
         return decisionController;
     }
 
-    private static void SendImpactEffect(Choice selection){
-        if (selection.hasEffect){
-          if (selection.impact == CharacterEffects.Meet){
-            selection.character.hasMetBefore = true;
-          }
+    private static void SendImpactEffect(Choice selection) {
+        if (selection.hasEffect) {
+            if (selection.impact == CharacterEffects.Meet) {
+                selection.character.hasMetBefore = true;
+            }
         }
     }
 
@@ -75,19 +78,32 @@ public class DecisionController : MonoBehaviour
     }
 
     // Invokes the event and broadcasts what conversation to load based on choice
-    public void MakeDecision()
-    {
-        if(choice.distortionEffect <= 0)
-        {
-            Debug.Log("PlayPositiveeffect");
+    //public void MakeDecision()
+    //{
+        //if (choice.distortionEffect <= 0)
+       // {
+           // Debug.Log("PlayPositiveeffect");
 
-        }
-        else
-        {
-            Debug.Log("PlayNegativeEffect");
-        }
-        conversationChangeEvent.Invoke(choice.nextConversation);
-    }
+        //}
+        //else
+       // {
+           // Debug.Log("PlayNegativeEffect");
+        //}
+       //conversationChangeEvent.Invoke(choice.nextConversation);
+    //}
+
+    //public static void PlayEffect(GameObject particle, Button BTN)
+    //{
+    //Move to UI Manager
+    //GameObject effect = Instantiate(particle, BTN.gameObject.transform);
+    //effect.transform.parent = null;
+    //delete after 2-3 seconds
+
+
+
+
+
+    //}
 
     private static void SendDistortionLevel(int distortionChange)
     {
@@ -100,5 +116,10 @@ public class DecisionController : MonoBehaviour
     {
         GameObject ui = GameObject.Find("UIController");
         ui.SendMessage("LoadScene", sceneName);
+    }
+    private static void SendPositiveOrNegative(int distortionNumber)
+    {
+        GameObject uiManager = GameObject.Find("UIController");
+        uiManager.SendMessage("BroughtDistortion", distortionNumber);
     }
 }

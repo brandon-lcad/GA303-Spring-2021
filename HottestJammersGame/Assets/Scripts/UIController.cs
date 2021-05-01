@@ -16,6 +16,9 @@ public class UIController : MonoBehaviour
     public TMP_Text nextButton;
     // Distortion Animation - type tbd
     private ParticleSystem[] activeParticles;
+    //button effects
+    public ParticleSystem positiveEffect;
+    public ParticleSystem negativeEffect;
     // Distortion vignettes
     private Image[] activeVignettes;
     // Character Portrait and Shadow Portrait
@@ -106,6 +109,10 @@ public class UIController : MonoBehaviour
         nextButton.enabled = true;
 
         ui.enabled = true;
+        
+        positiveEffect.Stop();
+        negativeEffect.Stop();
+
     }
 
     // Update is called once per frame
@@ -475,7 +482,34 @@ public class UIController : MonoBehaviour
                 animScreen.SetTrigger("FadeIn");
             }
         }
+         public void BroughtDistortion(int distortionNumber)
+        {
+        if (distortionNumber <= 0)
+        {
+            Debug.Log("Playpositiveeffect");
+            positiveEffect.Play();
+            WaitEffect();
+        }
+        else
+        {
+            Debug.Log("PlaynegativeEffect");
+            negativeEffect.Play();
+            WaitEffect();
+        }
+        }
+        public IEnumerator WaitEffect()
+        {
+            
+            yield return new WaitForSeconds(3);
+            StopPlease();
+        }
+       public void StopPlease()
+       {
+        positiveEffect.Stop();
+        negativeEffect.Stop();
+       }
 }
+
     // Updates text and bubbles to correspond to current line in convo and advances activeLineIndex to next line
     // void DisplayLine(int activeLineIndex)
     // {
