@@ -18,4 +18,9 @@ public class SceneChange : MonoBehaviour
                 Application.Quit();
         #endif
     }
+
+    public void OpenURL(string url)
+    {
+        Application.OpenURL(url);
+    }
 }

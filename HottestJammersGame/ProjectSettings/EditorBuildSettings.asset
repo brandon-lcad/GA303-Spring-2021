@@ -27,8 +27,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Game Scenes/CreditsMenu.unity
     guid: d50acd1bf017d8341b7776d6b7c91908
   - enabled: 1
-    path: Assets/Scenes/NewScenes/09_EndMenu.unity
-    guid: 9de2b5e383c9e0f48a12536880ace04b
+    path: Assets/Scenes/NewScenes/01_StartMenu.unity
+    guid: 10b0929a3367483438f21cce7ba35374
   - enabled: 1
     path: Assets/Scenes/NewScenes/02_Home.unity
     guid: 9be35e66c0d52ae419ca136bcfb678a0
@@ -51,6 +51,6 @@ EditorBuildSettings:
     path: Assets/Scenes/NewScenes/08_BadEnd.unity
     guid: 378a278f9706351419e6eb7433cee09a
   - enabled: 1
-    path: Assets/Scenes/NewScenes/01_StartMenu.unity
-    guid: 10b0929a3367483438f21cce7ba35374
+    path: Assets/Scenes/NewScenes/09_EndMenu.unity
+    guid: 9de2b5e383c9e0f48a12536880ace04b
   m_configObjects: {}
