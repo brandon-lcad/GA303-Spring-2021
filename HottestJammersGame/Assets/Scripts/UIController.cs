@@ -109,7 +109,7 @@ public class UIController : MonoBehaviour
         nextButton.enabled = true;
 
         ui.enabled = true;
-        
+
         positiveEffect.Stop();
         negativeEffect.Stop();
 
@@ -488,18 +488,18 @@ public class UIController : MonoBehaviour
         {
             Debug.Log("Playpositiveeffect");
             positiveEffect.Play();
-            WaitEffect();
+            StartCoroutine(WaitEffect());
         }
         else
         {
             Debug.Log("PlaynegativeEffect");
             negativeEffect.Play();
-            WaitEffect();
+            StartCoroutine(WaitEffect());
         }
         }
         public IEnumerator WaitEffect()
         {
-            
+
             yield return new WaitForSeconds(3);
             StopPlease();
         }

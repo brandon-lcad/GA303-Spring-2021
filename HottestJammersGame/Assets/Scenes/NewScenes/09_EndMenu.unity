@@ -672,6 +672,7 @@ GameObject:
   - component: {fileID: 777479755}
   - component: {fileID: 777479754}
   - component: {fileID: 777479753}
+  - component: {fileID: 777479759}
   m_Layer: 5
   m_Name: CreditsPage
   m_TagString: Untagged
@@ -797,6 +798,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!225 &777479759
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 777479752}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &787624164
 GameObject:
   m_ObjectHideFlags: 0
@@ -1195,7 +1208,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1436452337}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -36}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1852203481}
@@ -1204,7 +1217,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -276, y: -252}
+  m_AnchoredPosition: {x: -281, y: -174}
   m_SizeDelta: {x: 191.94208, y: 51.94448}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1436452339
@@ -1334,7 +1347,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 405, y: -261}
+  m_AnchoredPosition: {x: 392, y: -146}
   m_SizeDelta: {x: 191.94208, y: 51.94448}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1542392129
@@ -1464,7 +1477,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 405, y: -354.99994}
+  m_AnchoredPosition: {x: 392.00006, y: -239.99995}
   m_SizeDelta: {x: 191.94208, y: 51.94448}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1726246885
@@ -1594,7 +1607,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 405, y: -170}
+  m_AnchoredPosition: {x: 392.00006, y: -55.000015}
   m_SizeDelta: {x: 191.94208, y: 51.94448}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1736863974
@@ -2005,6 +2018,7 @@ GameObject:
   - component: {fileID: 1902526376}
   - component: {fileID: 1902526375}
   - component: {fileID: 1902526374}
+  - component: {fileID: 1902526379}
   m_Layer: 5
   m_Name: ThankYouPage
   m_TagString: Untagged
@@ -2132,3 +2146,15 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!225 &1902526379
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1902526372}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
