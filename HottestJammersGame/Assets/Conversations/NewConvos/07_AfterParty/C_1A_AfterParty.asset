@@ -33,7 +33,7 @@ MonoBehaviour:
     shadowText: 
     altDialogue: 0
     altText: 
-  - character: {fileID: 11400000, guid: ddc579749e6f19f42b54334e488c1a5f, type: 2}
+  - character: {fileID: 11400000, guid: c87fd56e6eb1c6e4d8540e462bf60d69, type: 2}
     text: What can I say? I'm the party QUEEN...
     shadowDialogue: 0
     shadowText: 

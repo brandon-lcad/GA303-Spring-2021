@@ -28,14 +28,14 @@ MonoBehaviour:
     altDialogue: 0
     altText: 
   - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
-    text: 'They all look like they''re having so much fun; a perfect night, volley
+    text: 'They all look like they''re having so much fun! A perfect night, volley
       ball, s''mores!? '
     shadowDialogue: 0
     shadowText: 
     altDialogue: 0
     altText: 
   - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
-    text: "\u2669 Gonna-get-me-a-smore, gonnagetmeas'more \u266B"
+    text: ~ Gonna-get-me-a-smore, gonnagetmeas'more ~
     shadowDialogue: 0
     shadowText: 
     altDialogue: 0
