@@ -136,7 +136,7 @@ PrefabInstance:
     - target: {fileID: 416250247338317362, guid: 7155628fc3381544f83b4d326ac162de,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -739.00006
+      value: -532.2001
       objectReference: {fileID: 0}
     - target: {fileID: 416250247338317362, guid: 7155628fc3381544f83b4d326ac162de,
         type: 3}
@@ -637,6 +637,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 273902170899616403, guid: 635d95b4a6d76c14cb6855777d8ca0b7,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -9574.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 273902170899616403, guid: 635d95b4a6d76c14cb6855777d8ca0b7,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 939826.25
       objectReference: {fileID: 0}
     - target: {fileID: 273902171375203188, guid: 635d95b4a6d76c14cb6855777d8ca0b7,
         type: 3}
@@ -1179,6 +1189,7 @@ GameObject:
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
   - component: {fileID: 519420033}
+  - component: {fileID: 519420034}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1273,7 +1284,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 26243b0551accef4db3eb29a26fc2f51, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 1c0d273dc47de4e4f908c49dba86e69c, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1359,6 +1370,25 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &519420034
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: aede938446950534487f5165a924d695, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &521104962
 GameObject:
   m_ObjectHideFlags: 0
@@ -2253,6 +2283,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  PositiveEffect: {fileID: 0}
+  NegativeEffect: {fileID: 0}
   sceneChange: {fileID: 519420030}
 --- !u!1 &1374688954
 GameObject:
@@ -2440,13 +2472,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 26d77c59b4b40444da15ede448b8a37e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3d39f1ca3903f804abfe5585362e3a8b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2941,7 +2973,7 @@ PrefabInstance:
     - target: {fileID: 3032232626227230566, guid: f6394ed96e6435e4393e7d3f277299d4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -739
+      value: -532.2
       objectReference: {fileID: 0}
     - target: {fileID: 3032232626227230566, guid: f6394ed96e6435e4393e7d3f277299d4,
         type: 3}
@@ -3375,7 +3407,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ui: {fileID: 1885180124}
-  nextButton: {fileID: 360558496}
+  nextButton: {fileID: 0}
+  positiveEffect: {fileID: 0}
+  negativeEffect: {fileID: 0}
   portrait: {fileID: 1450841783}
   shadowPortrait: {fileID: 1834629159}
   characterBubble: {fileID: 321513512}

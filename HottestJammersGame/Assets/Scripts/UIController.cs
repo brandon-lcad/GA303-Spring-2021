@@ -465,9 +465,11 @@ public class UIController : MonoBehaviour
 
         private IEnumerator WaitTime(string sceneName) {
             GameObject fadeScreen = GameObject.Find("BlackScreen");
-            Debug.Log(fadeScreen);
+            Debug.Log("found Black Screen");
             Animator animScreen = fadeScreen.GetComponent<Animator>();
-            Debug.Log(animScreen);
+            Debug.Log("animScreen");
+            GameObject sceneMusic = GameObject.Find("Main Camera");
+            Animator musicFade = sceneMusic.GetComponent<Animator>();
             if (animScreen != null) {
                 characterBubble.SetActive(false);
                 distortionBubble.SetActive(false);
@@ -475,11 +477,14 @@ public class UIController : MonoBehaviour
                 thoughtBubble.SetActive(false);
                 hidePortraits();
                 animScreen.SetTrigger("FadeIn");
+                musicFade.SetTrigger("FadeInSound");
             }
             yield return new WaitForSeconds(1);
+            Debug.Log("Waited for 1 Second!");
             SceneManager.LoadScene(sceneName);
             if (animScreen != null) {
                 animScreen.SetTrigger("FadeIn");
+                musicFade.SetTrigger("FadeInSound");
             }
         }
          public void BroughtDistortion(int distortionNumber)
