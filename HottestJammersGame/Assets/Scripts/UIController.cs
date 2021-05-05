@@ -42,6 +42,8 @@ public class UIController : MonoBehaviour
     public TMP_Text historyText;
     public bool canvasOn;
     public bool convoStarted;
+    // Bottom Bar
+    public Canvas bottomBarUI;
 
     private bool mindReading;
 
@@ -186,6 +188,17 @@ public class UIController : MonoBehaviour
         if (Input.GetKeyDown("h"))
         {
             HistoryToggle();
+        }
+
+        Scene scene = SceneManager.GetActiveScene();
+        if (scene.name == "01_StartMenu")
+        {
+            Debug.Log("Hiding Bottom Bar");
+            bottomBarUI.enabled = false;
+        }
+        else
+        {
+            bottomBarUI.enabled = true;
         }
     }
 
@@ -487,6 +500,7 @@ public class UIController : MonoBehaviour
                 musicFade.SetTrigger("FadeInSound");
             }
         }
+
          public void BroughtDistortion(int distortionNumber)
         {
         if (distortionNumber <= 0)
@@ -501,10 +515,10 @@ public class UIController : MonoBehaviour
             negativeEffect.Play();
             StartCoroutine(WaitEffect());
         }
+
         }
         public IEnumerator WaitEffect()
         {
-
             yield return new WaitForSeconds(3);
             StopPlease();
         }
