@@ -27,8 +27,8 @@ MonoBehaviour:
     altText: 
   - character: {fileID: 11400000, guid: a9a5a0ef951fe5b41b10e855cc7ea5f5, type: 2}
     text: Where? ... Hey wait!
-    shadowDialogue: 0
-    shadowText: 
+    shadowDialogue: 1
+    shadowText: You liar...
     altDialogue: 0
     altText: 
   - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}

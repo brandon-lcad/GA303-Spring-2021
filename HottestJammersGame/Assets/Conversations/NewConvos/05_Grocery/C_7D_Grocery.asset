@@ -36,7 +36,7 @@ MonoBehaviour:
       it to me again? Not that you would give me a fake number or something like
       that, because you're a decent person.
     shadowDialogue: 1
-    shadowText: This better not be a fake number...
+    shadowText: You're a bad person if you're giving out fake numbers...
     altDialogue: 0
     altText: 
   - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}

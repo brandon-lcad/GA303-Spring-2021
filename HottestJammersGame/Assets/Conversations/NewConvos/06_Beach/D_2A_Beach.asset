@@ -16,14 +16,14 @@ MonoBehaviour:
   choices:
   - text: AVOID HIM!
     nextConversation: {fileID: 11400000, guid: 4b633fb435a1d7f459ecad2530ad3bc6, type: 2}
-    distortionEffect: 0
+    distortionEffect: -15
     nextScene: 
     hasEffect: 0
     character: {fileID: 0}
     impact: 0
   - text: GET THAT CHOCOLATEY GOODNESS!
     nextConversation: {fileID: 11400000, guid: 73e5540ddad514c48b8aa58758a059ac, type: 2}
-    distortionEffect: 0
+    distortionEffect: 15
     nextScene: 
     hasEffect: 1
     character: {fileID: 11400000, guid: ddc579749e6f19f42b54334e488c1a5f, type: 2}

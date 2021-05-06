@@ -16,7 +16,7 @@ MonoBehaviour:
   choices:
   - text: The End!
     nextConversation: {fileID: 11400000, guid: 4ec6eb71af853b549828b9459c62e906, type: 2}
-    distortionEffect: 0
+    distortionEffect: 25
     nextScene: 09_EndMenu
     hasEffect: 0
     character: {fileID: 0}

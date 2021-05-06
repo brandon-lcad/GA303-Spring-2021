@@ -16,7 +16,7 @@ MonoBehaviour:
   choices:
   - text: Party the night away!
     nextConversation: {fileID: 11400000, guid: 6d10d0a2fe352b544ba0c35d3cb9893c, type: 2}
-    distortionEffect: 0
+    distortionEffect: 25
     nextScene: 07_AfterParty
     hasEffect: 0
     character: {fileID: 0}
