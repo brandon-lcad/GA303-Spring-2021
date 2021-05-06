@@ -38,7 +38,7 @@ MonoBehaviour:
     altDialogue: 0
     altText: 
   - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
-    text: And... uh he's kinda still scaring me.
+    text: And... uh, he's kinda still scaring me.
     shadowDialogue: 0
     shadowText: 
     altDialogue: 0

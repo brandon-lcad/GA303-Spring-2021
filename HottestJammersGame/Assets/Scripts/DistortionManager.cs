@@ -69,7 +69,7 @@ public class DistortionManager : MonoBehaviour
       characterDictionary.Add("Izzy", izzy);
       characterDictionary.Add("Player", player);
       characterDictionary.Add("Player Thoughts", playerThoughts);
-      characterDictionary.Add("BlankCharacter", blankCharacter);
+      characterDictionary.Add("???", blankCharacter);
 
         // Turn everything off
         // We're the only ones with references

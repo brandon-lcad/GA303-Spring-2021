@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: Decision 1A_Home
   choices:
-  - text: I should definitely go.
+  - text: I should definitely go
     nextConversation: {fileID: 11400000, guid: 034f5d514824f7744909e5b7df4feff7, type: 2}
     distortionEffect: 0
     nextScene: 

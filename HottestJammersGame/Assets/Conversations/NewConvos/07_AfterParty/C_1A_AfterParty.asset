@@ -28,7 +28,7 @@ MonoBehaviour:
     altDialogue: 0
     altText: 
   - character: {fileID: 11400000, guid: ddc579749e6f19f42b54334e488c1a5f, type: 2}
-    text: Yes the time was very good! My friends will be so jealous!
+    text: Yes, the time was very good! My friends will be so jealous!
     shadowDialogue: 0
     shadowText: 
     altDialogue: 0
@@ -70,8 +70,8 @@ MonoBehaviour:
     altDialogue: 0
     altText: 
   - character: {fileID: 11400000, guid: a9a5a0ef951fe5b41b10e855cc7ea5f5, type: 2}
-    text: Well if it isn't my cute little friend... How about we head somewhere more
-      intimate
+    text: Well, if it isn't my cute little friend... How about we head somewhere
+      more intimate.
     shadowDialogue: 1
     shadowText: I'm more than willing to show you a real good time...
     altDialogue: 0

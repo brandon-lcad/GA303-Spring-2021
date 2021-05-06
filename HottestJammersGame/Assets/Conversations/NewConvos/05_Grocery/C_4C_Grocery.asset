@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lines:
   - character: {fileID: 11400000, guid: e5d2758127e8bc04f9ac3f3ca9682820, type: 2}
-    text: I'd rather skip whatever's going on here right now because I've got stuff
+    text: I'd rather skip whatever's going on here right now, because I've got stuff
       to do and places to be.
     shadowDialogue: 0
     shadowText: 
@@ -28,7 +28,7 @@ MonoBehaviour:
     altDialogue: 0
     altText: 
   - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
-    text: It might get dangerous if I keep letting this slide. I gotta get out of
+    text: It might get dangerous if I keep letting this slide. I gotta' get out of
       here, even if it's a little forceful.
     shadowDialogue: 0
     shadowText: 

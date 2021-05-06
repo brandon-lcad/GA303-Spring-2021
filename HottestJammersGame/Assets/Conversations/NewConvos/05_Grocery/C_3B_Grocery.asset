@@ -20,7 +20,7 @@ MonoBehaviour:
     altDialogue: 0
     altText: 
   - character: {fileID: 11400000, guid: a9a5a0ef951fe5b41b10e855cc7ea5f5, type: 2}
-    text: C'mon~ Lemme help you out with your little shopping list~ What are you
+    text: C'mon~ Lemme' help you out with your little shopping list~ What are you
       looking for?
     shadowDialogue: 0
     shadowText: 

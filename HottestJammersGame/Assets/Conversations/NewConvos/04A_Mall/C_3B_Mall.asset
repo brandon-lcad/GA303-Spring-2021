@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lines:
   - character: {fileID: 11400000, guid: e5d2758127e8bc04f9ac3f3ca9682820, type: 2}
-    text: Well, if I'm being totally honest... I'm a little nervous.
+    text: Well, if I'm being totally honest... I'm not sure.
     shadowDialogue: 0
     shadowText: 
     altDialogue: 0
@@ -26,7 +26,7 @@ MonoBehaviour:
     altDialogue: 0
     altText: 
   - character: {fileID: 11400000, guid: e5d2758127e8bc04f9ac3f3ca9682820, type: 2}
-    text: I guess I'm just kind nervous, being new around here and all...
+    text: I guess I'm just kinda' nervous, being new around here and all...
     shadowDialogue: 0
     shadowText: 
     altDialogue: 0

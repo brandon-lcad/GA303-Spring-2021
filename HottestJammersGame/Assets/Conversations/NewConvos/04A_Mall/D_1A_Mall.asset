@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: Decision 1A_Mall
   choices:
-  - text: Say hi.
+  - text: Say hi
     nextConversation: {fileID: 11400000, guid: bf399ad07ac68cc44870c7f790bad6ec, type: 2}
     distortionEffect: -10
     nextScene: 

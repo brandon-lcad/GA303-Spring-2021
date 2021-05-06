@@ -45,7 +45,7 @@ MonoBehaviour:
     altDialogue: 0
     altText: 
   - character: {fileID: 11400000, guid: c87fd56e6eb1c6e4d8540e462bf60d69, type: 2}
-    text: 'You here for a suit too? You''re going to be at the beach tonight right? '
+    text: 'You here for a suit too? You''re going to be at the beach tonight, right? '
     shadowDialogue: 0
     shadowText: 
     altDialogue: 0

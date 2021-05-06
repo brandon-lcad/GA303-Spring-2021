@@ -20,7 +20,7 @@ MonoBehaviour:
     altDialogue: 0
     altText: 
   - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
-    text: Plus my new friends are going to be there!
+    text: Plus, my new friends are going to be there!
     shadowDialogue: 0
     shadowText: 
     altDialogue: 0

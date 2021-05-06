@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73cd5b1f3f2b6b241966e94bba22cb08, type: 3}
   m_Name: BlankCharacter
   m_EditorClassIdentifier: 
-  characterName: BlankCharacter
+  characterName: ???
   isPlayer: 0
   hasMetBefore: 0
   characterSprites:

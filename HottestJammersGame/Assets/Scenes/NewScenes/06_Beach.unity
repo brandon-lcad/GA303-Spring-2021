@@ -1061,7 +1061,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3faf046de95a49a49a7f8d12f132a9fd, type: 3}
+  m_audioClip: {fileID: 8300000, guid: b8c8c089060cac6418225a83135d1369, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1902,12 +1902,12 @@ PrefabInstance:
     - target: {fileID: 273902170899616403, guid: 635d95b4a6d76c14cb6855777d8ca0b7,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -960
+      value: -3823
       objectReference: {fileID: 0}
     - target: {fileID: 273902170899616403, guid: 635d95b4a6d76c14cb6855777d8ca0b7,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 118482.51
+      value: 122631.266
       objectReference: {fileID: 0}
     - target: {fileID: 273902171375203188, guid: 635d95b4a6d76c14cb6855777d8ca0b7,
         type: 3}
@@ -3424,6 +3424,7 @@ MonoBehaviour:
   historyText: {fileID: 1088819617}
   canvasOn: 0
   convoStarted: 0
+  bottomBarUI: {fileID: 0}
   decUI: {fileID: 355836655}
   currentShadowLine: 
   currentOtherLine: 

@@ -21,7 +21,7 @@ MonoBehaviour:
     hasEffect: 0
     character: {fileID: 11400000, guid: c87fd56e6eb1c6e4d8540e462bf60d69, type: 2}
     impact: 0
-  - text: I'm nervous.
+  - text: I'm nervous
     nextConversation: {fileID: 11400000, guid: a6c8677381f67d6429113e133b337f48, type: 2}
     distortionEffect: 5
     nextScene: 

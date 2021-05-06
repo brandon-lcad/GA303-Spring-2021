@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: Decision > Main Menu
   choices:
-  - text: Return to Main Menu?
+  - text: .....
     nextConversation: {fileID: 11400000, guid: 4ec6eb71af853b549828b9459c62e906, type: 2}
     distortionEffect: 0
     nextScene: 01_StartMenu

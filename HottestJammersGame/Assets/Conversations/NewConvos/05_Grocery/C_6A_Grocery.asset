@@ -56,7 +56,7 @@ MonoBehaviour:
     altDialogue: 0
     altText: 
   - character: {fileID: 11400000, guid: c87fd56e6eb1c6e4d8540e462bf60d69, type: 2}
-    text: Oh is that right? Because from where I'm standing, it looks like you're
+    text: Oh, is that right? Because from where I'm standing, it looks like you're
       making my friend uncomfortable. Why don't you go drool over in Frozen Foods
       and leave us alone?
     shadowDialogue: 0

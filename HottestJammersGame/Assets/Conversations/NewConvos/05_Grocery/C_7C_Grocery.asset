@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lines:
   - character: {fileID: 11400000, guid: e5d2758127e8bc04f9ac3f3ca9682820, type: 2}
-    text: I've really gotta get going and this is making me uncomfortable.
+    text: I've really gotta' get going and this is making me uncomfortable.
     shadowDialogue: 0
     shadowText: 
     altDialogue: 0

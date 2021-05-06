@@ -63,7 +63,7 @@ MonoBehaviour:
     altDialogue: 0
     altText: 
   - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
-    text: Wait what's that giant blur over her shoulder- oh NO!
+    text: Wait, what's that giant blur over her shoulder- oh NO!
     shadowDialogue: 0
     shadowText: 
     altDialogue: 0
@@ -112,7 +112,7 @@ MonoBehaviour:
     altText: 
   - character: {fileID: 11400000, guid: ddc579749e6f19f42b54334e488c1a5f, type: 2}
     text: I didn't want to just point at your chest, and you thinking I'm geiler
-      bock
+      bock.
     shadowDialogue: 0
     shadowText: 
     altDialogue: 0
@@ -126,7 +126,7 @@ MonoBehaviour:
     altText: 
   - character: {fileID: 11400000, guid: e5d2758127e8bc04f9ac3f3ca9682820, type: 2}
     text: Nope, no, I'm the one lying on my back in the sand after running into a
-      volleyball because I thought I was gonna be murdered in the middle of a party
+      volleyball, because I thought I was gonna be murdered in the middle of a party.
     shadowDialogue: 0
     shadowText: 
     altDialogue: 0

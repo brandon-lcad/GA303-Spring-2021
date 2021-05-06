@@ -35,7 +35,7 @@ MonoBehaviour:
     altDialogue: 0
     altText: 
   - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
-    text: ~ Gonna-get-me-a-smore, gonnagetmeas'more ~
+    text: ~ Gonna'-get-me-a-smore, gonnagetmeas'more ~
     shadowDialogue: 0
     shadowText: 
     altDialogue: 0
@@ -47,7 +47,7 @@ MonoBehaviour:
     altDialogue: 0
     altText: 
   - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
-    text: Correction, I know almost everybody here- the terminator is new...
+    text: Correction, I know almost everybody here- the Terminator is new...
     shadowDialogue: 0
     shadowText: 
     altDialogue: 0
