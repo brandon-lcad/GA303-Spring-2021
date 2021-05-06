@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: Gilbert
   isPlayer: 0
-  hasMetBefore: 0
+  hasMetBefore: 1
   characterSprites:
   - {fileID: 21300000, guid: 241df928a3f483f41ab7bafca2fd77e9, type: 3}
   - {fileID: 21300000, guid: f9db9aa125fcd864b9740a249f585ef7, type: 3}
   - {fileID: 21300000, guid: a6021a56fe7d91b4a890f954dbb51ee9, type: 3}
   shadowSprites:
   - {fileID: 21300000, guid: 91aeb900117273445b1c9e62c031bff7, type: 3}
-  - {fileID: 21300000, guid: 5a44b65c6d891a040833300022fbd389, type: 3}
-  - {fileID: 21300000, guid: cfe9f90086aa13a4cb55b0629b1850ab, type: 3}
+  - {fileID: 21300000, guid: 38157d4fe21a67f4c87862b2e2a5c14e, type: 3}
+  - {fileID: 21300000, guid: 689a85a6c6720b74bb256ab2a233ff31, type: 3}
   spriteToShow: 0
