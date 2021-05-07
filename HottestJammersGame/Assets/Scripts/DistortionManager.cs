@@ -39,7 +39,7 @@ public class DistortionManager : MonoBehaviour
     private GameObject uiController;
     private GameObject CharacterStateManager;
 
-    private int distortionLevel;
+    public int distortionLevel;
 
     void Awake()
     {
