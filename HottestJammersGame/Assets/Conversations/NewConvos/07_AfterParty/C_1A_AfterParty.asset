@@ -46,7 +46,7 @@ MonoBehaviour:
     altDialogue: 0
     altText: 
   - character: {fileID: 11400000, guid: e5d2758127e8bc04f9ac3f3ca9682820, type: 2}
-    text: Yup
+    text: ??? Yes, it is...
     shadowDialogue: 0
     shadowText: 
     altDialogue: 0
@@ -91,8 +91,8 @@ MonoBehaviour:
     altText: 
   - character: {fileID: 11400000, guid: a9a5a0ef951fe5b41b10e855cc7ea5f5, type: 2}
     text: Obviously not, sweet cheeks.
-    shadowDialogue: 0
-    shadowText: 
+    shadowDialogue: 1
+    shadowText: Now come on... all I'm asking for is a chance...
     altDialogue: 0
     altText: 
   - character: {fileID: 11400000, guid: c87fd56e6eb1c6e4d8540e462bf60d69, type: 2}
@@ -115,8 +115,8 @@ MonoBehaviour:
     altText: 
   - character: {fileID: 11400000, guid: a9a5a0ef951fe5b41b10e855cc7ea5f5, type: 2}
     text: Let's get out of here baby, your friends are no fun.
-    shadowDialogue: 0
-    shadowText: 
+    shadowDialogue: 1
+    shadowText: You're the one playing hard to get... Come here...
     altDialogue: 0
     altText: 
   - character: {fileID: 11400000, guid: e5d2758127e8bc04f9ac3f3ca9682820, type: 2}

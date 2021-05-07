@@ -22,8 +22,8 @@ MonoBehaviour:
   - character: {fileID: 11400000, guid: a9a5a0ef951fe5b41b10e855cc7ea5f5, type: 2}
     text: C'mon~ Lemme' help you out with your little shopping list~ What are you
       looking for?
-    shadowDialogue: 0
-    shadowText: 
+    shadowDialogue: 1
+    shadowText: Look, I'm just simply trying to help you out...
     altDialogue: 0
     altText: 
   - character: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
@@ -72,7 +72,7 @@ MonoBehaviour:
   - character: {fileID: 11400000, guid: a9a5a0ef951fe5b41b10e855cc7ea5f5, type: 2}
     text: So what are we shopping for today? Big plans tonight?
     shadowDialogue: 1
-    shadowText: I'm just being a nice guy....
+    shadowText: It's rude to not be honest with me...
     altDialogue: 0
     altText: 
   decision: {fileID: 0}
