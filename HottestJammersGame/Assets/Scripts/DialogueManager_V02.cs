@@ -24,6 +24,9 @@ public class DialogueManager_V02 : MonoBehaviour
     private GameObject distortionManager;
     private GameObject uiController;
 
+    [SerializeField]
+    private Savepp saved;
+
     //public Canvas ui;
 
     // public Button nextButton;
@@ -332,5 +335,11 @@ public class DialogueManager_V02 : MonoBehaviour
     //    activeSpeakerUI.Show();
     //    inactiveSpeakerUI.Hide();
     //}
+    public void savesetALI()
+    {
+        activeLineIndex = saved.ActiveLineIndex -1;
+        convo = saved.convo;
+
+    }
 
 }

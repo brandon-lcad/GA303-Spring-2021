@@ -1105,7 +1105,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 349814452}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1297963008}
+        m_MethodName: Loadclicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &349814452
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4279,9 +4290,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Dlevel: {fileID: 1656040898}
   ALI: {fileID: 2076168287}
+  UI: {fileID: 1971996564}
   Distortion: 0
   ActiveLineIndex: 0
   convo: {fileID: 0}
+  scene: 
 --- !u!1 &1326990183
 GameObject:
   m_ObjectHideFlags: 0
@@ -5328,6 +5341,7 @@ MonoBehaviour:
   blankCharacter: {fileID: 0}
   currentActiveCharacter: {fileID: 0}
   distortionLevel: 0
+  saved: {fileID: 1297963008}
 --- !u!4 &1656040899
 Transform:
   m_ObjectHideFlags: 0
@@ -6119,6 +6133,7 @@ MonoBehaviour:
   convo: {fileID: 11400000, guid: 4ec6eb71af853b549828b9459c62e906, type: 2}
   distortionLevel: 0
   activeLineIndex: 0
+  saved: {fileID: 1297963008}
 --- !u!4 &2076168288
 Transform:
   m_ObjectHideFlags: 0

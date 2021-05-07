@@ -1,15 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Savepp : MonoBehaviour
-{[SerializeField]
+{
+    [SerializeField]
     private DistortionManager Dlevel;
     [SerializeField]
     private DialogueManager_V02 ALI;
+    [SerializeField]
+    private UIController UI;
     public int Distortion;
     public int ActiveLineIndex;
     public Conversation convo;
+    public string scene;
 
     
 
@@ -25,7 +30,7 @@ public class Savepp : MonoBehaviour
         //ActiveLineIndex = Playerprefs.GetInt("currentActiveLineIndex");
         //need to set
     }
-    // need to change to onclick save button
+    
     void Update()
     {
         // DistortionManager.GetInt(distortionLevel);
@@ -39,18 +44,39 @@ public class Savepp : MonoBehaviour
         Distortion = Dlevel.distortionLevel;
         ActiveLineIndex = ALI.activeLineIndex;
         convo = ALI.convo;
-        //con = convo;
+        scene = SceneManager.GetActiveScene().name;
 
 
-
-
+        
         Debug.Log("Distortion is" + Distortion);
         Debug.Log("Active line is" + ActiveLineIndex);
         Debug.Log("Current Convo is" + convo);
+        Debug.Log("Current scene is" + scene);
+
+        //set Convo to string
         //saves
+        PlayerPrefs.GetInt("currentDistortion", Distortion);
+        PlayerPrefs.GetInt("currentActiveLineIndex", ActiveLineIndex);
+        PlayerPrefs.GetString("CurrentScene", scene);
+        //convo = new string(convostring);
+       // convo = convo.ToString();
+        //PlayerPrefs.GetString("currentConvo", convo);
+    }
+
+    public void Loadclicked()
+    {
         PlayerPrefs.SetInt("currentDistortion", Distortion);
         PlayerPrefs.SetInt("currentActiveLineIndex", ActiveLineIndex);
+        PlayerPrefs.SetString("CurrentScene", scene);
+        Debug.Log("Distortion is" + Distortion);
+        Debug.Log("Active line is" + ActiveLineIndex);
+        Debug.Log("Current Convo is" + convo);
         //PlayerPrefs.SetString("currentConvo", convo);
+
+        Dlevel.SendMessage("savesetdistortion");
+        ALI.SendMessage("savesetALI");
+        UI.SendMessage("LoadScene", scene);
+
 
     }
 

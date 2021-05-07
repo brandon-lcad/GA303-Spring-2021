@@ -641,12 +641,12 @@ PrefabInstance:
     - target: {fileID: 273902170899616403, guid: 635d95b4a6d76c14cb6855777d8ca0b7,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -1920
+      value: -3840
       objectReference: {fileID: 0}
     - target: {fileID: 273902170899616403, guid: 635d95b4a6d76c14cb6855777d8ca0b7,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 128849.31
+      value: 133573.27
       objectReference: {fileID: 0}
     - target: {fileID: 273902171375203188, guid: 635d95b4a6d76c14cb6855777d8ca0b7,
         type: 3}
@@ -2746,6 +2746,8 @@ MonoBehaviour:
   playerThoughts: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
   blankCharacter: {fileID: 0}
   currentActiveCharacter: {fileID: 0}
+  distortionLevel: 0
+  saved: {fileID: 0}
 --- !u!4 &1656040899
 Transform:
   m_ObjectHideFlags: 0
@@ -3424,6 +3426,7 @@ MonoBehaviour:
   historyText: {fileID: 310275973}
   canvasOn: 0
   convoStarted: 0
+  bottomBarUI: {fileID: 0}
   decUI: {fileID: 355836655}
   currentShadowLine: 
   currentOtherLine: 
@@ -3465,6 +3468,7 @@ MonoBehaviour:
   convo: {fileID: 11400000, guid: 1115d52b8c2d08244ab6288d271af7c7, type: 2}
   distortionLevel: 0
   activeLineIndex: 0
+  saved: {fileID: 0}
 --- !u!4 &2076168288
 Transform:
   m_ObjectHideFlags: 0

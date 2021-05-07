@@ -41,6 +41,9 @@ public class DistortionManager : MonoBehaviour
 
     public int distortionLevel;
 
+    [SerializeField]
+    private Savepp saved;
+
     void Awake()
     {
       if (DMInstance == null)
@@ -315,5 +318,10 @@ public class DistortionManager : MonoBehaviour
     public void SaveDistortionLevel()
     {
       GlobalChoiceRecorder.GCRInstance.globalDistortionLevel = distortionLevel;
+    }
+
+    public void savesetdistortion()
+    {
+        distortionLevel = saved.Distortion;
     }
 }
