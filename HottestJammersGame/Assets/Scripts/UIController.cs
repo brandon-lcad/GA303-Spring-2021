@@ -131,58 +131,7 @@ public class UIController : MonoBehaviour
     {
         if (Input.GetKeyDown("space"))
         {
-            if (characterBubble.active)
-            {
-                if (characterDialogue.text != currentOtherLine)
-                {
-                    currentOtherLine = characterDialogue.text;
-                }
-                else
-                {
-                    sendAdvanceConversation();
-                }
-            }
-
-            else if (playerBubble.active)
-            {
-                if (playerDialogue.text != currentOtherLine)
-                {
-                    currentOtherLine = playerDialogue.text;
-                }
-                else
-                {
-                    sendAdvanceConversation();
-                }
-            }
-
-            else if (thoughtBubble.active)
-            {
-                if (thoughtDialogue.text != currentOtherLine)
-                {
-                    currentOtherLine = thoughtDialogue.text;
-                }
-                else
-                {
-                    sendAdvanceConversation();
-                }
-            }
-
-            else if (distortionBubble.active)
-            {
-                if (distortionDialogue.text != currentShadowLine)
-                {
-                    currentShadowLine = distortionDialogue.text;
-                }
-                else
-                {
-                    sendAdvanceConversation();
-                }
-            }
-
-            else
-            {
                 sendAdvanceConversation();
-            }
         }
 
         if (Input.GetKeyDown("h"))
@@ -202,10 +151,59 @@ public class UIController : MonoBehaviour
         }
     }
 
-        public void sendAdvanceConversation() {
-            dialogueManager.SendMessage("AdvanceConversation");
-        }
+        public void sendAdvanceConversation()
+        {
 
+            if (characterBubble.active)
+            {
+                if (characterDialogue.text != currentOtherLine)
+                {
+                    currentOtherLine = characterDialogue.text;
+                }
+                else{
+                    dialogueManager.SendMessage("AdvanceConversation");
+                }
+            }
+            else if (playerBubble.active)
+            {
+                if (playerDialogue.text != currentOtherLine)
+                {
+                    currentOtherLine = playerDialogue.text;
+                }
+                else
+                {
+                    dialogueManager.SendMessage("AdvanceConversation");
+                }
+            }
+
+            else if (thoughtBubble.active)
+            {
+                if (thoughtDialogue.text != currentOtherLine)
+                {
+                    currentOtherLine = thoughtDialogue.text;
+                }
+                else
+                {
+                    dialogueManager.SendMessage("AdvanceConversation");
+                }
+            }
+
+            else if (distortionBubble.active)
+            {
+                if (distortionDialogue.text != currentShadowLine)
+                {
+                    currentShadowLine = distortionDialogue.text;
+                }
+                else
+                {
+                    dialogueManager.SendMessage("AdvanceConversation");
+                }
+            }
+            else
+            {
+                dialogueManager.SendMessage("AdvanceConversation");
+            }
+        }
         // This function progresses the conversation upon click or space bar; made public so a button can be implemented
         // public void AdvanceConversation()
         // {
