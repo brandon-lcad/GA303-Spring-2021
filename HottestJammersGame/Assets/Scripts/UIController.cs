@@ -142,7 +142,6 @@ public class UIController : MonoBehaviour
         Scene scene = SceneManager.GetActiveScene();
         if (scene.name == "01_StartMenu")
         {
-            Debug.Log("Hiding Bottom Bar");
             bottomBarUI.enabled = false;
         }
         else

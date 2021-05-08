@@ -337,7 +337,14 @@ public class DialogueManager_V02 : MonoBehaviour
     //}
     public void savesetALI(int savedALI)
     {
-        activeLineIndex = savedALI -1;
+        if (savedALI > 0)
+        {
+            activeLineIndex = savedALI - 1;
+        }
+        else
+        {
+            activeLineIndex = savedALI;
+        }
     }
 
     public void savesetConvo(Conversation savedConvo)
