@@ -320,8 +320,8 @@ public class DistortionManager : MonoBehaviour
       GlobalChoiceRecorder.GCRInstance.globalDistortionLevel = distortionLevel;
     }
 
-    public void savesetdistortion()
+    public void savesetdistortion(int savedDistortion)
     {
-        distortionLevel = saved.Distortion;
+        distortionLevel = savedDistortion;
     }
 }

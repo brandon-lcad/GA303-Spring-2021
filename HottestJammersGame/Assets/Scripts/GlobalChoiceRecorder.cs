@@ -32,7 +32,7 @@ public class GlobalChoiceRecorder : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-      if (scene.name == "Introduction")
+      if (scene.name == "02_Home")
       {
         globalDistortionLevel = 0;
       }

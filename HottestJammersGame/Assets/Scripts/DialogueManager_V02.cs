@@ -335,11 +335,14 @@ public class DialogueManager_V02 : MonoBehaviour
     //    activeSpeakerUI.Show();
     //    inactiveSpeakerUI.Hide();
     //}
-    public void savesetALI()
+    public void savesetALI(int savedALI)
     {
-        activeLineIndex = saved.ActiveLineIndex -1;
-        convo = saved.convo;
+        activeLineIndex = savedALI -1;
+    }
 
+    public void savesetConvo(Conversation savedConvo)
+    {
+        convo = savedConvo;
     }
 
 }

@@ -11,14 +11,12 @@ public class Savepp : MonoBehaviour
     private DialogueManager_V02 ALI;
     [SerializeField]
     private UIController UI;
-    public int Distortion;
-    public int ActiveLineIndex;
-    public Conversation convo;
-    public string scene;
-
-    
-
-
+    public int nowDistortionLevel;
+    public int nowActiveLineIndex;
+    public Conversation nowConvo;
+    public Scene nowScene;
+    public string nowConvoName;
+    public string nowSceneName;
 
     void Start()
     {
@@ -30,7 +28,7 @@ public class Savepp : MonoBehaviour
         //ActiveLineIndex = Playerprefs.GetInt("currentActiveLineIndex");
         //need to set
     }
-    
+
     void Update()
     {
         // DistortionManager.GetInt(distortionLevel);
@@ -38,46 +36,49 @@ public class Savepp : MonoBehaviour
 
     }
 
-    public void Buttonclicked()
+    public void SaveButtonclicked()
     {
 
-        Distortion = Dlevel.distortionLevel;
-        ActiveLineIndex = ALI.activeLineIndex;
-        convo = ALI.convo;
-        scene = SceneManager.GetActiveScene().name;
+        nowDistortionLevel = GlobalChoiceRecorder.GCRInstance.globalDistortionLevel;
+        nowActiveLineIndex = ALI.activeLineIndex;
+        nowConvo = ALI.convo;
+        nowScene = SceneManager.GetActiveScene();
 
 
-        
-        Debug.Log("Distortion is" + Distortion);
-        Debug.Log("Active line is" + ActiveLineIndex);
-        Debug.Log("Current Convo is" + convo);
-        Debug.Log("Current scene is" + scene);
+
+        Debug.Log("Distortion is " + nowDistortionLevel);
+        Debug.Log("Active line is " + nowActiveLineIndex);
+        Debug.Log("Current Convo is " + nowConvo);
+        Debug.Log("Current scene is " + nowScene);
 
         //set Convo to string
         //saves
-        PlayerPrefs.GetInt("currentDistortion", Distortion);
-        PlayerPrefs.GetInt("currentActiveLineIndex", ActiveLineIndex);
-        PlayerPrefs.GetString("CurrentScene", scene);
+        PlayerPrefs.SetInt("SavedDistortionLevel", Dlevel.distortionLevel);
+        PlayerPrefs.SetInt("SavedActiveLineIndex", ALI.activeLineIndex);
+        PlayerPrefs.SetString("SavedConvo", ALI.convo.name);
+        PlayerPrefs.SetString("SavedSceneName", SceneManager.GetActiveScene().name);
         //convo = new string(convostring);
        // convo = convo.ToString();
         //PlayerPrefs.GetString("currentConvo", convo);
     }
 
-    public void Loadclicked()
+    public void LoadButtonClicked()
     {
-        PlayerPrefs.SetInt("currentDistortion", Distortion);
-        PlayerPrefs.SetInt("currentActiveLineIndex", ActiveLineIndex);
-        PlayerPrefs.SetString("CurrentScene", scene);
-        Debug.Log("Distortion is" + Distortion);
-        Debug.Log("Active line is" + ActiveLineIndex);
-        Debug.Log("Current Convo is" + convo);
+        nowDistortionLevel = PlayerPrefs.GetInt("SaveDistortionLevel");
+        nowActiveLineIndex = PlayerPrefs.GetInt("SavedActiveLineIndex");
+        // nowConvoName = PlayerPrefs.GetString("SavedConvo");
+        nowSceneName = PlayerPrefs.GetString("SavedSceneName");
+
+        Debug.Log("Distortion is " + nowDistortionLevel);
+        Debug.Log("Active line is " + nowActiveLineIndex);
+        // Debug.Log("Current Convo is " + nowConvoName);
+        Debug.Log("Current scene is " + nowSceneName);
         //PlayerPrefs.SetString("currentConvo", convo);
 
-        Dlevel.SendMessage("savesetdistortion");
-        ALI.SendMessage("savesetALI");
-        UI.SendMessage("LoadScene", scene);
-
-
+        Dlevel.SendMessage("savesetdistortion", nowDistortionLevel);
+        ALI.SendMessage("savesetALI", nowActiveLineIndex);
+        // ALI.SendMessage("savesetConvo", nowConvo);
+        UI.SendMessage("LoadScene", nowSceneName);
     }
 
 }
