@@ -3870,9 +3870,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Dlevel: {fileID: 0}
   ALI: {fileID: 0}
+  UI: {fileID: 0}
   Distortion: 0
   ActiveLineIndex: 0
   convo: {fileID: 0}
+  scene: 
 --- !u!1 &2008759842
 GameObject:
   m_ObjectHideFlags: 0

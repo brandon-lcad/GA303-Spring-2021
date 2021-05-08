@@ -1063,7 +1063,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 26243b0551accef4db3eb29a26fc2f51, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -2507,12 +2507,12 @@ PrefabInstance:
     - target: {fileID: 273902170899616403, guid: 635d95b4a6d76c14cb6855777d8ca0b7,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -960
+      value: -1920
       objectReference: {fileID: 0}
     - target: {fileID: 273902170899616403, guid: 635d95b4a6d76c14cb6855777d8ca0b7,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 72620.39
+      value: 73947.84
       objectReference: {fileID: 0}
     - target: {fileID: 273902171375203188, guid: 635d95b4a6d76c14cb6855777d8ca0b7,
         type: 3}
@@ -2746,6 +2746,8 @@ MonoBehaviour:
   playerThoughts: {fileID: 11400000, guid: 1d22a295974a6c244a8186046f98f2d8, type: 2}
   blankCharacter: {fileID: 0}
   currentActiveCharacter: {fileID: 0}
+  distortionLevel: 0
+  saved: {fileID: 0}
 --- !u!4 &1656040899
 Transform:
   m_ObjectHideFlags: 0
@@ -3424,6 +3426,7 @@ MonoBehaviour:
   historyText: {fileID: 1600103561}
   canvasOn: 0
   convoStarted: 0
+  bottomBarUI: {fileID: 0}
   decUI: {fileID: 355836655}
   currentShadowLine: 
   currentOtherLine: 
@@ -3465,6 +3468,7 @@ MonoBehaviour:
   convo: {fileID: 11400000, guid: 25c9fab6aee7c2449a164e62ee9818ff, type: 2}
   distortionLevel: 0
   activeLineIndex: 0
+  saved: {fileID: 0}
 --- !u!4 &2076168288
 Transform:
   m_ObjectHideFlags: 0
