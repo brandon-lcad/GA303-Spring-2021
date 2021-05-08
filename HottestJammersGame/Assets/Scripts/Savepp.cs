@@ -61,6 +61,14 @@ public class Savepp : MonoBehaviour
        // convo = convo.ToString();
         //PlayerPrefs.GetString("currentConvo", convo);
     }
+   // public string GetString(string CurrentScene)
+    //{
+        //return PlayerPrefs.GetString(CurrentScene);
+     //}
+    //public string GetString(string CurrentConvo)
+    //{
+        //return PlayerPrefs.GetString(CurrentConvo);
+    //}
 
     public void LoadButtonClicked()
     {
@@ -79,6 +87,14 @@ public class Savepp : MonoBehaviour
         ALI.SendMessage("savesetALI", nowActiveLineIndex);
         // ALI.SendMessage("savesetConvo", nowConvo);
         UI.SendMessage("LoadScene", nowSceneName);
+    }
+
+    public void Continueclick()
+    {
+       PlayerPrefs.GetInt("currentActiveLineIndex", ActiveLineIndex);
+       PlayerPrefs.GetInt("currentDistortion", Distortion);
+       PlayerPrefs.GetString("CurrentScene");
+        PlayerPrefs.GetString("CurrentConvo");
     }
 
 }
