@@ -26,6 +26,8 @@ public class CraftingCtrl : MonoBehaviour
     {
         craftingProgressDisplay.gameObject.SetActive(false);
         playerFeebackMessage.gameObject.SetActive(false);
+        playerFeebackMessage.text = "";
+        playerFeebackMessage.CrossFadeAlpha(0.0f, 0.0f, false);
     }
 
     private void Update()
@@ -40,10 +42,12 @@ public class CraftingCtrl : MonoBehaviour
             if (CraftingComplete())
             {
                 container.inventoryItems.Add(recipeData.craftedItem.outputItem);
-                startCrafting = false;
                 craftingProgressDisplay.gameObject.SetActive(false);
+                startCrafting = false;
                 craftingProgressBar.fillAmount = 0;
                 recipeData = null;
+
+                
             }
         }
     }

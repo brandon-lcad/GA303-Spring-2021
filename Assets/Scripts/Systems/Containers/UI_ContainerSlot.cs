@@ -26,7 +26,5 @@ public class UI_ContainerSlot : MonoBehaviour
     public void DisplayItem()
     {
         containerIcon.sprite = inventoryItem.itemIcon;
-
-        //display quantity
     }
 }

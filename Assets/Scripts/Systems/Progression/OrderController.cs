@@ -39,7 +39,7 @@ public class OrderController : MonoBehaviour
     public void GetNewQuests()
     {
         var availableOrders = Resources.LoadAll<OrdersData>("Scriptable Objects/Orders");
-        Debug.Log(availableOrders.Length);
+
         foreach (var order in availableOrders)
         {
             if (!order.orderComplete) orders.Add(order);
@@ -99,6 +99,6 @@ public class OrderController : MonoBehaviour
 
     public void DepositReward(Container containerCtrl, OrdersData ordersData)
     {
-        containerCtrl.goldAmount += ordersData.rewardAmount;
+        container.goldAmount += ordersData.rewardAmount;
     }
 }

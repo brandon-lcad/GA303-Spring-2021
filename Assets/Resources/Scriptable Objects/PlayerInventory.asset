@@ -12,9 +12,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23263816f574d8249bee3135471ad66d, type: 3}
   m_Name: PlayerInventory
   m_EditorClassIdentifier: 
+  goldAmountLabel: {fileID: 0}
+  goldAmount: 0
+  reagentAmountLabel: {fileID: 0}
+  reagentAmount: 0
+  crystalAmountLabel: {fileID: 0}
+  crystalAmount: 0
   inventoryItems:
-  - {fileID: 11400000, guid: 703a45233ff9d4343936acd7556ec3e8, type: 2}
-  - {fileID: 11400000, guid: 703a45233ff9d4343936acd7556ec3e8, type: 2}
-  - {fileID: 11400000, guid: 703a45233ff9d4343936acd7556ec3e8, type: 2}
-  - {fileID: 11400000, guid: 703a45233ff9d4343936acd7556ec3e8, type: 2}
-  - {fileID: 11400000, guid: 70b778d95f9909441b567a0d8d388f2b, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}

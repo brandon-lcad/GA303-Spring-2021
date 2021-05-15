@@ -14,7 +14,7 @@ public class SceneLoading : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        sceneLoading.fillAmount += 0.0025f;
+        sceneLoading.fillAmount += 0.0005f;
 
         if (sceneLoading.fillAmount >= 0.990)
         {

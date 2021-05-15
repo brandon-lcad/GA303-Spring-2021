@@ -1,20 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using TMPro;
 
 [CreateAssetMenu(fileName = "new Container", menuName = "Systems/Container")]
 public class Inventory : ScriptableObject
 {
-    public List<InventoryItem> inventoryItems;
+    [Header("Player Currency Panel")]
+    public TextMeshProUGUI goldAmountLabel;
+    public int goldAmount;
+    public TextMeshProUGUI reagentAmountLabel;
+    public int reagentAmount;
+    public TextMeshProUGUI crystalAmountLabel;
+    public int crystalAmount;
 
-    /*public void LoadContainer()
-    {
-        var containerList = Resources.LoadAll<InventoryItem>("Scriptable Objects/Items");
-        foreach (var item in containerList)
-        {
-            inventoryItems.Add(item);
-        }
-    }*/
+    public List<InventoryItem> inventoryItems;
     public int ContainerSize() => inventoryItems.Count -1;
 }

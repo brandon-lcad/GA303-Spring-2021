@@ -10,8 +10,4 @@ public class OrdersData : OrdersTemplate
 
     public bool orderComplete;
     public bool isDelivered;
-
-    public bool orderTimed;
-    public bool orderActive;
-    public int orderTimer;
 }
