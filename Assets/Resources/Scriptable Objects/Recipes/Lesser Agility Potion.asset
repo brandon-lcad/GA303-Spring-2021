@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69236d1be2965de448e4662be25b7164, type: 3}
+  m_Name: Lesser Agility Potion
+  m_EditorClassIdentifier: 
+  itemName: Lesser Agility Potion
+  itemIcon: {fileID: 21300000, guid: b5c7e840df59cf3478da72d193bd508c, type: 3}
+  profession: 0
+  itemType: 3
+  itemDescription: +10 to Agility
+  itemId: 1620892275
+  buyPrice: 8
+  sellPrice: 5
+  maxStack: 20
+  materials: []
+  materialsRequired:
+  - inputItem: {fileID: 11400000, guid: 703a45233ff9d4343936acd7556ec3e8, type: 2}
+    inputAmount: 5
+  craftedItem:
+    outputItem: {fileID: 11400000, guid: 70b778d95f9909441b567a0d8d388f2b, type: 2}
+    outputAmount: 1
+  useText: LEARNINS

@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fedd5369cc7d2404490f682a5bb0bea5, type: 3}
+  m_Name: Order-HealthPotsGalore
+  m_EditorClassIdentifier: 
+  npcIcon: {fileID: 21300000, guid: 70c07282b802b2e4d967053555733ba2, type: 3}
+  npcName: Mahan Brom
+  orderType: 1
+  rewardType: 0
+  rewardAmount: 17
+  rewardImage: {fileID: 21300000, guid: d147940bc08e8b1489fd986fa00d4e14, type: 3}
+  orderDescription: Our priest keeps going oom! Our party wants to buy healing potions
+    from you in case it happens again.
+  orderId: 1620926224
+  orderObjective: {fileID: 11400000, guid: a91af53e8eb41cb488a1aab812f193a1, type: 2}
+  orderComplete: 0
+  isDelivered: 0
+  orderTimed: 0
+  orderActive: 0
+  orderTimer: 0

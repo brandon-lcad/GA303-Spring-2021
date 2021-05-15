@@ -12,7 +12,9 @@ TrueTypeFontImporter:
   fontNames:
   - Book Antiqua
   fallbackFontReferences:
+  - {fileID: 12800000, guid: b935ba603fb8080459432bbf068e5a6a, type: 3}
   - {fileID: 12800000, guid: 41eaa7021c0830e409e99127301fb611, type: 3}
+  - {fileID: 12800000, guid: 88f2a49f5a15f1143b6c09cffc79915a, type: 3}
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1
